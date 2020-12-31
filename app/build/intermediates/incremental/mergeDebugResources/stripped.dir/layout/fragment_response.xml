@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResponseFragment"
+    android:orientation="vertical"
+    android:id="@+id/lnlResponse"
+    android:weightSum="10"
+    android:background="@color/design_default_color_primary_dark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:layout_margin="20dp">
+        <TextView
+            android:id="@+id/txtMainText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gracias por tu feedback"
+            android:textSize="60dp"
+            android:textColor="@color/material_on_primary_emphasis_high_type"
+            android:gravity="center"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:layout_margin="20dp">
+        <TextView
+            android:id="@+id/txtAlternText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tu opinion es muy importante"
+            android:textSize="45dp"
+            android:textColor="@color/design_default_color_on_primary"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

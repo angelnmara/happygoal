@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">HappyGoal</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Introduce tu código</string>
+    <string name="prompt_password">Correo electrónico</string>
+    <string name="action_sign_in">Entrar</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Usuario invalido</string>
+    <string name="invalid_password">Password debe ser >5 caracteres</string>
+    <string name="login_failed">"Acceso Invalido"</string>
+    <string name="entrar">"entrar"</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="bienvenido">¡Bienvenido!</string>
+    <string name="enojado">Enojado</string>
+    <string name="enojadoSentence">Te entendemos</string>
+    <string name="feliz">Feliz</string>
+    <string name="felizSentence">Nos da gusto que te sientas así</string>
+    <string name="motivado">Motivado</string>
+    <string name="motivadoSentence">Tu opinión es muy importante</string>
+    <string name="estresado">Estresado</string>
+    <string name="estresadoSentence">Prometemos mejorar</string>
+    <string name="tranquilo">Tranquilo</string>
+    <string name="tranquiloSentence">Trabajamos en cambiar</string>
+    <string name="comoTeSientes">¿Cómo te sientes hoy?</string>
+    <!--mensajes-->
+    <string name="msjNoSentimiento">Selecciona una emoción</string>
+    <string name="msjNoComentario">Coloca información sobre tu emoción</string>
+</resources>
