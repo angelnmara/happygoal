@@ -116,12 +116,12 @@ class TestFragment : Fragment() {
 
             val apiService = RestApiService()
             val calificacion = Calificacion(
-                idCalificacion = 1,
+                idCalificacion = null,
                 calificacion = 1,
                 emocion = "nuevaemocion",
                 idUsuario = 1
             );
-            apiService.calificacionFun(calificacion, token){
+            apiService.calificacionFun(calificacion, token.toString()){
                 if (it?.idCalificacion != null) {
                     // it = newly added user parsed as response
                     // it?.id = newly added user ID
