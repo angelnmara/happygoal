@@ -2333,6 +2333,7 @@ int string prompt_email 0x7f0f0068
 int string prompt_password 0x7f0f0069
 int string search_menu_title 0x7f0f006a
 int string status_bar_notification_info_overflow 0x7f0f006b
+int string token 0x7f0f006f
 int string tranquilo 0x7f0f006c
 int string tranquiloSentence 0x7f0f006d
 int string welcome 0x7f0f006e

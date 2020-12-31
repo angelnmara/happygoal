@@ -1,6 +1,8 @@
 package com.example.happygoaldemo
 
+import android.content.Context
 import android.os.Bundle
+import android.provider.Settings
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -8,7 +10,10 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import com.example.happygoaldemo.api.RestApiService
+import com.example.happygoaldemo.data.model.Calificacion
 import com.example.happygoaldemo.databinding.FragmentTestBinding
+import com.example.happygoaldemo.ui.login.LoginFragmentDirections
 import com.example.happygoaldemo.ui.test.TestViewModel
 import com.example.happygoaldemo.ui.test.TestViewModelFactory
 
@@ -104,6 +109,29 @@ class TestFragment : Fragment() {
             }
 
             val comenta = titulo.text.toString()
+
+            val sharedPref = activity?.getPreferences(Context.MODE_PRIVATE) ?: return@setOnClickListener
+            val defaultValue = ""
+            val token = sharedPref.getString(getString(R.string.token), defaultValue)
+
+            val apiService = RestApiService()
+            val calificacion = Calificacion(
+                idCalificacion = 1,
+                calificacion = 1,
+                emocion = "nuevaemocion",
+                idUsuario = 1
+            );
+            apiService.calificacionFun(calificacion, token){
+                if (it?.idCalificacion != null) {
+                    // it = newly added user parsed as response
+                    // it?.id = newly added user ID
+                    Toast.makeText(context, "save", Toast.LENGTH_LONG).show()
+                } else {
+                    //Timber.d("Error registering new user")
+                    Toast.makeText(context, "error al registrarse", Toast.LENGTH_LONG).show()
+                }
+            }
+
             val action = TestFragmentDirections.actionTestFragmentToResponseFragment(comenta)
             view.findNavController().navigate(action)
         }

@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">HappyGoal</string>
     <!-- Strings related to login -->
-    <string name="prompt_email">Introduce tu código</string>
-    <string name="prompt_password">Correo electrónico</string>
+    <string name="prompt_email">Correo electrónico</string>
+    <string name="prompt_password">Introduce tu código</string>
     <string name="action_sign_in">Entrar</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="welcome">"Welcome!"</string>
@@ -26,4 +26,6 @@
     <!--mensajes-->
     <string name="msjNoSentimiento">Selecciona una emoción</string>
     <string name="msjNoComentario">Coloca información sobre tu emoción</string>
+
+    <string name="token">Token</string>
 </resources>

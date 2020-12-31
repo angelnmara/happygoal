@@ -100,12 +100,12 @@
         "source": "/home/dave/desarrollo/happygoal/app/src/main/res/mipmap-mdpi/ic_tranquilo_round.png"
     },
     {
-        "merged": "/home/dave/desarrollo/happygoal/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_tranquilo.png.flat",
-        "source": "/home/dave/desarrollo/happygoal/app/src/main/res/mipmap-mdpi/ic_tranquilo.png"
-    },
-    {
         "merged": "/home/dave/desarrollo/happygoal/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_feliz_round.xml.flat",
         "source": "/home/dave/desarrollo/happygoal/app/src/main/res/mipmap-anydpi-v26/ic_feliz_round.xml"
+    },
+    {
+        "merged": "/home/dave/desarrollo/happygoal/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_tranquilo.png.flat",
+        "source": "/home/dave/desarrollo/happygoal/app/src/main/res/mipmap-mdpi/ic_tranquilo.png"
     },
     {
         "merged": "/home/dave/desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_entusiasmado_foreground.xml.flat",

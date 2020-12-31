@@ -1,5 +1,6 @@
 package com.example.happygoaldemo.ui.login
 
+import android.content.Context
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.annotation.StringRes
@@ -16,6 +17,8 @@ import androidx.navigation.findNavController
 import com.example.happygoaldemo.databinding.FragmentLoginBinding
 
 import com.example.happygoaldemo.R
+import com.example.happygoaldemo.api.RestApiService
+import com.example.happygoaldemo.data.model.Login
 
 class LoginFragment : Fragment() {
 
@@ -107,8 +110,36 @@ class LoginFragment : Fragment() {
                 usernameEditText.text.toString(),
                 passwordEditText.text.toString()
             )
-            val action = LoginFragmentDirections.actionLoginFragmentToTestFragment()
-            view.findNavController().navigate(action)
+
+            addDummyUser(view, usernameEditText.text.toString(), passwordEditText.text.toString())
+
+        }
+    }
+
+    fun addDummyUser(view:View, userName:String, pass:String) {
+        val apiService = RestApiService()
+        val login = Login(  username = userName,
+            password = pass)
+
+        apiService.loginFun(login) {
+            if (it?.codeHttp == 200) {
+                // it = newly added user parsed as response
+                // it?.id = newly added user ID
+                saveToken(it.token)
+                val action = LoginFragmentDirections.actionLoginFragmentToTestFragment()
+                view.findNavController().navigate(action)
+            } else {
+                //Timber.d("Error registering new user")
+                Toast.makeText(context, "error al registrarse", Toast.LENGTH_LONG).show()
+            }
+        }
+    }
+
+    private fun saveToken(token:String){
+        val sharedPref = activity?.getPreferences(Context.MODE_PRIVATE) ?: return
+        with (sharedPref.edit()) {
+            putString(getString(R.string.token), token)
+            commit()
         }
     }
 

@@ -1,11 +1,11 @@
 com/example/happygoaldemo/BuildConfig.java
  com.example.happygoaldemo.BuildConfig
+com/example/happygoaldemo/DataBindingTriggerClass.java
+ com.example.happygoaldemo.DataBindingTriggerClass
 com/example/happygoaldemo/databinding/FragmentResponseBinding.java
  com.example.happygoaldemo.databinding.FragmentResponseBinding
 com/example/happygoaldemo/databinding/ActivityMainBinding.java
  com.example.happygoaldemo.databinding.ActivityMainBinding
-com/example/happygoaldemo/DataBindingTriggerClass.java
- com.example.happygoaldemo.DataBindingTriggerClass
 com/example/happygoaldemo/databinding/FragmentTestBinding.java
  com.example.happygoaldemo.databinding.FragmentTestBinding
 com/example/happygoaldemo/databinding/FragmentLoginBinding.java
