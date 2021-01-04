@@ -6,10 +6,11 @@
     <string name="action_sign_in">Entrar</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="welcome">"Welcome!"</string>
-    <string name="invalid_username">Usuario invalido</string>
-    <string name="invalid_password">Password debe ser >5 caracteres</string>
+    <string name="invalid_username">Correo invalido</string>
+    <string name="informacionEmocion">La información de tu emocion debe ser mayor a 15 caracteres</string>
+    <string name="invalid_password">Código debe ser >5 caracteres</string>
     <string name="login_failed">"Acceso Invalido"</string>
-    <string name="entrar">"entrar"</string>
+    <string name="entrar">"Entrar"</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="bienvenido">¡Bienvenido!</string>
     <string name="enojado">Enojado</string>
@@ -26,6 +27,6 @@
     <!--mensajes-->
     <string name="msjNoSentimiento">Selecciona una emoción</string>
     <string name="msjNoComentario">Coloca información sobre tu emoción</string>
-
+    <string name="msjNoSeEncuentraRegistrado">El usuario no se encuentra registrado solicitalo con el administrador</string>
     <string name="token">Token</string>
 </resources>

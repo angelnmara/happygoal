@@ -130,7 +130,7 @@ class LoginFragment : Fragment() {
                 view.findNavController().navigate(action)
             } else {
                 //Timber.d("Error registering new user")
-                Toast.makeText(context, "error al registrarse", Toast.LENGTH_LONG).show()
+                Toast.makeText(context, resources.getText(R.string.msjNoSeEncuentraRegistrado), Toast.LENGTH_LONG).show()
             }
         }
     }

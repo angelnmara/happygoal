@@ -15,8 +15,8 @@ interface RestApi {
     fun addLogin(@Body login: Login): Call<Void>
 
     @Headers("Content-Type: application/json")
-    @POST("calificacion")
-    fun addCalificacion(@Body calificacion: Calificacion, @Header("Authorization") autHeader: String): Call<Calificacion>
+    @POST("calificacion/")
+    fun addCalificacion(@Body calificacion: Calificacion, @Header("Authorization") autHeader: String): Call<Void>
 
 
 }

@@ -1023,7 +1023,7 @@
     <string name="comoTeSientes">¿Cómo te sientes hoy?</string>
     <string name="enojado">Enojado</string>
     <string name="enojadoSentence">Te entendemos</string>
-    <string name="entrar">"entrar"</string>
+    <string name="entrar">"Entrar"</string>
     <string name="error_icon_content_description">Error</string>
     <string name="estresado">Estresado</string>
     <string name="estresadoSentence">Prometemos mejorar</string>
@@ -1034,8 +1034,9 @@
     <string name="felizSentence">Nos da gusto que te sientas así</string>
     <string name="hide_bottom_view_on_scroll_behavior" translatable="false">com.google.android.material.behavior.HideBottomViewOnScrollBehavior</string>
     <string description="Content description for an icon that appears in the title area of a dialog" name="icon_content_description">Dialog Icon</string>
-    <string name="invalid_password">Password debe ser >5 caracteres</string>
-    <string name="invalid_username">Usuario invalido</string>
+    <string name="informacionEmocion">La información de tu emocion debe ser mayor a 15 caracteres</string>
+    <string name="invalid_password">Código debe ser >5 caracteres</string>
+    <string name="invalid_username">Correo invalido</string>
     <string name="item_view_role_description">Tab</string>
     <string name="login_failed">"Acceso Invalido"</string>
     <string description="Content description for the thumb with the maximum value in a Range slider. [CHAR_LIMIT=NONE]" name="material_slider_range_end">Range end, </string>
@@ -1043,6 +1044,7 @@
     <string name="motivado">Motivado</string>
     <string name="motivadoSentence">Tu opinión es muy importante</string>
     <string name="msjNoComentario">Coloca información sobre tu emoción</string>
+    <string name="msjNoSeEncuentraRegistrado">El usuario no se encuentra registrado solicitalo con el administrador</string>
     <string name="msjNoSentimiento">Selecciona una emoción</string>
     <string description="Content description for new notification (no number count) [CHAR_LIMIT=NONE]" name="mtrl_badge_numberless_content_description">New notification</string>
     <string description="Content description for a close icon that lets the user remove content from the screen" name="mtrl_chip_close_icon_content_description">Remove %1$s</string>

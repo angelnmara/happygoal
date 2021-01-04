@@ -21,8 +21,7 @@
             android:text="Gracias por tu feedback"
             android:textSize="60dp"
             android:textColor="@color/material_on_primary_emphasis_high_type"
-            android:gravity="center"
-            android:layout_gravity="center"/>
+            android:layout_gravity="bottom"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -36,8 +35,7 @@
             android:text="Tu opinion es muy importante"
             android:textSize="45dp"
             android:textColor="@color/design_default_color_on_primary"
-            android:layout_gravity="center"
-            android:gravity="center"/>
+            android:layout_gravity="top" />
     </LinearLayout>
 
 

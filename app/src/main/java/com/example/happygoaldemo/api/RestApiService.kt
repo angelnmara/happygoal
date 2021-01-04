@@ -27,17 +27,17 @@ class RestApiService {
         )
     }
 
-    fun calificacionFun(calificacion: Calificacion, token: String, onResult: (Calificacion?) -> Unit){
+    fun calificacionFun(calificacion: Calificacion, token: String, onResult: (Int?) -> Unit){
         val retrofit = ServiceBuilder.buildService(RestApi::class.java)
 
         retrofit.addCalificacion(calificacion, token).enqueue(
-            object : Callback<Calificacion> {
-                override fun onFailure(call: Call<Calificacion>, t: Throwable) {
+            object : Callback<Void> {
+                override fun onFailure(call: Call<Void>, t: Throwable) {
                     onResult(null)
                 }
-                override fun onResponse(call: Call<Calificacion>, response: Response<Calificacion>) {
-                    val calificacion = response.body()
-                    onResult(calificacion)
+                override fun onResponse(call: Call<Void>, response: Response<Void>) {
+                    val statusCode = response.code().toInt()
+                    onResult(statusCode)
                 }
             }
         )

@@ -2278,6 +2278,7 @@ string feliz
 string felizSentence
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
+string informacionEmocion
 string invalid_password
 string invalid_username
 string item_view_role_description
@@ -2287,6 +2288,7 @@ string material_slider_range_start
 string motivado
 string motivadoSentence
 string msjNoComentario
+string msjNoSeEncuentraRegistrado
 string msjNoSentimiento
 string mtrl_badge_numberless_content_description
 string mtrl_chip_close_icon_content_description

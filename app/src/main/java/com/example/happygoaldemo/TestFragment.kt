@@ -3,11 +3,14 @@ package com.example.happygoaldemo
 import android.content.Context
 import android.os.Bundle
 import android.provider.Settings
+import android.text.Editable
+import android.text.TextWatcher
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.example.happygoaldemo.api.RestApiService
@@ -33,7 +36,8 @@ class TestFragment : Fragment() {
     private var param2: String? = null
     private lateinit var testViewModel: TestViewModel
     private var _binding: FragmentTestBinding? = null
-    private var comentarioMaximo: Long = 15;
+    private var comentarioMaximo: Long = 15
+    private var calificacionId: Int? = null
 
     private val binding get() = _binding!!
 
@@ -64,38 +68,52 @@ class TestFragment : Fragment() {
         val tranquilo = binding.imgTranquilo
         val motivado = binding.imgMotivado
         val titulo = binding.txtTitulo
-        var btnComenta = binding.btnComenta
-        var txtComenta = binding.txtComenta
+        val btnComenta = binding.btnComenta
+        val txtComenta = binding.txtComenta
+
+        testViewModel.testFormState.observe(viewLifecycleOwner, Observer {
+            testFormState -> if(testFormState==null){
+                return@Observer
+            }
+            testFormState.emocionError?.let{
+                txtComenta.error = getString(it)
+            }
+        })
 
         enojado.setOnClickListener{
             titulo.setText(R.string.enojado)
             titulo.setTextColor(resources.getColor(R.color.white))
             lnlTest.setBackgroundColor(resources.getColor(R.color.enojado))
             setVisible(view)
+            calificacionId = 5
         }
         feliz.setOnClickListener {
             titulo.setText(R.string.feliz)
             titulo.setTextColor(resources.getColor(R.color.black))
             lnlTest.setBackgroundColor(resources.getColor(R.color.feliz))
             setVisible(view)
+            calificacionId = 1
         }
         estresado.setOnClickListener {
             titulo.setText(R.string.estresado)
             titulo.setTextColor(resources.getColor(R.color.white))
             lnlTest.setBackgroundColor(resources.getColor(R.color.estresado))
             setVisible(view)
+            calificacionId = 4
         }
         tranquilo.setOnClickListener {
             titulo.setText(R.string.tranquilo)
             titulo.setTextColor(resources.getColor(R.color.black))
             lnlTest.setBackgroundColor(resources.getColor(R.color.tranquilo))
             setVisible(view)
+            calificacionId = 3
         }
         motivado.setOnClickListener {
             titulo.setText(R.string.motivado)
             titulo.setTextColor(resources.getColor(R.color.black))
             lnlTest.setBackgroundColor(resources.getColor(R.color.motivado))
             setVisible(view)
+            calificacionId = 2
         }
 
         btnComenta.setOnClickListener {
@@ -117,24 +135,40 @@ class TestFragment : Fragment() {
             val apiService = RestApiService()
             val calificacion = Calificacion(
                 idCalificacion = null,
-                calificacion = 1,
-                emocion = "nuevaemocion",
+                calificacion = calificacionId,
+                emocion = txtComenta.text.toString(),
                 idUsuario = 1
             );
             apiService.calificacionFun(calificacion, token.toString()){
-                if (it?.idCalificacion != null) {
+                if (it == 200) {
                     // it = newly added user parsed as response
                     // it?.id = newly added user ID
-                    Toast.makeText(context, "save", Toast.LENGTH_LONG).show()
+                    val action = TestFragmentDirections.actionTestFragmentToResponseFragment(comenta)
+                    view.findNavController().navigate(action)
                 } else {
                     //Timber.d("Error registering new user")
-                    Toast.makeText(context, "error al registrarse", Toast.LENGTH_LONG).show()
+                    Toast.makeText(context, "Ocurrio un error al guardar tu emoción", Toast.LENGTH_LONG).show()
                 }
             }
-
-            val action = TestFragmentDirections.actionTestFragmentToResponseFragment(comenta)
-            view.findNavController().navigate(action)
         }
+
+        val afterTextChangedListener = object : TextWatcher{
+            override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
+                // ignore
+            }
+
+            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
+                // ignore
+            }
+
+            override fun afterTextChanged(s: Editable) {
+                testViewModel.txtEmocionChanged(
+                    txtComenta.text.toString()
+                )
+            }
+        }
+
+        txtComenta.addTextChangedListener(afterTextChangedListener)
 
     }
 

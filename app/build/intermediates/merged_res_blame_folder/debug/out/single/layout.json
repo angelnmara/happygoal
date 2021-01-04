@@ -1,18 +1,18 @@
 [
     {
-        "merged": "/home/dave/desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
-        "source": "/home/dave/desarrollo/happygoal/app/src/main/res/layout/activity_main.xml"
+        "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_response.xml",
+        "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/layout/fragment_response.xml"
     },
     {
-        "merged": "/home/dave/desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_login.xml",
-        "source": "/home/dave/desarrollo/happygoal/app/src/main/res/layout/fragment_login.xml"
+        "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_login.xml",
+        "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/layout/fragment_login.xml"
     },
     {
-        "merged": "/home/dave/desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_response.xml",
-        "source": "/home/dave/desarrollo/happygoal/app/src/main/res/layout/fragment_response.xml"
+        "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
+        "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/layout/activity_main.xml"
     },
     {
-        "merged": "/home/dave/desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_test.xml",
-        "source": "/home/dave/desarrollo/happygoal/app/src/main/res/layout/fragment_test.xml"
+        "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_test.xml",
+        "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/layout/fragment_test.xml"
     }
 ]

@@ -34,18 +34,23 @@ class ResponseFragment : Fragment() {
         var color = 111
         if(calificacion.contains(getString(R.string.feliz))){
             tv.setText(R.string.felizSentence)
+            tv.setTextColor(resources.getColor(R.color.black))
             color = resources.getColor(R.color.feliz)
         }else if(calificacion.contains(getString(R.string.enojado))){
             tv.setText(R.string.enojadoSentence)
+            tv.setTextColor(resources.getColor(R.color.white))
             color = resources.getColor(R.color.enojado)
         }else if(calificacion.contains(getString(R.string.estresado))){
             tv.setText(R.string.estresadoSentence)
+            tv.setTextColor(resources.getColor(R.color.white))
             color = resources.getColor(R.color.estresado)
         }else if(calificacion.contains(getString(R.string.motivado))){
             tv.setText(R.string.motivadoSentence)
+            tv.setTextColor(resources.getColor(R.color.black))
             color = resources.getColor(R.color.motivado)
         }else if(calificacion.contains(getString(R.string.tranquilo))){
             tv.setText(R.string.tranquiloSentence)
+            tv.setTextColor(resources.getColor(R.color.black))
             color = resources.getColor(R.color.tranquilo)
         }
         lnlResponse.setBackgroundColor(color)

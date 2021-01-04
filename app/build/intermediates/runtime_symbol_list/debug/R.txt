@@ -2277,6 +2277,7 @@ int string feliz 0x7f0f0030
 int string felizSentence 0x7f0f0031
 int string hide_bottom_view_on_scroll_behavior 0x7f0f0032
 int string icon_content_description 0x7f0f0033
+int string informacionEmocion 0x7f0f0071
 int string invalid_password 0x7f0f0034
 int string invalid_username 0x7f0f0035
 int string item_view_role_description 0x7f0f0036
@@ -2286,6 +2287,7 @@ int string material_slider_range_start 0x7f0f0039
 int string motivado 0x7f0f003a
 int string motivadoSentence 0x7f0f003b
 int string msjNoComentario 0x7f0f003c
+int string msjNoSeEncuentraRegistrado 0x7f0f0070
 int string msjNoSentimiento 0x7f0f003d
 int string mtrl_badge_numberless_content_description 0x7f0f003e
 int string mtrl_chip_close_icon_content_description 0x7f0f003f
@@ -2333,10 +2335,10 @@ int string prompt_email 0x7f0f0068
 int string prompt_password 0x7f0f0069
 int string search_menu_title 0x7f0f006a
 int string status_bar_notification_info_overflow 0x7f0f006b
-int string token 0x7f0f006f
-int string tranquilo 0x7f0f006c
-int string tranquiloSentence 0x7f0f006d
-int string welcome 0x7f0f006e
+int string token 0x7f0f006c
+int string tranquilo 0x7f0f006d
+int string tranquiloSentence 0x7f0f006e
+int string welcome 0x7f0f006f
 int style AlertDialog_AppCompat 0x7f100000
 int style AlertDialog_AppCompat_Light 0x7f100001
 int style AndroidThemeColorAccentYellow 0x7f100002
