@@ -23,7 +23,9 @@
         tools:layout="@layout/fragment_test" >
         <action
             android:id="@+id/action_testFragment_to_responseFragment"
-            app:destination="@id/responseFragment" />
+            app:destination="@id/responseFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true"/>
     </fragment>
     <fragment
         android:id="@+id/responseFragment"

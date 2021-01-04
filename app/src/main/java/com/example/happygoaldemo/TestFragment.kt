@@ -2,7 +2,6 @@ package com.example.happygoaldemo
 
 import android.content.Context
 import android.os.Bundle
-import android.provider.Settings
 import android.text.Editable
 import android.text.TextWatcher
 import androidx.fragment.app.Fragment
@@ -16,7 +15,6 @@ import androidx.navigation.findNavController
 import com.example.happygoaldemo.api.RestApiService
 import com.example.happygoaldemo.data.model.Calificacion
 import com.example.happygoaldemo.databinding.FragmentTestBinding
-import com.example.happygoaldemo.ui.login.LoginFragmentDirections
 import com.example.happygoaldemo.ui.test.TestViewModel
 import com.example.happygoaldemo.ui.test.TestViewModelFactory
 
@@ -65,7 +63,7 @@ class TestFragment : Fragment() {
         val enojado = binding.imgEnojado
         val estresado = binding.imgEstresado
         val feliz = binding.imgFeliz
-        val tranquilo = binding.imgTranquilo
+        val neutral = binding.imgTranquilo
         val motivado = binding.imgMotivado
         val titulo = binding.txtTitulo
         val btnComenta = binding.btnComenta
@@ -84,6 +82,8 @@ class TestFragment : Fragment() {
             titulo.setText(R.string.enojado)
             titulo.setTextColor(resources.getColor(R.color.white))
             lnlTest.setBackgroundColor(resources.getColor(R.color.enojado))
+            cleanFaces()
+            enojado.setImageResource(R.mipmap.ic_enojado_r)
             setVisible(view)
             calificacionId = 5
         }
@@ -91,6 +91,8 @@ class TestFragment : Fragment() {
             titulo.setText(R.string.feliz)
             titulo.setTextColor(resources.getColor(R.color.black))
             lnlTest.setBackgroundColor(resources.getColor(R.color.feliz))
+            cleanFaces()
+            feliz.setImageResource(R.mipmap.ic_feliz_r)
             setVisible(view)
             calificacionId = 1
         }
@@ -98,13 +100,17 @@ class TestFragment : Fragment() {
             titulo.setText(R.string.estresado)
             titulo.setTextColor(resources.getColor(R.color.white))
             lnlTest.setBackgroundColor(resources.getColor(R.color.estresado))
+            cleanFaces()
+            estresado.setImageResource(R.mipmap.ic_preocupado_r)
             setVisible(view)
             calificacionId = 4
         }
-        tranquilo.setOnClickListener {
+        neutral.setOnClickListener {
             titulo.setText(R.string.tranquilo)
             titulo.setTextColor(resources.getColor(R.color.black))
             lnlTest.setBackgroundColor(resources.getColor(R.color.tranquilo))
+            cleanFaces()
+            neutral.setImageResource(R.mipmap.ic_neutral_r)
             setVisible(view)
             calificacionId = 3
         }
@@ -112,6 +118,8 @@ class TestFragment : Fragment() {
             titulo.setText(R.string.motivado)
             titulo.setTextColor(resources.getColor(R.color.black))
             lnlTest.setBackgroundColor(resources.getColor(R.color.motivado))
+            cleanFaces()
+            motivado.setImageResource(R.mipmap.ic_entusiasmado_r)
             setVisible(view)
             calificacionId = 2
         }
@@ -170,6 +178,19 @@ class TestFragment : Fragment() {
 
         txtComenta.addTextChangedListener(afterTextChangedListener)
 
+    }
+
+    fun cleanFaces(){
+        val enojado = binding.imgEnojado
+        val estresado = binding.imgEstresado
+        val feliz = binding.imgFeliz
+        val neutral = binding.imgTranquilo
+        val motivado = binding.imgMotivado
+        enojado.setImageResource(R.mipmap.ic_enojado)
+        motivado.setImageResource(R.mipmap.ic_entusiasmado)
+        estresado.setImageResource(R.mipmap.ic_preocupado)
+        feliz.setImageResource(R.mipmap.ic_feliz)
+        neutral.setImageResource(R.mipmap.ic_neutral)
     }
 
     fun setVisible(view: View){
