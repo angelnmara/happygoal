@@ -7,9 +7,9 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="enojado">#bb99ff</color>
-    <color name="estresado">#ff6666</color>
-    <color name="motivado">#99ebff</color>
+    <color name="enojado">#ff3300</color>
+    <color name="estresado">#ff9900</color>
+    <color name="motivado">#99ff99</color>
     <color name="tranquilo">#3399ff</color>
     <color name="feliz">#ffff4d</color>
     <color name="morado">#9966ff</color>

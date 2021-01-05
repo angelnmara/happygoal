@@ -101,7 +101,7 @@ class TestFragment : Fragment() {
             titulo.setTextColor(resources.getColor(R.color.white))
             lnlTest.setBackgroundColor(resources.getColor(R.color.estresado))
             cleanFaces()
-            estresado.setImageResource(R.mipmap.ic_preocupado_r)
+            estresado.setImageResource(R.mipmap.ic_estresado_r)
             setVisible(view)
             calificacionId = 4
         }
@@ -110,7 +110,7 @@ class TestFragment : Fragment() {
             titulo.setTextColor(resources.getColor(R.color.black))
             lnlTest.setBackgroundColor(resources.getColor(R.color.tranquilo))
             cleanFaces()
-            neutral.setImageResource(R.mipmap.ic_neutral_r)
+            neutral.setImageResource(R.mipmap.ic_tranquilo_r)
             setVisible(view)
             calificacionId = 3
         }
@@ -119,7 +119,7 @@ class TestFragment : Fragment() {
             titulo.setTextColor(resources.getColor(R.color.black))
             lnlTest.setBackgroundColor(resources.getColor(R.color.motivado))
             cleanFaces()
-            motivado.setImageResource(R.mipmap.ic_entusiasmado_r)
+            motivado.setImageResource(R.mipmap.ic_motivado_r)
             setVisible(view)
             calificacionId = 2
         }
@@ -187,10 +187,10 @@ class TestFragment : Fragment() {
         val neutral = binding.imgTranquilo
         val motivado = binding.imgMotivado
         enojado.setImageResource(R.mipmap.ic_enojado)
-        motivado.setImageResource(R.mipmap.ic_entusiasmado)
-        estresado.setImageResource(R.mipmap.ic_preocupado)
+        motivado.setImageResource(R.mipmap.ic_motivado)
+        estresado.setImageResource(R.mipmap.ic_estresado)
         feliz.setImageResource(R.mipmap.ic_feliz)
-        neutral.setImageResource(R.mipmap.ic_neutral)
+        neutral.setImageResource(R.mipmap.ic_tranquilo)
     }
 
     fun setVisible(view: View){

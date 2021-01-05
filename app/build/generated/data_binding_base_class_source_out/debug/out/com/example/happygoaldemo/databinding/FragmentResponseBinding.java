@@ -22,15 +22,20 @@ public final class FragmentResponseBinding implements ViewBinding {
   public final LinearLayout lnlResponse;
 
   @NonNull
+  public final LinearLayout lnlSvg;
+
+  @NonNull
   public final TextView txtAlternText;
 
   @NonNull
   public final TextView txtMainText;
 
   private FragmentResponseBinding(@NonNull LinearLayout rootView, @NonNull LinearLayout lnlResponse,
-      @NonNull TextView txtAlternText, @NonNull TextView txtMainText) {
+      @NonNull LinearLayout lnlSvg, @NonNull TextView txtAlternText,
+      @NonNull TextView txtMainText) {
     this.rootView = rootView;
     this.lnlResponse = lnlResponse;
+    this.lnlSvg = lnlSvg;
     this.txtAlternText = txtAlternText;
     this.txtMainText = txtMainText;
   }
@@ -64,6 +69,12 @@ public final class FragmentResponseBinding implements ViewBinding {
     missingId: {
       LinearLayout lnlResponse = (LinearLayout) rootView;
 
+      id = R.id.lnlSvg;
+      LinearLayout lnlSvg = rootView.findViewById(id);
+      if (lnlSvg == null) {
+        break missingId;
+      }
+
       id = R.id.txtAlternText;
       TextView txtAlternText = rootView.findViewById(id);
       if (txtAlternText == null) {
@@ -76,8 +87,8 @@ public final class FragmentResponseBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentResponseBinding((LinearLayout) rootView, lnlResponse, txtAlternText,
-          txtMainText);
+      return new FragmentResponseBinding((LinearLayout) rootView, lnlResponse, lnlSvg,
+          txtAlternText, txtMainText);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

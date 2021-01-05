@@ -14,15 +14,20 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="bienvenido">¡Bienvenido!</string>
     <string name="enojado">Enojado</string>
-    <string name="enojadoSentence">Te entendemos</string>
+    <string name="enojadoTitle">Gracias por compartirnos cómo te encuentras</string>
+    <string name="enojadoSentence">Recuerda que hay espacios para escucharte</string>
     <string name="feliz">Feliz</string>
-    <string name="felizSentence">Nos da gusto que te sientas así</string>
+    <string name="felizTitle">Gracias por compartirnos cómo te encuentras</string>
+    <string name="felizSentence">Nos fascina que te sientas feliz</string>
     <string name="motivado">Motivado</string>
-    <string name="motivadoSentence">Tu opinión es muy importante</string>
+    <string name="motivadoTitle">Gracias por compartirnos cómo te encuentras</string>
+    <string name="motivadoSentence">Qué alegría que te encuentres motivado</string>
     <string name="estresado">Estresado</string>
-    <string name="estresadoSentence">Prometemos mejorar</string>
+    <string name="estresadoTitle">Gracias por compartirnos cómo te encuentras</string>
+    <string name="estresadoSentence">Trabajaremos para mejorar el ambiente</string>
     <string name="tranquilo">Tranquilo</string>
-    <string name="tranquiloSentence">Trabajamos en cambiar</string>
+    <string name="tranquiloTitle">Gracias por compartirnos cómo te encuentras</string>
+    <string name="tranquiloSentence">Nos da gusto que te encuentres así</string>
     <string name="comoTeSientes">¿Cómo te sientes hoy?</string>
     <!--mensajes-->
     <string name="msjNoSentimiento">Selecciona una emoción</string>

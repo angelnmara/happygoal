@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.navArgs
 
 // TODO: Rename parameter arguments, choose names that match
@@ -29,35 +30,57 @@ class ResponseFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val tv: TextView = view.findViewById(R.id.txtAlternText)
-        var lnlResponse: LinearLayout = view.findViewById(R.id.lnlResponse);
+        val mainText: TextView = view.findViewById(R.id.txtMainText)
+        var lnlResponse: LinearLayout = view.findViewById(R.id.lnlResponse)
+        var lnlSvg: LinearLayout = view.findViewById(R.id.lnlSvg)
         val calificacion = args.calificacion;
         var color = 111
+        var resource = R.drawable.ic_fondo_pantalla_1
+
         if(calificacion.contains(getString(R.string.feliz))){
             tv.setText(R.string.felizSentence)
             tv.setTextColor(resources.getColor(R.color.black))
+            mainText.setTextColor(resources.getColor(R.color.black))
             color = resources.getColor(R.color.feliz)
+            resource = R.drawable.ic_fondo_pantalla_1
+
         }else if(calificacion.contains(getString(R.string.enojado))){
             tv.setText(R.string.enojadoSentence)
             tv.setTextColor(resources.getColor(R.color.white))
+            mainText.setTextColor(resources.getColor(R.color.white))
             color = resources.getColor(R.color.enojado)
+            resource = R.drawable.ic_fondo_pantalla_2
+
         }else if(calificacion.contains(getString(R.string.estresado))){
             tv.setText(R.string.estresadoSentence)
             tv.setTextColor(resources.getColor(R.color.white))
+            mainText.setTextColor(resources.getColor(R.color.white))
             color = resources.getColor(R.color.estresado)
+            resource = R.drawable.ic_fondo_pantalla_3
+
         }else if(calificacion.contains(getString(R.string.motivado))){
             tv.setText(R.string.motivadoSentence)
             tv.setTextColor(resources.getColor(R.color.black))
+            mainText.setTextColor(resources.getColor(R.color.black))
             color = resources.getColor(R.color.motivado)
+            resource = R.drawable.ic_fondo_pantalla_1
+
         }else if(calificacion.contains(getString(R.string.tranquilo))){
             tv.setText(R.string.tranquiloSentence)
             tv.setTextColor(resources.getColor(R.color.black))
+            mainText.setTextColor(resources.getColor(R.color.black))
             color = resources.getColor(R.color.tranquilo)
+            resource = R.drawable.ic_fondo_pantalla_2
+
         }
         lnlResponse.setBackgroundColor(color)
+        lnlSvg.setBackgroundResource(resource)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        (activity as AppCompatActivity).supportActionBar?.hide()
+
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
