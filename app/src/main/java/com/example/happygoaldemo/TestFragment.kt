@@ -83,7 +83,7 @@ class TestFragment : Fragment() {
             titulo.setTextColor(resources.getColor(R.color.white))
             lnlTest.setBackgroundColor(resources.getColor(R.color.enojado))
             cleanFaces()
-            enojado.setImageResource(R.mipmap.ic_enojado_r)
+            enojado.setImageResource(R.drawable.ic_enojado_r)
             setVisible(view)
             calificacionId = 5
         }
@@ -92,7 +92,7 @@ class TestFragment : Fragment() {
             titulo.setTextColor(resources.getColor(R.color.black))
             lnlTest.setBackgroundColor(resources.getColor(R.color.feliz))
             cleanFaces()
-            feliz.setImageResource(R.mipmap.ic_feliz_r)
+            feliz.setImageResource(R.drawable.ic_feliz_r)
             setVisible(view)
             calificacionId = 1
         }
@@ -101,7 +101,7 @@ class TestFragment : Fragment() {
             titulo.setTextColor(resources.getColor(R.color.white))
             lnlTest.setBackgroundColor(resources.getColor(R.color.estresado))
             cleanFaces()
-            estresado.setImageResource(R.mipmap.ic_estresado_r)
+            estresado.setImageResource(R.drawable.ic_estresado_r)
             setVisible(view)
             calificacionId = 4
         }
@@ -110,7 +110,7 @@ class TestFragment : Fragment() {
             titulo.setTextColor(resources.getColor(R.color.black))
             lnlTest.setBackgroundColor(resources.getColor(R.color.tranquilo))
             cleanFaces()
-            neutral.setImageResource(R.mipmap.ic_tranquilo_r)
+            neutral.setImageResource(R.drawable.ic_tranquilo_r)
             setVisible(view)
             calificacionId = 3
         }
@@ -119,7 +119,7 @@ class TestFragment : Fragment() {
             titulo.setTextColor(resources.getColor(R.color.black))
             lnlTest.setBackgroundColor(resources.getColor(R.color.motivado))
             cleanFaces()
-            motivado.setImageResource(R.mipmap.ic_motivado_r)
+            motivado.setImageResource(R.drawable.ic_motivado_r)
             setVisible(view)
             calificacionId = 2
         }
@@ -136,9 +136,9 @@ class TestFragment : Fragment() {
 
             val comenta = titulo.text.toString()
 
-            val sharedPref = activity?.getPreferences(Context.MODE_PRIVATE) ?: return@setOnClickListener
-            val defaultValue = ""
-            val token = sharedPref.getString(getString(R.string.token), defaultValue)
+                    val sharedPref = activity?.getPreferences(Context.MODE_PRIVATE) ?: return@setOnClickListener
+                    val defaultValue = ""
+                    val token = sharedPref.getString(getString(R.string.token), defaultValue)
 
             val apiService = RestApiService()
             val calificacion = Calificacion(
@@ -186,11 +186,11 @@ class TestFragment : Fragment() {
         val feliz = binding.imgFeliz
         val neutral = binding.imgTranquilo
         val motivado = binding.imgMotivado
-        enojado.setImageResource(R.mipmap.ic_enojado)
-        motivado.setImageResource(R.mipmap.ic_motivado)
-        estresado.setImageResource(R.mipmap.ic_estresado)
-        feliz.setImageResource(R.mipmap.ic_feliz)
-        neutral.setImageResource(R.mipmap.ic_tranquilo)
+        enojado.setImageResource(R.drawable.ic_enojado)
+        motivado.setImageResource(R.drawable.ic_motivado)
+        estresado.setImageResource(R.drawable.ic_estresado)
+        feliz.setImageResource(R.drawable.ic_feliz)
+        neutral.setImageResource(R.drawable.ic_tranquilo)
     }
 
     fun setVisible(view: View){

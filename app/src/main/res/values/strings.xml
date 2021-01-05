@@ -34,4 +34,7 @@
     <string name="msjNoComentario">Coloca información sobre tu emoción</string>
     <string name="msjNoSeEncuentraRegistrado">El usuario no se encuentra registrado solicitalo con el administrador</string>
     <string name="token">Token</string>
+    <string name="isloged">isLoged</string>
+    <string name="dateloged">dateLoged</string>
+    <integer name="timeExpiration">360000</integer>
 </resources>

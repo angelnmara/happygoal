@@ -36,7 +36,7 @@
             android:id="@+id/imgEnojado"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:src="@mipmap/ic_enojado"
+            android:src="@drawable/ic_enojado"
             android:padding="10dp"
             android:layout_weight="2">
         </ImageView>
@@ -44,7 +44,7 @@
             android:id="@+id/imgEstresado"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:src="@mipmap/ic_estresado"
+            android:src="@drawable/ic_estresado"
             android:padding="10dp"
             android:layout_weight="2">
         </ImageView>
@@ -53,7 +53,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:src="@mipmap/ic_tranquilo"
+            android:src="@drawable/ic_tranquilo"
             android:padding="10dp">
         </ImageView>
         <ImageView
@@ -62,7 +62,7 @@
             android:layout_height="match_parent"
             android:layout_weight="2"
             android:padding="10dp"
-            android:src="@mipmap/ic_motivado">
+            android:src="@drawable/ic_motivado">
         </ImageView>
         <ImageView
             android:id="@+id/imgFeliz"
@@ -70,7 +70,7 @@
             android:layout_height="match_parent"
             android:layout_weight="2"
             android:padding="10dp"
-            android:src="@mipmap/ic_feliz">
+            android:src="@drawable/ic_feliz">
         </ImageView>
     </LinearLayout>
     <LinearLayout
