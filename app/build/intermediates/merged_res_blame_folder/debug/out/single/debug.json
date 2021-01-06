@@ -32,6 +32,10 @@
         "source": "/Users/dave/Desarrollo/happygoal/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_boton_entrar.png"
     },
     {
+        "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/layout_header_main.xml.flat",
+        "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/layout/header_main.xml"
+    },
+    {
         "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_enojado_r.xml.flat",
         "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/drawable/ic_enojado_r.xml"
     },
@@ -40,12 +44,12 @@
         "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/drawable/ic_fondo_pantalla_1.xml"
     },
     {
-        "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_feliz.xml.flat",
-        "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/drawable/ic_feliz.xml"
-    },
-    {
         "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_estresado_r.xml.flat",
         "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/drawable/ic_estresado_r.xml"
+    },
+    {
+        "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_feliz.xml.flat",
+        "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/drawable/ic_feliz.xml"
     },
     {
         "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_boton_entrar.png.flat",
@@ -72,6 +76,10 @@
         "source": "/Users/dave/Desarrollo/happygoal/app/build/generated/res/pngs/debug/drawable-hdpi/ic_boton_entrar.png"
     },
     {
+        "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/menu_happy_goal_menu.xml.flat",
+        "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/menu/happy_goal_menu.xml"
+    },
+    {
         "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_enojado.xml.flat",
         "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/drawable/ic_enojado.xml"
     },
@@ -80,12 +88,12 @@
         "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/layout/fragment_login.xml"
     },
     {
-        "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_boton_entrar.png.flat",
-        "source": "/Users/dave/Desarrollo/happygoal/app/build/generated/res/pngs/debug/drawable-mdpi/ic_boton_entrar.png"
-    },
-    {
         "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_launcher_foreground.xml.flat",
         "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_boton_entrar.png.flat",
+        "source": "/Users/dave/Desarrollo/happygoal/app/build/generated/res/pngs/debug/drawable-mdpi/ic_boton_entrar.png"
     },
     {
         "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-anydpi-v24_ic_boton_entrar.xml.flat",

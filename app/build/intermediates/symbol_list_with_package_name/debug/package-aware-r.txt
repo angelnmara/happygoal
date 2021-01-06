@@ -2094,7 +2094,6 @@ integer mtrl_chip_anim_duration
 integer mtrl_tab_indicator_anim_duration_ms
 integer show_password_duration
 integer status_bar_notification_info_maxnum
-integer timeExpiration
 interpolator btn_checkbox_checked_mtrl_animation_interpolator_0
 interpolator btn_checkbox_checked_mtrl_animation_interpolator_1
 interpolator btn_checkbox_unchecked_mtrl_animation_interpolator_0
@@ -2154,6 +2153,7 @@ layout design_text_input_start_icon
 layout fragment_login
 layout fragment_response
 layout fragment_test
+layout header_main
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title
@@ -2215,6 +2215,7 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+menu happy_goal_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 navigation nav_graph
@@ -2335,6 +2336,7 @@ string prompt_email
 string prompt_password
 string search_menu_title
 string status_bar_notification_info_overflow
+string timeExpiration
 string token
 string tranquilo
 string tranquiloSentence

@@ -983,7 +983,6 @@
     <integer name="mtrl_tab_indicator_anim_duration_ms">250</integer>
     <integer name="show_password_duration">200</integer>
     <integer name="status_bar_notification_info_maxnum">999</integer>
-    <integer name="timeExpiration">360000</integer>
     <plurals description="Plural form content description for number of new notifications [CHAR_LIMIT=NONE]" name="mtrl_badge_content_description">
     <item quantity="one"><ns1:g id="count">%d</ns1:g> new notification</item>
     <item quantity="other"><ns1:g id="count">%d</ns1:g> new notifications</item>
@@ -1104,6 +1103,7 @@
     <string name="prompt_password">Introduce tu código</string>
     <string name="search_menu_title">Search</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="timeExpiration">30000</string>
     <string name="token">Token</string>
     <string name="tranquilo">Tranquilo</string>
     <string name="tranquiloSentence">Nos da gusto que te encuentres así</string>

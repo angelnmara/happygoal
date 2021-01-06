@@ -2,6 +2,8 @@ com/example/happygoaldemo/BuildConfig.java
  com.example.happygoaldemo.BuildConfig
 com/example/happygoaldemo/databinding/ActivityMainBinding.java
  com.example.happygoaldemo.databinding.ActivityMainBinding
+com/example/happygoaldemo/databinding/HeaderMainBinding.java
+ com.example.happygoaldemo.databinding.HeaderMainBinding
 com/example/happygoaldemo/databinding/FragmentResponseBinding.java
  com.example.happygoaldemo.databinding.FragmentResponseBinding
 com/example/happygoaldemo/DataBindingTriggerClass.java

@@ -140,7 +140,7 @@ class LoginFragment : Fragment() {
                 // it?.id = newly added user ID
                 savePreferences(getString(R.string.token), it.token, 1)
                 savePreferences(getString(R.string.isloged), "true", 2)
-                savePreferences(getString(R.string.dateloged), (Calendar.getInstance().timeInMillis + R.integer.timeExpiration).toString(), 3)
+                savePreferences(getString(R.string.dateloged), (Calendar.getInstance().timeInMillis + getString(R.string.timeExpiration).toLong()).toString(), 3)
                 val action = LoginFragmentDirections.actionLoginFragmentToTestFragment()
                 view.findNavController().navigate(action)
             } else {

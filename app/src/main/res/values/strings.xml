@@ -36,5 +36,5 @@
     <string name="token">Token</string>
     <string name="isloged">isLoged</string>
     <string name="dateloged">dateLoged</string>
-    <integer name="timeExpiration">360000</integer>
+    <string name="timeExpiration">3600000</string>
 </resources>

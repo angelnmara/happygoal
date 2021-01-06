@@ -8,6 +8,10 @@
         "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/layout/fragment_login.xml"
     },
     {
+        "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/header_main.xml",
+        "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/layout/header_main.xml"
+    },
+    {
         "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
         "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/layout/activity_main.xml"
     },
