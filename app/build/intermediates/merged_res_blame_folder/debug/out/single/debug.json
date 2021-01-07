@@ -4,6 +4,10 @@
         "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/drawable/ic_tranquilo_r.xml"
     },
     {
+        "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_baseline_close_24.xml.flat",
+        "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/drawable/ic_baseline_close_24.xml"
+    },
+    {
         "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_tranquilo.xml.flat",
         "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/drawable/ic_tranquilo.xml"
     },
@@ -12,12 +16,20 @@
         "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/navigation/nav_graph.xml"
     },
     {
+        "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_baseline_info_24.xml.flat",
+        "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/drawable/ic_baseline_info_24.xml"
+    },
+    {
         "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_motivado.xml.flat",
         "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/drawable/ic_motivado.xml"
     },
     {
         "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_baseline_local_fire_department_24.xml.flat",
+        "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/drawable/ic_baseline_local_fire_department_24.xml"
     },
     {
         "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_fondo_pantalla_3.xml.flat",
@@ -34,6 +46,14 @@
     {
         "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/layout_header_main.xml.flat",
         "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/layout/header_main.xml"
+    },
+    {
+        "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_baseline_comment_24.xml.flat",
+        "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/drawable/ic_baseline_comment_24.xml"
+    },
+    {
+        "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_baseline_bar_chart_24.xml.flat",
+        "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/drawable/ic_baseline_bar_chart_24.xml"
     },
     {
         "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_enojado_r.xml.flat",
@@ -66,6 +86,10 @@
     {
         "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_motivado_r.xml.flat",
         "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/drawable/ic_motivado_r.xml"
+    },
+    {
+        "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_baseline_menu_24.xml.flat",
+        "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/drawable/ic_baseline_menu_24.xml"
     },
     {
         "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_feliz_r.xml.flat",

@@ -9,7 +9,9 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.navigation.fragment.navArgs
+import com.google.android.material.appbar.AppBarLayout
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -80,6 +82,11 @@ class ResponseFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         (activity as AppCompatActivity).supportActionBar?.hide()
+
+        val appBarLayout = activity?.findViewById<AppBarLayout>(R.id.app_bar_layout)
+        val lp = appBarLayout?.layoutParams
+        lp?.height = 0;
+        appBarLayout?.layoutParams = lp
 
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)

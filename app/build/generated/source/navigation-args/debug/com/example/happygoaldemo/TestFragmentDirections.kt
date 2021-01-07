@@ -1,6 +1,7 @@
 package com.example.happygoaldemo
 
 import android.os.Bundle
+import androidx.navigation.ActionOnlyNavDirections
 import androidx.navigation.NavDirections
 import kotlin.Int
 import kotlin.String
@@ -21,5 +22,8 @@ public class TestFragmentDirections private constructor() {
   public companion object {
     public fun actionTestFragmentToResponseFragment(calificacion: String): NavDirections =
         ActionTestFragmentToResponseFragment(calificacion)
+
+    public fun actionTestFragmentToLoginFragment(): NavDirections =
+        ActionOnlyNavDirections(R.id.action_testFragment_to_loginFragment)
   }
 }

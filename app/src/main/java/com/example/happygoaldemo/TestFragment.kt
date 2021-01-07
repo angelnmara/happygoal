@@ -4,19 +4,30 @@ import android.content.Context
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import androidx.drawerlayout.widget.DrawerLayout
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.NavHostFragment.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupWithNavController
 import com.example.happygoaldemo.api.RestApiService
 import com.example.happygoaldemo.data.model.Calificacion
 import com.example.happygoaldemo.databinding.FragmentTestBinding
+import com.example.happygoaldemo.ui.login.LoginFragmentDirections
 import com.example.happygoaldemo.ui.test.TestViewModel
 import com.example.happygoaldemo.ui.test.TestViewModelFactory
+import com.google.android.material.appbar.CollapsingToolbarLayout
+import java.util.*
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -41,15 +52,27 @@ class TestFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
     }
 
+    private fun validaLogin(view:View) {
+        val sharedPref = activity?.getPreferences(Context.MODE_PRIVATE) ?: return
+        val defaultValue = false
+        val isloged = sharedPref.getBoolean(getString(R.string.isloged), defaultValue)
+        var dateLoged = sharedPref.getLong(getString(R.string.dateloged), 0)
+        if(!(isloged && (dateLoged > Calendar.getInstance().timeInMillis))){
+            val action = TestFragmentDirections.actionTestFragmentToLoginFragment()
+            view.findNavController().navigate(action)
+        }
+    }
+
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         _binding = FragmentTestBinding.inflate(inflater, container, false)
@@ -58,6 +81,9 @@ class TestFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        validaLogin(view)
+
         testViewModel = ViewModelProvider(this, TestViewModelFactory()).get(TestViewModel::class.java)
         val lnlTest = binding.lnlTest
         val enojado = binding.imgEnojado
@@ -69,11 +95,11 @@ class TestFragment : Fragment() {
         val btnComenta = binding.btnComenta
         val txtComenta = binding.txtComenta
 
-        testViewModel.testFormState.observe(viewLifecycleOwner, Observer {
-            testFormState -> if(testFormState==null){
+        testViewModel.testFormState.observe(viewLifecycleOwner, Observer { testFormState ->
+            if (testFormState == null) {
                 return@Observer
             }
-            testFormState.emocionError?.let{
+            testFormState.emocionError?.let {
                 txtComenta.error = getString(it)
             }
         })
@@ -142,10 +168,10 @@ class TestFragment : Fragment() {
 
             val apiService = RestApiService()
             val calificacion = Calificacion(
-                idCalificacion = null,
-                calificacion = calificacionId,
-                emocion = txtComenta.text.toString(),
-                idUsuario = 1
+                    idCalificacion = null,
+                    calificacion = calificacionId,
+                    emocion = txtComenta.text.toString(),
+                    idUsuario = 1
             );
             apiService.calificacionFun(calificacion, token.toString()){
                 if (it == 200) {
@@ -171,7 +197,7 @@ class TestFragment : Fragment() {
 
             override fun afterTextChanged(s: Editable) {
                 testViewModel.txtEmocionChanged(
-                    txtComenta.text.toString()
+                        txtComenta.text.toString()
                 )
             }
         }

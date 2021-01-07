@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.viewbinding.ViewBinding;
 import com.example.happygoaldemo.R;
 import java.lang.NullPointerException;
@@ -14,15 +14,15 @@ import java.lang.Override;
 
 public final class HeaderMainBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final LinearLayoutCompat rootView;
 
-  private HeaderMainBinding(@NonNull ConstraintLayout rootView) {
+  private HeaderMainBinding(@NonNull LinearLayoutCompat rootView) {
     this.rootView = rootView;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public LinearLayoutCompat getRoot() {
     return rootView;
   }
 
@@ -47,6 +47,6 @@ public final class HeaderMainBinding implements ViewBinding {
       throw new NullPointerException("rootView");
     }
 
-    return new HeaderMainBinding((ConstraintLayout) rootView);
+    return new HeaderMainBinding((LinearLayoutCompat) rootView);
   }
 }

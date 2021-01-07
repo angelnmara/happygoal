@@ -33,8 +33,15 @@
     <string name="msjNoSentimiento">Selecciona una emoción</string>
     <string name="msjNoComentario">Coloca información sobre tu emoción</string>
     <string name="msjNoSeEncuentraRegistrado">El usuario no se encuentra registrado solicitalo con el administrador</string>
+    <!--logueo-->
     <string name="token">Token</string>
     <string name="isloged">isLoged</string>
     <string name="dateloged">dateLoged</string>
     <string name="timeExpiration">3600000</string>
+    <!--menu-->
+    <string name="estadisticaPersonal">Estadística personal</string>
+    <string name="comentarioDelDia">Comentario del día</string>
+    <string name="termómetroGeneral">Termómetro general</string>
+    <string name="acercaDe">Acerca de</string>
+    <string name="cerrarSesion">Cerrar sesión</string>
 </resources>

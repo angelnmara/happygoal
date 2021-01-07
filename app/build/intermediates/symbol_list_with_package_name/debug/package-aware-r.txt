@@ -1608,6 +1608,12 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable ic_baseline_bar_chart_24
+drawable ic_baseline_close_24
+drawable ic_baseline_comment_24
+drawable ic_baseline_info_24
+drawable ic_baseline_local_fire_department_24
+drawable ic_baseline_menu_24
 drawable ic_boton_entrar
 drawable ic_enojado
 drawable ic_enojado_r
@@ -1725,6 +1731,7 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
+id action_testFragment_to_loginFragment
 id action_testFragment_to_responseFragment
 id action_text
 id actions
@@ -1736,6 +1743,7 @@ id all
 id always
 id animateToEnd
 id animateToStart
+id app_bar_layout
 id asConfigured
 id async
 id auto
@@ -1771,6 +1779,7 @@ id clear_text
 id clip_horizontal
 id clip_vertical
 id collapseActionView
+id collapsing_toolbar_layout
 id confirm_button
 id container
 id content
@@ -1805,6 +1814,7 @@ id dragLeft
 id dragRight
 id dragStart
 id dragUp
+id drawer_layout
 id dropdown_menu
 id easeIn
 id easeInOut
@@ -1908,10 +1918,15 @@ id mtrl_picker_text_input_range_end
 id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id multiply
+id nav_acerca_de
+id nav_cerrar_sesion
+id nav_comentarios_del_dia
 id nav_controller_view_tag
+id nav_estadistica_personal
 id nav_graph
 id nav_host_fragment
 id nav_host_fragment_container
+id nav_termometro_general
 id nav_view
 id navigation_header_container
 id never
@@ -2041,6 +2056,7 @@ id title
 id titleDividerNoCustom
 id title_template
 id toggle
+id toolbar
 id top
 id topPanel
 id touch_outside
@@ -2247,17 +2263,20 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string acercaDe
 string action_sign_in
 string action_sign_in_short
 string app_name
 string appbar_scrolling_view_behavior
 string bienvenido
 string bottom_sheet_behavior
+string cerrarSesion
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
 string chip_text
 string clear_text_end_icon_content_description
+string comentarioDelDia
 string comoTeSientes
 string dateloged
 string enojado
@@ -2265,6 +2284,7 @@ string enojadoSentence
 string enojadoTitle
 string entrar
 string error_icon_content_description
+string estadisticaPersonal
 string estresado
 string estresadoSentence
 string estresadoTitle
@@ -2336,6 +2356,7 @@ string prompt_email
 string prompt_password
 string search_menu_title
 string status_bar_notification_info_overflow
+string termómetroGeneral
 string timeExpiration
 string token
 string tranquilo

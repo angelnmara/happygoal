@@ -46,15 +46,6 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val sharedPref = activity?.getPreferences(Context.MODE_PRIVATE) ?: return
-        val defaultValue = false
-        val isloged = sharedPref.getBoolean(getString(R.string.isloged), defaultValue)
-        var dateLoged = sharedPref.getLong(getString(R.string.dateloged), 0)
-        if(isloged && (dateLoged > Calendar.getInstance().timeInMillis)){
-            val action = LoginFragmentDirections.actionLoginFragmentToTestFragment()
-            view.findNavController().navigate(action)
-        }
-
         loginViewModel = ViewModelProvider(this, LoginViewModelFactory())
             .get(LoginViewModel::class.java)
 
