@@ -22,7 +22,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.HappyGoalDemo"
         android:usesCleartextTraffic="true" >
-        <activity android:name="com.example.happygoaldemo.MainActivity" >
+        <activity
+            android:name="com.example.happygoaldemo.MainActivity"
+            android:windowSoftInputMode="adjustResize" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

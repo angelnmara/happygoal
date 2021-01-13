@@ -22,10 +22,12 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.happygoaldemo.api.RestApiService
 import com.example.happygoaldemo.data.model.Calificacion
 import com.example.happygoaldemo.databinding.FragmentTestBinding
+import com.example.happygoaldemo.tools.Tools
 import com.example.happygoaldemo.ui.login.LoginFragmentDirections
 import com.example.happygoaldemo.ui.test.TestViewModel
 import com.example.happygoaldemo.ui.test.TestViewModelFactory
 import com.google.android.material.appbar.CollapsingToolbarLayout
+import com.google.android.material.snackbar.Snackbar
 import java.util.*
 
 
@@ -47,12 +49,14 @@ class TestFragment : Fragment() {
     private var _binding: FragmentTestBinding? = null
     private var comentarioMaximo: Long = 15
     private var calificacionId: Int? = null
+    private var userName = "";
+    val tools = Tools()
 
     private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        tools.muestraToolBar(activity)
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
@@ -64,6 +68,7 @@ class TestFragment : Fragment() {
         val defaultValue = false
         val isloged = sharedPref.getBoolean(getString(R.string.isloged), defaultValue)
         var dateLoged = sharedPref.getLong(getString(R.string.dateloged), 0)
+        userName = sharedPref.getString(getString(R.string.username), "").toString()
         if(!(isloged && (dateLoged > Calendar.getInstance().timeInMillis))){
             val action = TestFragmentDirections.actionTestFragmentToLoginFragment()
             view.findNavController().navigate(action)
@@ -152,11 +157,13 @@ class TestFragment : Fragment() {
 
         btnComenta.setOnClickListener {
             if(titulo.text.contains(getString(R.string.comoTeSientes))){
-                Toast.makeText(context, getString(R.string.msjNoSentimiento), Toast.LENGTH_LONG).show()
+                //Toast.makeText(context, getString(R.string.msjNoSentimiento), Toast.LENGTH_LONG).show()
+                Snackbar.make(view, getString(R.string.msjNoSentimiento), Snackbar.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
             if(txtComenta.length()<=comentarioMaximo){
-                Toast.makeText(context, getString(R.string.msjNoComentario), Toast.LENGTH_LONG).show()
+                //Toast.makeText(context, getString(R.string.msjNoComentario), Toast.LENGTH_LONG).show()
+                Snackbar.make(view, getString(R.string.msjNoComentario), Snackbar.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
@@ -171,7 +178,7 @@ class TestFragment : Fragment() {
                     idCalificacion = null,
                     calificacion = calificacionId,
                     emocion = txtComenta.text.toString(),
-                    idUsuario = 1
+                    idUsuario = userName
             );
             apiService.calificacionFun(calificacion, token.toString()){
                 if (it == 200) {
@@ -181,7 +188,8 @@ class TestFragment : Fragment() {
                     view.findNavController().navigate(action)
                 } else {
                     //Timber.d("Error registering new user")
-                    Toast.makeText(context, "Ocurrio un error al guardar tu emoción", Toast.LENGTH_LONG).show()
+                    //Toast.makeText(context, "Ocurrio un error al guardar tu emoción", Toast.LENGTH_LONG).show()
+                    Snackbar.make(view, resources.getText(R.string.msjNoSeEncuentraRegistrado), Snackbar.LENGTH_SHORT).show()
                 }
             }
         }

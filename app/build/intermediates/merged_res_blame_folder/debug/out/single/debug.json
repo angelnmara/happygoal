@@ -56,6 +56,10 @@
         "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/drawable/ic_baseline_bar_chart_24.xml"
     },
     {
+        "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/layout_fragment_acerca_de.xml.flat",
+        "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/layout/fragment_acerca_de.xml"
+    },
+    {
         "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_enojado_r.xml.flat",
         "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/drawable/ic_enojado_r.xml"
     },

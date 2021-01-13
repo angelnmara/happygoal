@@ -28,7 +28,15 @@
             app:popUpToInclusive="true"/>
         <action
             android:id="@+id/action_testFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_testFragment_to_acerca_de"
+            app:destination="@id/acerca_de" />
+        <action
+            android:id="@+id/action_testFragment_self"
+            app:destination="@id/testFragment"/>
     </fragment>
     <fragment
         android:id="@+id/responseFragment"
@@ -39,4 +47,10 @@
             android:name="calificacion"
             app:argType="string" />
     </fragment>
+    <fragment
+        android:id="@+id/acerca_de"
+        android:name="com.example.happygoaldemo.Acerca_de"
+        android:label="fragment_acerca_de"
+        tools:layout="@layout/fragment_acerca_de" />
+
 </navigation>

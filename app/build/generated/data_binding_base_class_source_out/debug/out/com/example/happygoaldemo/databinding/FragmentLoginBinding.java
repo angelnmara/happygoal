@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.viewbinding.ViewBinding;
 import com.example.happygoaldemo.R;
 import java.lang.NullPointerException;
@@ -19,10 +20,13 @@ import java.lang.String;
 
 public final class FragmentLoginBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final CoordinatorLayout rootView;
 
   @NonNull
-  public final ConstraintLayout container;
+  public final ConstraintLayout constraintLayout;
+
+  @NonNull
+  public final CoordinatorLayout container;
 
   @NonNull
   public final ProgressBar loading;
@@ -34,6 +38,9 @@ public final class FragmentLoginBinding implements ViewBinding {
   public final EditText password;
 
   @NonNull
+  public final TextView textView;
+
+  @NonNull
   public final TextView txtAppName;
 
   @NonNull
@@ -42,15 +49,18 @@ public final class FragmentLoginBinding implements ViewBinding {
   @NonNull
   public final EditText username;
 
-  private FragmentLoginBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ConstraintLayout container, @NonNull ProgressBar loading, @NonNull Button login,
-      @NonNull EditText password, @NonNull TextView txtAppName, @NonNull TextView txtBienvenido,
+  private FragmentLoginBinding(@NonNull CoordinatorLayout rootView,
+      @NonNull ConstraintLayout constraintLayout, @NonNull CoordinatorLayout container,
+      @NonNull ProgressBar loading, @NonNull Button login, @NonNull EditText password,
+      @NonNull TextView textView, @NonNull TextView txtAppName, @NonNull TextView txtBienvenido,
       @NonNull EditText username) {
     this.rootView = rootView;
+    this.constraintLayout = constraintLayout;
     this.container = container;
     this.loading = loading;
     this.login = login;
     this.password = password;
+    this.textView = textView;
     this.txtAppName = txtAppName;
     this.txtBienvenido = txtBienvenido;
     this.username = username;
@@ -58,7 +68,7 @@ public final class FragmentLoginBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public CoordinatorLayout getRoot() {
     return rootView;
   }
 
@@ -83,7 +93,13 @@ public final class FragmentLoginBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      ConstraintLayout container = (ConstraintLayout) rootView;
+      id = R.id.constraintLayout;
+      ConstraintLayout constraintLayout = rootView.findViewById(id);
+      if (constraintLayout == null) {
+        break missingId;
+      }
+
+      CoordinatorLayout container = (CoordinatorLayout) rootView;
 
       id = R.id.loading;
       ProgressBar loading = rootView.findViewById(id);
@@ -100,6 +116,12 @@ public final class FragmentLoginBinding implements ViewBinding {
       id = R.id.password;
       EditText password = rootView.findViewById(id);
       if (password == null) {
+        break missingId;
+      }
+
+      id = R.id.textView;
+      TextView textView = rootView.findViewById(id);
+      if (textView == null) {
         break missingId;
       }
 
@@ -121,8 +143,8 @@ public final class FragmentLoginBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentLoginBinding((ConstraintLayout) rootView, container, loading, login,
-          password, txtAppName, txtBienvenido, username);
+      return new FragmentLoginBinding((CoordinatorLayout) rootView, constraintLayout, container,
+          loading, login, password, textView, txtAppName, txtBienvenido, username);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

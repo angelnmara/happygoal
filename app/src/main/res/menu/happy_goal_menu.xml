@@ -15,7 +15,7 @@
             android:icon="@drawable/ic_baseline_local_fire_department_24"
             android:title="@string/termómetroGeneral" />
         <item
-            android:id="@+id/nav_acerca_de"
+            android:id="@+id/acerca_de"
             android:icon="@drawable/ic_baseline_info_24"
             android:title="@string/acercaDe" />
         <item

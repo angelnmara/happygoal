@@ -1713,6 +1713,7 @@ id accessibility_custom_action_6
 id accessibility_custom_action_7
 id accessibility_custom_action_8
 id accessibility_custom_action_9
+id acerca_de
 id action0
 id action_bar
 id action_bar_activity_content
@@ -1731,6 +1732,8 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
+id action_testFragment_self
+id action_testFragment_to_acerca_de
 id action_testFragment_to_loginFragment
 id action_testFragment_to_responseFragment
 id action_text
@@ -1781,6 +1784,7 @@ id clip_vertical
 id collapseActionView
 id collapsing_toolbar_layout
 id confirm_button
+id constraintLayout
 id container
 id content
 id contentPanel
@@ -1918,7 +1922,6 @@ id mtrl_picker_text_input_range_end
 id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id multiply
-id nav_acerca_de
 id nav_cerrar_sesion
 id nav_comentarios_del_dia
 id nav_controller_view_tag
@@ -2042,6 +2045,7 @@ id textEnd
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
+id textView
 id textWatcher
 id text_input_end_icon
 id text_input_start_icon
@@ -2166,6 +2170,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout fragment_acerca_de
 layout fragment_login
 layout fragment_response
 layout fragment_test
@@ -2283,6 +2288,7 @@ string enojado
 string enojadoSentence
 string enojadoTitle
 string entrar
+string errorEmocion
 string error_icon_content_description
 string estadisticaPersonal
 string estresado
@@ -2294,6 +2300,7 @@ string fab_transformation_sheet_behavior
 string feliz
 string felizSentence
 string felizTitle
+string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string informacionEmocion
@@ -2362,6 +2369,7 @@ string token
 string tranquilo
 string tranquiloSentence
 string tranquiloTitle
+string username
 string welcome
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light

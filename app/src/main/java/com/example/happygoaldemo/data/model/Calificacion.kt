@@ -4,5 +4,5 @@ data class Calificacion (
     val idCalificacion: Int?,
     val calificacion: Int?,
     val emocion: String,
-    val idUsuario: Int
+    val idUsuario: String
         )

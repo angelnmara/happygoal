@@ -25,5 +25,11 @@ public class TestFragmentDirections private constructor() {
 
     public fun actionTestFragmentToLoginFragment(): NavDirections =
         ActionOnlyNavDirections(R.id.action_testFragment_to_loginFragment)
+
+    public fun actionTestFragmentToAcercaDe(): NavDirections =
+        ActionOnlyNavDirections(R.id.action_testFragment_to_acerca_de)
+
+    public fun actionTestFragmentSelf(): NavDirections =
+        ActionOnlyNavDirections(R.id.action_testFragment_self)
   }
 }

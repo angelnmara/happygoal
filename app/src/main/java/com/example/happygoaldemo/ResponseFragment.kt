@@ -11,6 +11,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.navigation.fragment.navArgs
+import com.example.happygoaldemo.tools.Tools
 import com.google.android.material.appbar.AppBarLayout
 
 // TODO: Rename parameter arguments, choose names that match
@@ -29,6 +30,7 @@ class ResponseFragment : Fragment() {
     private var param2: String? = null
 
     val args: ResponseFragmentArgs by navArgs()
+    val tools = Tools()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val tv: TextView = view.findViewById(R.id.txtAlternText)
@@ -83,10 +85,7 @@ class ResponseFragment : Fragment() {
         super.onCreate(savedInstanceState)
         (activity as AppCompatActivity).supportActionBar?.hide()
 
-        val appBarLayout = activity?.findViewById<AppBarLayout>(R.id.app_bar_layout)
-        val lp = appBarLayout?.layoutParams
-        lp?.height = 0;
-        appBarLayout?.layoutParams = lp
+        tools.ocultaToolBar(activity)
 
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)

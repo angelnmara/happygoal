@@ -1,6 +1,5 @@
 package com.example.happygoaldemo.ui.login
 
-import android.content.Context
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -8,18 +7,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
-import android.widget.Toast
 import androidx.annotation.StringRes
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.NavOptions
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.findNavController
 import com.example.happygoaldemo.R
 import com.example.happygoaldemo.api.RestApiService
 import com.example.happygoaldemo.data.model.Login
 import com.example.happygoaldemo.databinding.FragmentLoginBinding
+import com.example.happygoaldemo.tools.Tools
+import com.google.android.material.snackbar.Snackbar
 import java.util.*
 
 
@@ -27,6 +25,7 @@ class LoginFragment : Fragment() {
 
     private lateinit var loginViewModel: LoginViewModel
     private var _binding: FragmentLoginBinding? = null
+    val tools = Tools()
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -41,6 +40,11 @@ class LoginFragment : Fragment() {
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
         return binding.root
 
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        tools.ocultaToolBar(activity)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -91,8 +95,8 @@ class LoginFragment : Fragment() {
 
             override fun afterTextChanged(s: Editable) {
                 loginViewModel.loginDataChanged(
-                        usernameEditText.text.toString(),
-                        passwordEditText.text.toString()
+                    usernameEditText.text.toString(),
+                    passwordEditText.text.toString()
                 )
             }
         }
@@ -129,40 +133,34 @@ class LoginFragment : Fragment() {
             if (it?.codeHttp == 200) {
                 // it = newly added user parsed as response
                 // it?.id = newly added user ID
-                savePreferences(getString(R.string.token), it.token, 1)
-                savePreferences(getString(R.string.isloged), "true", 2)
-                savePreferences(getString(R.string.dateloged), (Calendar.getInstance().timeInMillis + getString(R.string.timeExpiration).toLong()).toString(), 3)
+                                tools.savePreferences(activity, getString(R.string.token), it.token, 1)
+                tools.savePreferences(activity, getString(R.string.isloged), "true", 2)
+                tools.savePreferences(activity, getString(R.string.dateloged), (Calendar.getInstance().timeInMillis + getString(R.string.timeExpiration).toLong()).toString(), 3)
+                tools.savePreferences(activity, getString(R.string.username), userName, 1 )
                 val action = LoginFragmentDirections.actionLoginFragmentToTestFragment()
                 view.findNavController().navigate(action)
             } else {
                 //Timber.d("Error registering new user")
-                Toast.makeText(context, resources.getText(R.string.msjNoSeEncuentraRegistrado), Toast.LENGTH_LONG).show()
+                //Toast.makeText(context, resources.getText(R.string.msjNoSeEncuentraRegistrado), Toast.LENGTH_LONG).show()
+                Snackbar.make(view, resources.getText(R.string.msjNoSeEncuentraRegistrado), Snackbar.LENGTH_SHORT).show()
             }
         }
     }
 
-    private fun savePreferences(name: String, value: String, type: Int){
-        val sharedPref = activity?.getPreferences(Context.MODE_PRIVATE) ?: return
-        with(sharedPref.edit()) {
-            when(type){
-                1 -> putString(name, value)
-                2 -> putBoolean(name, value.toBoolean())
-                3 -> putLong(name, value.toLong())
-            }
-            commit()
-        }
-    }
+
 
     private fun updateUiWithUser(model: LoggedInUserView) {
         val welcome = getString(R.string.welcome) + model.displayName
         // TODO : initiate successful logged in experience
-        val appContext = context?.applicationContext ?: return
+        //val appContext = context?.applicationContext ?: return
         //Toast.makeText(appContext, welcome, Toast.LENGTH_LONG).show()
+        //view?.let { Snackbar.make(it, welcome, Snackbar.LENGTH_SHORT).show() }
     }
 
     private fun showLoginFailed(@StringRes errorString: Int) {
-        val appContext = context?.applicationContext ?: return
-        Toast.makeText(appContext, errorString, Toast.LENGTH_LONG).show()
+        //val appContext = context?.applicationContext ?: return
+        //Toast.makeText(appContext, errorString, Toast.LENGTH_LONG).show()
+        view?.let { Snackbar.make(it, errorString, Snackbar.LENGTH_SHORT).show() }
     }
 
     override fun onDestroyView() {

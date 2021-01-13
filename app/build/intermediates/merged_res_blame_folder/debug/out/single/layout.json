@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_acerca_de.xml",
+        "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/layout/fragment_acerca_de.xml"
+    },
+    {
         "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_response.xml",
         "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/layout/fragment_response.xml"
     },
