@@ -4,6 +4,7 @@ import android.content.Context
 import android.provider.Settings.Global.getString
 import com.example.happygoaldemo.R
 import com.example.happygoaldemo.data.model.Calificacion
+import com.example.happygoaldemo.data.model.CalificacionParametros
 import com.example.happygoaldemo.data.model.Login
 import com.example.happygoaldemo.data.model.LoginResponse
 import retrofit2.Call
@@ -31,6 +32,22 @@ class RestApiService {
         val retrofit = ServiceBuilder.buildService(RestApi::class.java)
 
         retrofit.addCalificacion(calificacion, token).enqueue(
+            object : Callback<Void> {
+                override fun onFailure(call: Call<Void>, t: Throwable) {
+                    onResult(null)
+                }
+                override fun onResponse(call: Call<Void>, response: Response<Void>) {
+                    val statusCode = response.code().toInt()
+                    onResult(statusCode)
+                }
+            }
+        )
+    }
+
+    fun calificacionByUserFun(usuario:String, calificacionParametros: CalificacionParametros, token: String, onResult: (Int?) -> Unit){
+        val retrofit = ServiceBuilder.buildService(RestApi::class.java)
+
+        retrofit.getCalificacionByUser(usuario, calificacionParametros, token).enqueue(
             object : Callback<Void> {
                 override fun onFailure(call: Call<Void>, t: Throwable) {
                     onResult(null)

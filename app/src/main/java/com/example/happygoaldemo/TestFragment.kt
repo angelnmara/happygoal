@@ -178,6 +178,7 @@ class TestFragment : Fragment() {
                     idCalificacion = null,
                     calificacion = calificacionId,
                     emocion = txtComenta.text.toString(),
+                    fechaCreacion = null,
                     idUsuario = userName
             );
             apiService.calificacionFun(calificacion, token.toString()){
