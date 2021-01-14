@@ -23,6 +23,9 @@
         android:theme="@style/Theme.HappyGoalDemo"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.example.happygoaldemo.EstadisticaPersonalActivity"
+            android:label="@string/title_activity_estadistica_personal" />
+        <activity
             android:name="com.example.happygoaldemo.MainActivity"
             android:windowSoftInputMode="adjustResize" >
             <intent-filter>

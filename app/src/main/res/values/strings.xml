@@ -39,15 +39,22 @@
     <string name="dateloged">dateLoged</string>
     <string name="timeExpiration">3600000</string>
     <string name="username">userName</string>
-    <!--menu-->
+    <!--menu main-->
     <string name="estadisticaPersonal">Estadística personal</string>
     <string name="comentarioDelDia">Comentario del día</string>
     <string name="termómetroGeneral">Termómetro general</string>
     <string name="acercaDe">Acerca de</string>
     <string name="cerrarSesion">Cerrar sesión</string>
+    <!--menu estadistica personal-->
+    <string name="misEstadisticasPersonales">Mis estadísticas personales</string>
+    <string name="miGrafica">Mi gráfica</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <!--errores-->
     <string name="errorEmocion">Ocurrio un error al guardar tu emoción</string>
+    <string name="title_activity_estadistica_personal">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 
 </resources>

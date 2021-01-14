@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_estadistica_personal"
+            android:id="@+id/estadisticaPersonalActivity"
             android:checked="true"
             android:icon="@drawable/ic_baseline_bar_chart_24"
             android:title="@string/estadisticaPersonal" />

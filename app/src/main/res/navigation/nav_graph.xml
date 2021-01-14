@@ -37,6 +37,9 @@
         <action
             android:id="@+id/action_testFragment_self"
             app:destination="@id/testFragment"/>
+        <action
+            android:id="@+id/action_testFragment_to_estadisticaPersonalActivity"
+            app:destination="@id/estadisticaPersonalActivity" />
     </fragment>
     <fragment
         android:id="@+id/responseFragment"
@@ -52,5 +55,9 @@
         android:name="com.example.happygoaldemo.Acerca_de"
         android:label="fragment_acerca_de"
         tools:layout="@layout/fragment_acerca_de" />
+    <activity
+        android:id="@+id/estadisticaPersonalActivity"
+        android:name="com.example.happygoaldemo.EstadisticaPersonalActivity"
+        android:label="EstadisticaPersonalActivity" />
 
 </navigation>

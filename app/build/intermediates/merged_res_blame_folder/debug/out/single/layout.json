@@ -1,7 +1,35 @@
 [
     {
+        "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_estadistica_personal_chart.xml",
+        "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/layout/fragment_estadistica_personal_chart.xml"
+    },
+    {
+        "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_dashboard.xml",
+        "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/layout/fragment_dashboard.xml"
+    },
+    {
+        "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_test.xml",
+        "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/layout/fragment_test.xml"
+    },
+    {
+        "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_estadistica_personal_list_list.xml",
+        "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/layout/fragment_estadistica_personal_list_list.xml"
+    },
+    {
+        "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_home.xml",
+        "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/layout/fragment_home.xml"
+    },
+    {
+        "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_notifications.xml",
+        "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/layout/fragment_notifications.xml"
+    },
+    {
         "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_acerca_de.xml",
         "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/layout/fragment_acerca_de.xml"
+    },
+    {
+        "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_estadistica_personal_list.xml",
+        "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/layout/fragment_estadistica_personal_list.xml"
     },
     {
         "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_response.xml",
@@ -16,11 +44,15 @@
         "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/layout/header_main.xml"
     },
     {
-        "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
-        "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/layout/activity_main.xml"
+        "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_estadistica_personal.xml",
+        "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/layout/activity_estadistica_personal.xml"
     },
     {
-        "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_test.xml",
-        "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/layout/fragment_test.xml"
+        "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_estadistica_personal_n_v.xml",
+        "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/layout/fragment_estadistica_personal_n_v.xml"
+    },
+    {
+        "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
+        "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/layout/activity_main.xml"
     }
 ]

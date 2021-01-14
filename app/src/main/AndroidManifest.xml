@@ -5,14 +5,18 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.HappyGoalDemo">
-        <activity android:name=".MainActivity"
+        android:theme="@style/Theme.HappyGoalDemo"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".EstadisticaPersonalActivity"
+            android:label="@string/title_activity_estadistica_personal"></activity>
+        <activity
+            android:name=".MainActivity"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

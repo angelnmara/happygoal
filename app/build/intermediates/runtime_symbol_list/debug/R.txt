@@ -1233,6 +1233,8 @@ int dimen abc_text_size_subtitle_material_toolbar 0x7f06004b
 int dimen abc_text_size_title_material 0x7f06004c
 int dimen abc_text_size_title_material_toolbar 0x7f06004d
 int dimen action_bar_size 0x7f06004e
+int dimen activity_horizontal_margin 0x7f060160
+int dimen activity_vertical_margin 0x7f060161
 int dimen appcompat_dialog_background_inset 0x7f06004f
 int dimen cardview_compat_inset_shadow 0x7f060050
 int dimen cardview_default_elevation 0x7f060051
@@ -1497,6 +1499,7 @@ int dimen subtitle_outline_width 0x7f060153
 int dimen subtitle_shadow_offset 0x7f060154
 int dimen subtitle_shadow_radius 0x7f060155
 int dimen test_mtrl_calendar_day_cornerSize 0x7f060156
+int dimen text_margin 0x7f06015f
 int dimen tooltip_corner_radius 0x7f060157
 int dimen tooltip_horizontal_padding 0x7f060158
 int dimen tooltip_margin 0x7f060159
@@ -1611,9 +1614,11 @@ int drawable ic_baseline_bar_chart_24 0x7f07006c
 int drawable ic_baseline_close_24 0x7f07006d
 int drawable ic_baseline_comment_24 0x7f07006e
 int drawable ic_baseline_info_24 0x7f07006f
+int drawable ic_baseline_list_24 0x7f0700a5
 int drawable ic_baseline_local_fire_department_24 0x7f070070
 int drawable ic_baseline_menu_24 0x7f070071
 int drawable ic_boton_entrar 0x7f070072
+int drawable ic_dashboard_black_24dp 0x7f0700a6
 int drawable ic_enojado 0x7f070073
 int drawable ic_enojado_r 0x7f070074
 int drawable ic_estresado 0x7f070075
@@ -1623,6 +1628,7 @@ int drawable ic_feliz_r 0x7f070078
 int drawable ic_fondo_pantalla_1 0x7f070079
 int drawable ic_fondo_pantalla_2 0x7f07007a
 int drawable ic_fondo_pantalla_3 0x7f07007b
+int drawable ic_home_black_24dp 0x7f0700a7
 int drawable ic_launcher_foreground 0x7f07007c
 int drawable ic_motivado 0x7f07007d
 int drawable ic_motivado_r 0x7f07007e
@@ -1630,6 +1636,7 @@ int drawable ic_mtrl_checked_circle 0x7f07007f
 int drawable ic_mtrl_chip_checked_black 0x7f070080
 int drawable ic_mtrl_chip_checked_circle 0x7f070081
 int drawable ic_mtrl_chip_close_circle 0x7f070082
+int drawable ic_notifications_black_24dp 0x7f0700a8
 int drawable ic_tranquilo 0x7f070083
 int drawable ic_tranquilo_r 0x7f070084
 int drawable material_ic_calendar_black_24dp 0x7f070085
@@ -1724,6 +1731,8 @@ int id action_bar_title 0x7f080038
 int id action_container 0x7f080039
 int id action_context_bar 0x7f08003a
 int id action_divider 0x7f08003b
+int id action_estadisticaPersonalChartFragment_to_estadisticaPersonalListFragment2 0x7f0801b9
+int id action_estadisticaPersonalListFragment2_to_estadisticaPersonalChartFragment 0x7f0801ba
 int id action_image 0x7f08003c
 int id action_loginFragment_to_testFragment 0x7f08003d
 int id action_menu_divider 0x7f08003e
@@ -1733,6 +1742,7 @@ int id action_mode_bar_stub 0x7f080041
 int id action_mode_close_button 0x7f080042
 int id action_testFragment_self 0x7f080043
 int id action_testFragment_to_acerca_de 0x7f080044
+int id action_testFragment_to_estadisticaPersonalActivity 0x7f0801bc
 int id action_testFragment_to_loginFragment 0x7f080045
 int id action_testFragment_to_responseFragment 0x7f080046
 int id action_text 0x7f080047
@@ -1827,6 +1837,10 @@ int id end 0x7f08009f
 int id end_padder 0x7f0800a0
 int id enterAlways 0x7f0800a1
 int id enterAlwaysCollapsed 0x7f0800a2
+int id estadisticaPersonalActivity 0x7f0801bd
+int id estadisticaPersonalChartFragment 0x7f0801ae
+int id estadisticaPersonalListFragment 0x7f0801af
+int id estadistica_personal_nav_graph 0x7f0801b1
 int id exitUntilCollapsed 0x7f0800a3
 int id expand_activities_button 0x7f0800a4
 int id expanded_menu 0x7f0800a5
@@ -1867,6 +1881,7 @@ int id imgTranquilo 0x7f0800c7
 int id info 0x7f0800c8
 int id invisible 0x7f0800c9
 int id italic 0x7f0800ca
+int id item_number 0x7f0801b2
 int id item_touch_helper_previous_elevation 0x7f0800cb
 int id jumpToEnd 0x7f0800cc
 int id jumpToStart 0x7f0800cd
@@ -1877,6 +1892,7 @@ int id left 0x7f0800d1
 int id line1 0x7f0800d2
 int id line3 0x7f0800d3
 int id linear 0x7f0800d4
+int id list 0x7f0801b3
 int id listMode 0x7f0800d5
 int id list_item 0x7f0800d6
 int id lnlBtnComenta 0x7f0800d7
@@ -1924,9 +1940,9 @@ int id multiply 0x7f080100
 int id nav_cerrar_sesion 0x7f080101
 int id nav_comentarios_del_dia 0x7f080102
 int id nav_controller_view_tag 0x7f080103
-int id nav_estadistica_personal 0x7f080104
 int id nav_graph 0x7f080105
 int id nav_host_fragment 0x7f080106
+int id nav_host_fragment_activity_estadistica_personal 0x7f0801bf
 int id nav_host_fragment_container 0x7f080107
 int id nav_termometro_general 0x7f080108
 int id nav_view 0x7f080109
@@ -2046,8 +2062,10 @@ int id textSpacerNoTitle 0x7f08017a
 int id textStart 0x7f08017b
 int id textView 0x7f08017c
 int id textWatcher 0x7f08017d
+int id text_dashboard 0x7f0801c3
 int id text_input_end_icon 0x7f08017e
 int id text_input_start_icon 0x7f08017f
+int id text_notifications 0x7f0801c5
 int id textinput_counter 0x7f080180
 int id textinput_error 0x7f080181
 int id textinput_helper_text 0x7f080182
@@ -2152,6 +2170,7 @@ int layout abc_search_dropdown_item_icons_2line 0x7f0b0018
 int layout abc_search_view 0x7f0b0019
 int layout abc_select_dialog_material 0x7f0b001a
 int layout abc_tooltip 0x7f0b001b
+int layout activity_estadistica_personal 0x7f0b0073
 int layout activity_main 0x7f0b001c
 int layout custom_dialog 0x7f0b001d
 int layout design_bottom_navigation_item 0x7f0b001e
@@ -2170,7 +2189,12 @@ int layout design_navigation_menu_item 0x7f0b002a
 int layout design_text_input_end_icon 0x7f0b002b
 int layout design_text_input_start_icon 0x7f0b002c
 int layout fragment_acerca_de 0x7f0b002d
+int layout fragment_dashboard 0x7f0b0074
+int layout fragment_estadistica_personal_chart 0x7f0b006f
+int layout fragment_estadistica_personal_list 0x7f0b0070
+int layout fragment_estadistica_personal_list_list 0x7f0b0071
 int layout fragment_login 0x7f0b002e
+int layout fragment_notifications 0x7f0b0076
 int layout fragment_response 0x7f0b002f
 int layout fragment_test 0x7f0b0030
 int layout header_main 0x7f0b0031
@@ -2235,9 +2259,11 @@ int layout text_view_with_line_height_from_layout 0x7f0b006b
 int layout text_view_with_line_height_from_style 0x7f0b006c
 int layout text_view_with_theme_line_height 0x7f0b006d
 int layout text_view_without_line_height 0x7f0b006e
+int menu estadistica_personal_menu 0x7f0c0001
 int menu happy_goal_menu 0x7f0c0000
 int mipmap ic_launcher 0x7f0d0000
 int mipmap ic_launcher_round 0x7f0d0001
+int navigation estadistica_personal_nav_graph 0x7f0e0001
 int navigation nav_graph 0x7f0e0000
 int plurals mtrl_badge_content_description 0x7f0f0000
 int string abc_action_bar_home_description 0x7f100000
@@ -2310,6 +2336,8 @@ int string item_view_role_description 0x7f100042
 int string login_failed 0x7f100043
 int string material_slider_range_end 0x7f100044
 int string material_slider_range_start 0x7f100045
+int string miGrafica 0x7f100082
+int string misEstadisticasPersonales 0x7f100083
 int string motivado 0x7f100046
 int string motivadoSentence 0x7f100047
 int string motivadoTitle 0x7f100048
@@ -2364,6 +2392,10 @@ int string search_menu_title 0x7f100078
 int string status_bar_notification_info_overflow 0x7f100079
 int string termómetroGeneral 0x7f10007a
 int string timeExpiration 0x7f10007b
+int string title_activity_estadistica_personal 0x7f100084
+int string title_dashboard 0x7f100085
+int string title_home 0x7f100086
+int string title_notifications 0x7f100087
 int string token 0x7f10007c
 int string tranquilo 0x7f10007d
 int string tranquiloSentence 0x7f10007e
