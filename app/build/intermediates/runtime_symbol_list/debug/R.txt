@@ -2062,7 +2062,6 @@ int id textSpacerNoTitle 0x7f080183
 int id textStart 0x7f080184
 int id textView 0x7f080185
 int id textWatcher 0x7f080186
-int id text_dashboard 0x7f080187
 int id text_input_end_icon 0x7f080188
 int id text_input_start_icon 0x7f080189
 int id text_notifications 0x7f08018a
@@ -2189,7 +2188,6 @@ int layout design_navigation_menu_item 0x7f0b002b
 int layout design_text_input_end_icon 0x7f0b002c
 int layout design_text_input_start_icon 0x7f0b002d
 int layout fragment_acerca_de 0x7f0b002e
-int layout fragment_dashboard 0x7f0b002f
 int layout fragment_estadistica_personal_chart 0x7f0b0030
 int layout fragment_estadistica_personal_list 0x7f0b0031
 int layout fragment_estadistica_personal_list_list 0x7f0b0032

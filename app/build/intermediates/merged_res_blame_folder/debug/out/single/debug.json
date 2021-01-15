@@ -176,10 +176,6 @@
         "source": "/Users/dave/Desarrollo/happygoal/app/build/generated/res/pngs/debug/drawable-mdpi/ic_boton_entrar.png"
     },
     {
-        "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/layout_fragment_dashboard.xml.flat",
-        "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/layout/fragment_dashboard.xml"
-    },
-    {
         "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_boton_entrar.png.flat",
         "source": "/Users/dave/Desarrollo/happygoal/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_boton_entrar.png"
     },

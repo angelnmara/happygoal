@@ -10,8 +10,6 @@ com/example/happygoaldemo/databinding/FragmentLoginBinding.java
  com.example.happygoaldemo.databinding.FragmentLoginBinding
 com/example/happygoaldemo/databinding/FragmentTestBinding.java
  com.example.happygoaldemo.databinding.FragmentTestBinding
-com/example/happygoaldemo/databinding/FragmentDashboardBinding.java
- com.example.happygoaldemo.databinding.FragmentDashboardBinding
 com/example/happygoaldemo/databinding/ActivityMainBinding.java
  com.example.happygoaldemo.databinding.ActivityMainBinding
 com/example/happygoaldemo/databinding/HeaderMainBinding.java

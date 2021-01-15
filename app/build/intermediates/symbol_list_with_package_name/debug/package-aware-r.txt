@@ -2063,7 +2063,6 @@ id textSpacerNoTitle
 id textStart
 id textView
 id textWatcher
-id text_dashboard
 id text_input_end_icon
 id text_input_start_icon
 id text_notifications
@@ -2190,7 +2189,6 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_acerca_de
-layout fragment_dashboard
 layout fragment_estadistica_personal_chart
 layout fragment_estadistica_personal_list
 layout fragment_estadistica_personal_list_list
