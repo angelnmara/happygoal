@@ -1,7 +1,13 @@
 package com.example.happygoaldemo.placeholder
 
-import java.util.ArrayList
-import java.util.HashMap
+import androidx.navigation.findNavController
+import com.example.happygoaldemo.R
+import com.example.happygoaldemo.api.RestApiService
+import com.example.happygoaldemo.data.model.Calificacion
+import com.example.happygoaldemo.data.model.CalificacionParametros
+import com.example.happygoaldemo.ui.login.LoginFragmentDirections
+import com.google.android.material.snackbar.Snackbar
+import java.util.*
 
 /**
  * Helper class for providing sample content for user interfaces created by
@@ -11,15 +17,17 @@ import java.util.HashMap
  */
 object PlaceholderContent {
 
+    val apiService = RestApiService()
+
     /**
      * An array of sample (placeholder) items.
      */
-    val ITEMS: MutableList<PlaceholderItem> = ArrayList()
+    val ITEMS: MutableList<Calificacion> = ArrayList()
 
     /**
      * A map of sample (placeholder) items, by ID.
      */
-    val ITEM_MAP: MutableMap<String, PlaceholderItem> = HashMap()
+    val ITEM_MAP: MutableMap<String, Calificacion> = HashMap()
 
     private val COUNT = 25
 
@@ -30,13 +38,34 @@ object PlaceholderContent {
         }
     }
 
-    private fun addItem(item: PlaceholderItem) {
-        ITEMS.add(item)
-        ITEM_MAP.put(item.id, item)
+    private fun fillListCalificaciones(){
+        val calificaionParametros = CalificacionParametros(
+                annio = 2021,
+                mes = 1
+        )
+        /*apiService.calificacionByUserFun("a@b.com", calificaionParametros, "") {
+            if (it?.codeHttp == 200) {
+                // it = newly added user parsed as response
+                // it?.id = newly added user ID
+
+                val action = LoginFragmentDirections.actionLoginFragmentToTestFragment()
+
+            } else {
+                //Timber.d("Error registering new user")
+                //Toast.makeText(context, resources.getText(R.string.msjNoSeEncuentraRegistrado), Toast.LENGTH_LONG).show()
+                Snackbar.make(view, resources.getText(R.string.msjNoSeEncuentraRegistrado), Snackbar.LENGTH_SHORT).show()
+            }
+        }*/
     }
 
-    private fun createPlaceholderItem(position: Int): PlaceholderItem {
-        return PlaceholderItem(position.toString(), "Item " + position, makeDetails(position))
+    private fun addItem(item: Calificacion) {
+        ITEMS.add(item)
+        ITEM_MAP.put(item.idCalificacion.toString(), item)
+    }
+
+    private fun createPlaceholderItem(position: Int): Calificacion {
+        var data: Date = Calendar.getInstance().time
+        return Calificacion(1, 2, makeDetails(position), data, "")
     }
 
     private fun makeDetails(position: Int): String {
@@ -51,7 +80,7 @@ object PlaceholderContent {
     /**
      * A placeholder item representing a piece of content.
      */
-    data class PlaceholderItem(val id: String, val content: String, val details: String) {
+    /*data class Calificacion(val id: String, val content: String, val details: String) {
         override fun toString(): String = content
-    }
+    }*/
 }

@@ -17,7 +17,7 @@ interface RestApi {
     fun addCalificacion(@Body calificacion: Calificacion, @Header("Authorization") autHeader: String): Call<Void>
 
     @Headers("Content-Type: application/json")
-    @GET("calificacion/{idUser}")
+    @GET("calificacion/")
     fun getCalificacionByUser(@Query("idUser") idUser: String, @Body calificacionParametros: CalificacionParametros, @Header("Authorization") autHeader: String): Call<Void>
 
 
