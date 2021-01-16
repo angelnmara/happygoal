@@ -18,7 +18,7 @@
     </fragment>
     <fragment
         android:id="@+id/testFragment"
-        android:name="com.example.happygoaldemo.TestFragment"
+        android:name="com.example.happygoaldemo.ui.test.TestFragment"
         android:label="fragment_test"
         tools:layout="@layout/fragment_test" >
         <action
@@ -43,7 +43,7 @@
     </fragment>
     <fragment
         android:id="@+id/responseFragment"
-        android:name="com.example.happygoaldemo.ResponseFragment"
+        android:name="com.example.happygoaldemo.ui.response.ResponseFragment"
         android:label="fragment_response"
         tools:layout="@layout/fragment_response">
         <argument
@@ -52,7 +52,7 @@
     </fragment>
     <fragment
         android:id="@+id/acerca_de"
-        android:name="com.example.happygoaldemo.Acerca_de"
+        android:name="com.example.happygoaldemo.ui.acerca_de.Acerca_de"
         android:label="fragment_acerca_de"
         tools:layout="@layout/fragment_acerca_de" />
     <activity
