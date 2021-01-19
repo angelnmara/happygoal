@@ -53,11 +53,12 @@ class TestFragment : Fragment() {
     }
 
     private fun validaLogin(view:View) {
-        val sharedPref = activity?.getPreferences(Context.MODE_PRIVATE) ?: return
-        val defaultValue = false
-        val isloged = sharedPref.getBoolean(getString(R.string.isloged), defaultValue)
-        var dateLoged = sharedPref.getLong(getString(R.string.dateloged), 0)
-        userName = sharedPref.getString(getString(R.string.username), "").toString()
+        val tools = Tools()
+        //val sharedPref = activity?.getPreferences(Context.MODE_PRIVATE) ?: return
+        //val defaultValue = false
+        val isloged = tools.getDefaultsBolean(getString(R.string.isloged), context) //sharedPref.getBoolean(getString(R.string.isloged), defaultValue)
+        var dateLoged = tools.getDefaultsLong(getString(R.string.dateloged), context) //sharedPref.getLong(getString(R.string.dateloged), 0)
+        userName = tools.getDefaultsString(getString(R.string.username), context).toString() //sharedPref.getString(getString(R.string.username), "").toString()
         if(!(isloged && (dateLoged > Calendar.getInstance().timeInMillis))){
             val action = TestFragmentDirections.actionTestFragmentToLoginFragment()
             view.findNavController().navigate(action)

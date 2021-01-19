@@ -4,6 +4,10 @@
         "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/layout/fragment_estadistica_personal_chart.xml"
     },
     {
+        "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_test.xml",
+        "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/layout/fragment_test.xml"
+    },
+    {
         "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_estadistica_personal_list_list.xml",
         "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/layout/fragment_estadistica_personal_list_list.xml"
     },
@@ -14,6 +18,10 @@
     {
         "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_acerca_de.xml",
         "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/layout/fragment_acerca_de.xml"
+    },
+    {
+        "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_main.xml",
+        "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/layout/fragment_main.xml"
     },
     {
         "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_estadistica_personal_list.xml",
@@ -40,7 +48,7 @@
         "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/layout/activity_main.xml"
     },
     {
-        "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_test.xml",
-        "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/layout/fragment_test.xml"
+        "merged": "/Users/dave/Desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/tragos_row.xml",
+        "source": "/Users/dave/Desarrollo/happygoal/app/src/main/res/layout/tragos_row.xml"
     }
 ]

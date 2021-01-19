@@ -9,3 +9,7 @@ data class Calificacion (
     val fechaCreacion: Date?,
     val idUsuario: String
         )
+
+data class CalificacionList(
+        val calificacionList: List<Calificacion>
+)

@@ -1858,6 +1858,7 @@ id forever
 id fragment_container_view_tag
 id ghost_view
 id ghost_view_holder
+id glide_custom_view_target_tag
 id gone
 id graph
 id graph_wrap
@@ -1879,6 +1880,7 @@ id imgEstresado
 id imgFeliz
 id imgMotivado
 id imgTranquilo
+id img_trago
 id info
 id invisible
 id italic
@@ -1975,6 +1977,7 @@ id percent
 id pin
 id position
 id postLayout
+id progressBar
 id progress_circular
 id progress_horizontal
 id radio
@@ -1987,6 +1990,7 @@ id right_icon
 id right_side
 id rounded
 id row_index_key
+id rv_tragos
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -2095,6 +2099,8 @@ id txtBienvenido
 id txtComenta
 id txtMainText
 id txtTitulo
+id txt_descripcion
+id txt_titulo
 id unchecked
 id uniform
 id unlabeled
@@ -2193,6 +2199,7 @@ layout fragment_estadistica_personal_chart
 layout fragment_estadistica_personal_list
 layout fragment_estadistica_personal_list_list
 layout fragment_login
+layout fragment_main
 layout fragment_notifications
 layout fragment_response
 layout fragment_test
@@ -2258,6 +2265,7 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+layout tragos_row
 menu estadistica_personal_menu
 menu happy_goal_menu
 mipmap ic_launcher

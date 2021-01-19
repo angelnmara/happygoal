@@ -58,6 +58,17 @@
 34-->/Users/dave/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:24:27-74
 35            </intent-filter>
 36        </activity>
-37    </application>
-38
-39</manifest>
+37
+38        <provider
+38-->[androidx.lifecycle:lifecycle-process:2.2.0] /usr/local/Cellar/gradle/6.7.1/libexec/caches/transforms-2/files-2.1/1d91b334e1586dde374c4dc3634a2408/lifecycle-process-2.2.0/AndroidManifest.xml:25:9-29:43
+39            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+39-->[androidx.lifecycle:lifecycle-process:2.2.0] /usr/local/Cellar/gradle/6.7.1/libexec/caches/transforms-2/files-2.1/1d91b334e1586dde374c4dc3634a2408/lifecycle-process-2.2.0/AndroidManifest.xml:26:13-79
+40            android:authorities="com.example.happygoaldemo.lifecycle-process"
+40-->[androidx.lifecycle:lifecycle-process:2.2.0] /usr/local/Cellar/gradle/6.7.1/libexec/caches/transforms-2/files-2.1/1d91b334e1586dde374c4dc3634a2408/lifecycle-process-2.2.0/AndroidManifest.xml:27:13-69
+41            android:exported="false"
+41-->[androidx.lifecycle:lifecycle-process:2.2.0] /usr/local/Cellar/gradle/6.7.1/libexec/caches/transforms-2/files-2.1/1d91b334e1586dde374c4dc3634a2408/lifecycle-process-2.2.0/AndroidManifest.xml:28:13-37
+42            android:multiprocess="true" />
+42-->[androidx.lifecycle:lifecycle-process:2.2.0] /usr/local/Cellar/gradle/6.7.1/libexec/caches/transforms-2/files-2.1/1d91b334e1586dde374c4dc3634a2408/lifecycle-process-2.2.0/AndroidManifest.xml:29:13-40
+43    </application>
+44
+45</manifest>

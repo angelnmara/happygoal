@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
 import com.example.happygoaldemo.data.model.Calificacion
+import com.example.happygoaldemo.data.model.Drink
 import com.example.happygoaldemo.databinding.FragmentEstadisticaPersonalListBinding
 
 /**
@@ -12,7 +13,7 @@ import com.example.happygoaldemo.databinding.FragmentEstadisticaPersonalListBind
  * TODO: Replace the implementation with code for your data type.
  */
 class MyItemRecyclerViewAdapter(
-    private val values: List<Calificacion>
+    private val values: List<Drink>
 ) : RecyclerView.Adapter<MyItemRecyclerViewAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -29,8 +30,8 @@ class MyItemRecyclerViewAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = values[position]
-        holder.idView.text = item.idCalificacion.toString()
-        holder.contentView.text = item.idUsuario
+        holder.idView.text = item.nombre
+        holder.contentView.text = item.descripcion
     }
 
     override fun getItemCount(): Int = values.size
