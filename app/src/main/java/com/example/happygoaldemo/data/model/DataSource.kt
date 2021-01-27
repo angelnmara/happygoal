@@ -1,7 +1,8 @@
 package com.example.happygoaldemo.data.model
 
 import com.example.happygoaldemo.tools.Resource
-import com.example.happygoaldemo.vo.RetrofitClient
+import com.example.happygoaldemo.api.RetrofitClient
+import com.example.happygoaldemo.tools.ResourceString
 
 class DataSource {
 
@@ -9,8 +10,14 @@ class DataSource {
         return Resource.Success(RetrofitClient.webservice.getTragoByName(tragoName).drinkList)
     }
 
-    suspend fun getCalificacionByUser(userName:String, calificacionParametros: CalificacionParametros, token:String): Resource<List<Calificacion>>{
-        return Resource.Success(RetrofitClient.webservice.getCalificacionByUser(userName, calificacionParametros, token).calificacionList)
+    suspend fun getCalificacionByUser(userName:String
+                                      , annio:Int
+                                      , mes:Int
+                                      , token:String): Resource<List<Calificacion>> {
+        return Resource.Success(RetrofitClient.webservice.getCalificacionByUser(userName
+                , annio
+                , mes
+                , token).toList())
     }
 
     /*val generateTragosList= Resource.Success(listOf(

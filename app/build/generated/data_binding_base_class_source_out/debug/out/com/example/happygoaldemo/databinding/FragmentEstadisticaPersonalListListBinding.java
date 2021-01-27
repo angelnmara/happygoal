@@ -4,6 +4,8 @@ package com.example.happygoaldemo.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
+import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
@@ -11,23 +13,28 @@ import androidx.viewbinding.ViewBinding;
 import com.example.happygoaldemo.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class FragmentEstadisticaPersonalListListBinding implements ViewBinding {
   @NonNull
-  private final RecyclerView rootView;
+  private final FrameLayout rootView;
 
   @NonNull
   public final RecyclerView list;
 
-  private FragmentEstadisticaPersonalListListBinding(@NonNull RecyclerView rootView,
-      @NonNull RecyclerView list) {
+  @NonNull
+  public final RelativeLayout progressBar;
+
+  private FragmentEstadisticaPersonalListListBinding(@NonNull FrameLayout rootView,
+      @NonNull RecyclerView list, @NonNull RelativeLayout progressBar) {
     this.rootView = rootView;
     this.list = list;
+    this.progressBar = progressBar;
   }
 
   @Override
   @NonNull
-  public RecyclerView getRoot() {
+  public FrameLayout getRoot() {
     return rootView;
   }
 
@@ -49,12 +56,26 @@ public final class FragmentEstadisticaPersonalListListBinding implements ViewBin
 
   @NonNull
   public static FragmentEstadisticaPersonalListListBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.list;
+      RecyclerView list = rootView.findViewById(id);
+      if (list == null) {
+        break missingId;
+      }
+
+      id = R.id.progressBar;
+      RelativeLayout progressBar = rootView.findViewById(id);
+      if (progressBar == null) {
+        break missingId;
+      }
+
+      return new FragmentEstadisticaPersonalListListBinding((FrameLayout) rootView, list,
+          progressBar);
     }
-
-    RecyclerView list = (RecyclerView) rootView;
-
-    return new FragmentEstadisticaPersonalListListBinding((RecyclerView) rootView, list);
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

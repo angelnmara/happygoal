@@ -8,3 +8,10 @@ sealed class Resource<out T> {
     data class Failure<out T>(val exception: Exception):Resource<T>()
 
 }
+
+sealed class ResourceString<out String> {
+    class Loading<out String>: ResourceString<String>()
+    data class Success<out String>(val data:String):ResourceString<String>()
+    data class Failure<out String>(val exception: Exception):ResourceString<String>()
+
+}

@@ -4,6 +4,7 @@ package com.example.happygoaldemo.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -22,13 +23,26 @@ public final class FragmentEstadisticaPersonalListBinding implements ViewBinding
   public final TextView content;
 
   @NonNull
+  public final ImageView imgSentimiento;
+
+  @NonNull
   public final TextView itemNumber;
 
+  @NonNull
+  public final TextView txtDia;
+
+  @NonNull
+  public final TextView txtDiaNumero;
+
   private FragmentEstadisticaPersonalListBinding(@NonNull LinearLayout rootView,
-      @NonNull TextView content, @NonNull TextView itemNumber) {
+      @NonNull TextView content, @NonNull ImageView imgSentimiento, @NonNull TextView itemNumber,
+      @NonNull TextView txtDia, @NonNull TextView txtDiaNumero) {
     this.rootView = rootView;
     this.content = content;
+    this.imgSentimiento = imgSentimiento;
     this.itemNumber = itemNumber;
+    this.txtDia = txtDia;
+    this.txtDiaNumero = txtDiaNumero;
   }
 
   @Override
@@ -64,14 +78,32 @@ public final class FragmentEstadisticaPersonalListBinding implements ViewBinding
         break missingId;
       }
 
+      id = R.id.img_sentimiento;
+      ImageView imgSentimiento = rootView.findViewById(id);
+      if (imgSentimiento == null) {
+        break missingId;
+      }
+
       id = R.id.item_number;
       TextView itemNumber = rootView.findViewById(id);
       if (itemNumber == null) {
         break missingId;
       }
 
+      id = R.id.txt_dia;
+      TextView txtDia = rootView.findViewById(id);
+      if (txtDia == null) {
+        break missingId;
+      }
+
+      id = R.id.txt_dia_numero;
+      TextView txtDiaNumero = rootView.findViewById(id);
+      if (txtDiaNumero == null) {
+        break missingId;
+      }
+
       return new FragmentEstadisticaPersonalListBinding((LinearLayout) rootView, content,
-          itemNumber);
+          imgSentimiento, itemNumber, txtDia, txtDiaNumero);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

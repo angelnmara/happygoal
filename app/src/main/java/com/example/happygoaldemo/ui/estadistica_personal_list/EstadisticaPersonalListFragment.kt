@@ -9,14 +9,19 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.RelativeLayout
+import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import com.example.happygoaldemo.api.RepoImpl
+import com.example.happygoaldemo.data.model.CalificacionParametros
 import com.example.happygoaldemo.data.model.DataSource
-import com.example.happygoaldemo.data.model.Drink
 import com.example.happygoaldemo.tools.Resource
+import com.example.happygoaldemo.tools.ResourceString
+import com.example.happygoaldemo.tools.Tools
 import com.example.happygoaldemo.tools.VMFactory
-import com.example.happygoaldemo.ui.estadistica_personal_list.MainViewModel
+import com.example.happygoaldemo.ui.estadistica_personal_list.EstadisticaPersonalRecyclerViewAdapter
+import com.example.happygoaldemo.ui.estadistica_personal_list.EstadisticaPersonalViewModel
 
 /**
  * A fragment representing a list of Items.
@@ -24,9 +29,13 @@ import com.example.happygoaldemo.ui.estadistica_personal_list.MainViewModel
 class EstadisticaPersonalListFragment : Fragment(){
 
     //private val viewModel by viewModels<ViewModelPersonalList> { VMFactory(RepoImpl(DataSource())) }
-    private val viewModel by viewModels<MainViewModel> { VMFactory(RepoImpl(DataSource())) }
+    private val viewModel by viewModels<EstadisticaPersonalViewModel> { VMFactory(RepoImpl(DataSource())) }
 
     private var columnCount = 1
+
+    private lateinit var progressBar:RelativeLayout
+
+    private var tools = Tools()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,70 +52,63 @@ class EstadisticaPersonalListFragment : Fragment(){
         val view =
             inflater.inflate(R.layout.fragment_estadistica_personal_list_list, container, false)
 
+        var rv = view.findViewById<RecyclerView>(R.id.list)
+        progressBar = view.findViewById<RelativeLayout>(R.id.progressBar)
+
         // Set the adapter
-        if (view is RecyclerView) {
-            with(view) {
+        if (rv is RecyclerView) {
+            with(rv) {
                 layoutManager = when {
                     columnCount <= 1 -> LinearLayoutManager(context)
                     else -> GridLayoutManager(context, columnCount)
                 }
 
-                viewModel.fetchTragosList.observe(viewLifecycleOwner, Observer { result ->
+                /*viewModel.fetchTragosList.observe(viewLifecycleOwner, Observer { result ->
                     when (result) {
                         is Resource.Loading -> {
-                            //progressBar.visibility=View.VISIBLE
+                            progressBar.visibility=View.VISIBLE
                             Log.d("",  "Loading")
                         }
                         is Resource.Success -> {
-                            //progressBar.visibility=View.GONE
+                            progressBar.visibility=View.GONE
                             //rv_tragos.adapter=MainAdapter(requireContext(), result.data, this)
                             Log.d("", result.data.toString() )
-                            adapter = MyItemRecyclerViewAdapter(result.data)
+                            adapter = EstadisticaPersonalRecyclerViewAdapter(result.data)
                         }
                         is Resource.Failure -> {
-                            //progressBar.visibility=View.GONE
-                            //Toast.makeText(requireContext(), "Ocurrio un error al traer los datos ${result.exception}", Toast.LENGTH_SHORT).show()
+                            progressBar.visibility=View.GONE
+                            Toast.makeText(requireContext(), "Ocurrio un error al traer los datos ${result.exception}", Toast.LENGTH_SHORT).show()
                             Log.d("", "failure")
                         }
                     }
-                })
+                })*/
+
+                viewModel.token = tools.getDefaultsString(getString(R.string.token), requireContext()).toString()
+                viewModel.userName = tools.getDefaultsString(getString(R.string.username), requireContext()).toString()
+                viewModel.annio = 2021
+                viewModel.mes = 1
+
+                viewModel.fetchCalificacionList.observe(viewLifecycleOwner, Observer { result->
+                    when(result){
+                        is Resource.Loading->{
+                            progressBar.visibility=View.VISIBLE
+                            Log.d("", "Loading")
+                        }
+                        is Resource.Success->{
+                            progressBar.visibility=View.GONE
+                            adapter = EstadisticaPersonalRecyclerViewAdapter(result.data, requireContext())
+                            Log.d("", result.data.toString())
+                        }
+                        is Resource.Failure->{
+                            progressBar.visibility=View.GONE
+                            Log.d("", "Failure")
+                        }
+                    }
+                 })
+
             }
         }
         return view
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        /*var tools = Tools()
-        val token = tools.getDefaultsString(getString(R.string.token), requireContext()) //sharedPref.getString(getString(R.string.token), defaultValue)
-        val userName = tools.getDefaultsString(getString(R.string.username), requireContext()) //sharedPref.getString(getString(R.string.username), defaultValue)
-
-        if (token != null) {
-            viewModel.token = token
-        }
-        if (userName != null) {
-            viewModel.userName = userName
-        }
-        viewModel.calificacionParametros = CalificacionParametros(
-                annio = 2021,
-                mes = 1
-        )
-        viewModel.tragoName = "margarita"*/
-        /*viewModel.fetchPersonalList.observe(viewLifecycleOwner, Observer { result->
-            when(result){
-                is Resource.Loading->{
-                    Log.d("", "Loading")
-                }
-                is Resource.Success->{
-                    Log.d("", "succes")
-                }
-                is Resource.Failure->{
-                    Log.d("", result.exception.toString())
-                }
-            }
-        })*/
-
-
     }
 
     companion object {

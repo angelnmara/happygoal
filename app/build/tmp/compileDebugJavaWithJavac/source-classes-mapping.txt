@@ -1,9 +1,9 @@
 com/example/happygoaldemo/BuildConfig.java
  com.example.happygoaldemo.BuildConfig
-com/example/happygoaldemo/databinding/FragmentEstadisticaPersonalListBinding.java
- com.example.happygoaldemo.databinding.FragmentEstadisticaPersonalListBinding
 com/example/happygoaldemo/DataBindingTriggerClass.java
  com.example.happygoaldemo.DataBindingTriggerClass
+com/example/happygoaldemo/databinding/FragmentEstadisticaPersonalListBinding.java
+ com.example.happygoaldemo.databinding.FragmentEstadisticaPersonalListBinding
 com/example/happygoaldemo/databinding/FragmentNotificationsBinding.java
  com.example.happygoaldemo.databinding.FragmentNotificationsBinding
 com/example/happygoaldemo/databinding/TragosRowBinding.java

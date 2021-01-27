@@ -5,6 +5,7 @@ import android.preference.PreferenceManager
 import androidx.fragment.app.FragmentActivity
 import com.example.happygoaldemo.R
 import com.google.android.material.appbar.AppBarLayout
+import java.util.*
 
 
 class Tools {
@@ -57,6 +58,56 @@ class Tools {
     fun getDefaultsLong(key: String?, context: Context?): Long {
         val preferences = PreferenceManager.getDefaultSharedPreferences(context)
         return preferences.getLong(key, 0L)
+    }
+
+    fun getDayOfWeekEspanniol(date: Date?, context: Context?):String?{
+        //val calendar: Calendar = Calendar.getInstance()
+        val c = Calendar.getInstance()
+        c.time = date
+        val dayOfWeek = c.get(Calendar.DAY_OF_WEEK)
+        return when(dayOfWeek){
+            Calendar.SUNDAY -> context?.getString(R.string.domingo)
+            Calendar.MONDAY -> context?.getString(R.string.lunes)
+            Calendar.TUESDAY -> context?.getString(R.string.martes)
+            Calendar.WEDNESDAY -> context?.getString(R.string.miercoles)
+            Calendar.THURSDAY -> context?.getString(R.string.jueves)
+            Calendar.FRIDAY -> context?.getString(R.string.viernes)
+            Calendar.SATURDAY -> context?.getString(R.string.sabado)
+            else -> ""
+        }
+    }
+
+    fun getDay(date: Date?):String{
+        //val calendar: Calendar = Calendar.getInstance()
+        val c = Calendar.getInstance()
+        c.time = date
+        return c.get(Calendar.DAY_OF_MONTH).toString()
+    }
+
+    fun getHora(date: Date?, context: Context?):String{
+        //val calendar: Calendar = Calendar.getInstance()
+        val c = Calendar.getInstance()
+        c.time = date
+        return c.get(Calendar.HOUR).toString().padStart(2, '0') + ":" + c.get(Calendar.MINUTE).toString().padStart(2, '0') + ":" + c.get(Calendar.SECOND).toString().padStart(2, '0') + " " + getAMPM(c.get(Calendar.AM_PM), context)
+     }
+
+    fun getAMPM(id:Int, context: Context?):String{
+        return when(id){
+            Calendar.AM->context?.getString(R.string.am).toString()
+            Calendar.PM->context?.getString(R.string.pm).toString()
+            else -> context?.getString(R.string.am).toString()
+        }
+    }
+
+    fun getFaceResource(id:Int?):Int{
+        return when(id){
+            1->R.drawable.ic_feliz
+            2->R.drawable.ic_motivado
+            3->R.drawable.ic_tranquilo
+            4->R.drawable.ic_estresado
+            5->R.drawable.ic_enojado
+            else -> R.drawable.ic_feliz
+        }
     }
 
 }

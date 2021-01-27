@@ -1880,6 +1880,7 @@ id imgEstresado
 id imgFeliz
 id imgMotivado
 id imgTranquilo
+id img_sentimiento
 id img_trago
 id info
 id invisible
@@ -2100,6 +2101,8 @@ id txtComenta
 id txtMainText
 id txtTitulo
 id txt_descripcion
+id txt_dia
+id txt_dia_numero
 id txt_titulo
 id unchecked
 id uniform
@@ -2303,6 +2306,7 @@ string abc_toolbar_collapse_description
 string acercaDe
 string action_sign_in
 string action_sign_in_short
+string am
 string app_name
 string appbar_scrolling_view_behavior
 string bienvenido
@@ -2316,6 +2320,7 @@ string clear_text_end_icon_content_description
 string comentarioDelDia
 string comoTeSientes
 string dateloged
+string domingo
 string enojado
 string enojadoSentence
 string enojadoTitle
@@ -2340,10 +2345,14 @@ string invalid_password
 string invalid_username
 string isloged
 string item_view_role_description
+string jueves
 string login_failed
+string lunes
+string martes
 string material_slider_range_end
 string material_slider_range_start
 string miGrafica
+string miercoles
 string misEstadisticasPersonales
 string motivado
 string motivadoSentence
@@ -2393,8 +2402,10 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string pm
 string prompt_email
 string prompt_password
+string sabado
 string search_menu_title
 string status_bar_notification_info_overflow
 string termómetroGeneral
@@ -2408,6 +2419,7 @@ string tranquilo
 string tranquiloSentence
 string tranquiloTitle
 string username
+string viernes
 string welcome
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
