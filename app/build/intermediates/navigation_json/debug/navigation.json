@@ -1,11 +1,11 @@
 [
   {
-    "name": "estadistica_personal_nav_graph",
+    "name": "nav_graph",
     "navigationXmlIds": [],
     "deepLinks": []
   },
   {
-    "name": "nav_graph",
+    "name": "estadistica_personal_nav_graph",
     "navigationXmlIds": [],
     "deepLinks": []
   }

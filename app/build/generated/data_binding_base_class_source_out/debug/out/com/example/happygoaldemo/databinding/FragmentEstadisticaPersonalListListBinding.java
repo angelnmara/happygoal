@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
+import android.widget.Spinner;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
@@ -25,11 +26,15 @@ public final class FragmentEstadisticaPersonalListListBinding implements ViewBin
   @NonNull
   public final RelativeLayout progressBar;
 
+  @NonNull
+  public final Spinner spnMonth;
+
   private FragmentEstadisticaPersonalListListBinding(@NonNull FrameLayout rootView,
-      @NonNull RecyclerView list, @NonNull RelativeLayout progressBar) {
+      @NonNull RecyclerView list, @NonNull RelativeLayout progressBar, @NonNull Spinner spnMonth) {
     this.rootView = rootView;
     this.list = list;
     this.progressBar = progressBar;
+    this.spnMonth = spnMonth;
   }
 
   @Override
@@ -72,8 +77,14 @@ public final class FragmentEstadisticaPersonalListListBinding implements ViewBin
         break missingId;
       }
 
+      id = R.id.spnMonth;
+      Spinner spnMonth = rootView.findViewById(id);
+      if (spnMonth == null) {
+        break missingId;
+      }
+
       return new FragmentEstadisticaPersonalListListBinding((FrameLayout) rootView, list,
-          progressBar);
+          progressBar, spnMonth);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

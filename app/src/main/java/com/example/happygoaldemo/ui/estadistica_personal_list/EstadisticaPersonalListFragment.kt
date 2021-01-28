@@ -9,15 +9,15 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.RelativeLayout
-import android.widget.Toast
+import android.widget.*
+import androidx.appcompat.widget.AppCompatCheckedTextView
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import com.example.happygoaldemo.adapters.CustomSpinnerAdapter
 import com.example.happygoaldemo.api.RepoImpl
-import com.example.happygoaldemo.data.model.CalificacionParametros
 import com.example.happygoaldemo.data.model.DataSource
+import com.example.happygoaldemo.data.model.Drink
 import com.example.happygoaldemo.tools.Resource
-import com.example.happygoaldemo.tools.ResourceString
 import com.example.happygoaldemo.tools.Tools
 import com.example.happygoaldemo.tools.VMFactory
 import com.example.happygoaldemo.ui.estadistica_personal_list.EstadisticaPersonalRecyclerViewAdapter
@@ -26,7 +26,7 @@ import com.example.happygoaldemo.ui.estadistica_personal_list.EstadisticaPersona
 /**
  * A fragment representing a list of Items.
  */
-class EstadisticaPersonalListFragment : Fragment(){
+class EstadisticaPersonalListFragment : Fragment(), AdapterView.OnItemSelectedListener{
 
     //private val viewModel by viewModels<ViewModelPersonalList> { VMFactory(RepoImpl(DataSource())) }
     private val viewModel by viewModels<EstadisticaPersonalViewModel> { VMFactory(RepoImpl(DataSource())) }
@@ -34,6 +34,8 @@ class EstadisticaPersonalListFragment : Fragment(){
     private var columnCount = 1
 
     private lateinit var progressBar:RelativeLayout
+
+    private lateinit var spinnerAdapter:CustomSpinnerAdapter
 
     private var tools = Tools()
 
@@ -51,6 +53,39 @@ class EstadisticaPersonalListFragment : Fragment(){
     ): View? {
         val view =
             inflater.inflate(R.layout.fragment_estadistica_personal_list_list, container, false)
+
+        val spinner: Spinner = view.findViewById(R.id.spnMonth)
+
+        spinner.onItemSelectedListener = this
+
+        /*var languages = arrayOf("Java", "PHP", "Kotlin", "Javascript", "Python", "Swift")*/
+
+        var listD = ArrayList<Drink>();
+        var drink = Drink(
+                imagen = "imagen",
+                nombre = "nombre",
+                descripcion = "descripcion"
+        );
+        var drink2 = Drink(
+                imagen = "imagen2",
+                nombre = "nombre2",
+                descripcion = "descripcion2"
+        );
+        listD.add(drink)
+        listD.add(drink2)
+
+        //ArrayAdapter<Drink>(requireContext(), android.R.layout.simple_spinner_dropdown_item, listD)
+
+        /*ArrayAdapter.createFromResource(
+            requireContext(),
+            languages,
+            android.R.layout.simple_spinner_item
+        ).also { adapter ->
+            // Specify the layout to use when the list of choices appears
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            // Apply the adapter to the spinner
+            spinner.adapter = adapter
+        }*/
 
         var rv = view.findViewById<RecyclerView>(R.id.list)
         progressBar = view.findViewById<RelativeLayout>(R.id.progressBar)
@@ -97,6 +132,8 @@ class EstadisticaPersonalListFragment : Fragment(){
                         is Resource.Success->{
                             progressBar.visibility=View.GONE
                             adapter = EstadisticaPersonalRecyclerViewAdapter(result.data, requireContext())
+                            spinnerAdapter = CustomSpinnerAdapter(requireContext(), android.R.layout.simple_spinner_dropdown_item, "nombre", listD as ArrayList<Any>);
+                            spinner.adapter = spinnerAdapter
                             Log.d("", result.data.toString())
                         }
                         is Resource.Failure->{
@@ -124,6 +161,14 @@ class EstadisticaPersonalListFragment : Fragment(){
                     putInt(ARG_COLUMN_COUNT, columnCount)
                 }
             }
+    }
+
+    override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+        Toast.makeText(requireContext(), (p1 as AppCompatCheckedTextView).text, Toast.LENGTH_LONG).show()
+    }
+
+    override fun onNothingSelected(p0: AdapterView<*>?) {
+        TODO("Not yet implemented")
     }
 
 }
