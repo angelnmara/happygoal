@@ -4,17 +4,15 @@ import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
 import com.example.happygoaldemo.api.Repo
-import com.example.happygoaldemo.data.model.CalificacionParametros
 import com.example.happygoaldemo.tools.Resource
-import com.example.happygoaldemo.tools.ResourceString
 import kotlinx.coroutines.Dispatchers
 import java.lang.Exception
 
 class EstadisticaPersonalViewModel(private val repo: Repo):ViewModel() {
 
     lateinit var userName:String
-    var annio:Int = 0
-    var mes:Int = 0
+    var annio:Int? = null
+    var mes:Int? = null
     lateinit var token:String
 
     val fetchTragosList = liveData(Dispatchers.IO) {

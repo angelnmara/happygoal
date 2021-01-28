@@ -11,8 +11,8 @@ class DataSource {
     }
 
     suspend fun getCalificacionByUser(userName:String
-                                      , annio:Int
-                                      , mes:Int
+                                      , annio:Int?
+                                      , mes:Int?
                                       , token:String): Resource<List<Calificacion>> {
         return Resource.Success(RetrofitClient.webservice.getCalificacionByUser(userName
                 , annio

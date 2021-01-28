@@ -159,9 +159,9 @@ class TestFragment : Fragment() {
 
             val comenta = titulo.text.toString()
 
-                    val sharedPref = activity?.getPreferences(Context.MODE_PRIVATE) ?: return@setOnClickListener
-                    val defaultValue = ""
-                    val token = sharedPref.getString(getString(R.string.token), defaultValue)
+                    //val sharedPref = activity?.getPreferences(Context.MODE_PRIVATE) ?: return@setOnClickListener
+                    //val defaultValue = ""
+                    val token = tools.getDefaultsString(getString(R.string.token), requireContext()) //sharedPref.getString(getString(R.string.token), defaultValue)
 
             val apiService = RestApiService()
             val calificacion = Calificacion(

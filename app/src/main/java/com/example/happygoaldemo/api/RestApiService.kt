@@ -1,10 +1,6 @@
 package com.example.happygoaldemo.api
 
-import android.content.Context
-import android.provider.Settings.Global.getString
-import com.example.happygoaldemo.R
 import com.example.happygoaldemo.data.model.Calificacion
-import com.example.happygoaldemo.data.model.CalificacionParametros
 import com.example.happygoaldemo.data.model.Login
 import com.example.happygoaldemo.data.model.LoginResponse
 import retrofit2.Call

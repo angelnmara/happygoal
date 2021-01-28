@@ -2,19 +2,20 @@ package com.example.happygoaldemo
 
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.appcompat.widget.AppCompatCheckedTextView
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.happygoaldemo.adapters.CustomSpinnerAdapter
 import com.example.happygoaldemo.api.RepoImpl
+import com.example.happygoaldemo.data.model.AnnioMes
 import com.example.happygoaldemo.data.model.DataSource
 import com.example.happygoaldemo.data.model.Drink
 import com.example.happygoaldemo.tools.Resource
@@ -22,6 +23,8 @@ import com.example.happygoaldemo.tools.Tools
 import com.example.happygoaldemo.tools.VMFactory
 import com.example.happygoaldemo.ui.estadistica_personal_list.EstadisticaPersonalRecyclerViewAdapter
 import com.example.happygoaldemo.ui.estadistica_personal_list.EstadisticaPersonalViewModel
+import java.util.*
+import kotlin.collections.ArrayList
 
 /**
  * A fragment representing a list of Items.
@@ -39,6 +42,8 @@ class EstadisticaPersonalListFragment : Fragment(), AdapterView.OnItemSelectedLi
 
     private var tools = Tools()
 
+    private var TAG = javaClass.name
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -48,8 +53,8 @@ class EstadisticaPersonalListFragment : Fragment(), AdapterView.OnItemSelectedLi
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         val view =
             inflater.inflate(R.layout.fragment_estadistica_personal_list_list, container, false)
@@ -120,28 +125,39 @@ class EstadisticaPersonalListFragment : Fragment(), AdapterView.OnItemSelectedLi
 
                 viewModel.token = tools.getDefaultsString(getString(R.string.token), requireContext()).toString()
                 viewModel.userName = tools.getDefaultsString(getString(R.string.username), requireContext()).toString()
-                viewModel.annio = 2021
-                viewModel.mes = 1
+                //viewModel.annio = null
+                //viewModel.mes = null
 
-                viewModel.fetchCalificacionList.observe(viewLifecycleOwner, Observer { result->
-                    when(result){
-                        is Resource.Loading->{
-                            progressBar.visibility=View.VISIBLE
+                viewModel.fetchCalificacionList.observe(viewLifecycleOwner, Observer { result ->
+                    when (result) {
+                        is Resource.Loading -> {
+                            progressBar.visibility = View.VISIBLE
                             Log.d("", "Loading")
                         }
-                        is Resource.Success->{
-                            progressBar.visibility=View.GONE
+                        is Resource.Success -> {
+                            progressBar.visibility = View.GONE
                             adapter = EstadisticaPersonalRecyclerViewAdapter(result.data, requireContext())
-                            spinnerAdapter = CustomSpinnerAdapter(requireContext(), android.R.layout.simple_spinner_dropdown_item, "nombre", listD as ArrayList<Any>);
+                            var annioMesList = arrayListOf<AnnioMes>()
+                            result.data.forEach {
+                                val c: Calendar = Calendar.getInstance()
+                                c.setTime(it.fechaCreacion)
+                                var annioMes = AnnioMes(
+                                        annio = c.get(Calendar.YEAR),
+                                        mes = c.get(Calendar.MONTH)
+                                )
+                                annioMesList.add(annioMes)
+                            }
+                            Log.d(TAG, annioMesList.toString())
+                            spinnerAdapter = CustomSpinnerAdapter(requireContext(), android.R.layout.simple_spinner_dropdown_item, "mesName", annioMesList.distinctBy { it.mes } as ArrayList<Any>);
                             spinner.adapter = spinnerAdapter
-                            Log.d("", result.data.toString())
+                            Log.d(TAG, result.data.toString())
                         }
-                        is Resource.Failure->{
-                            progressBar.visibility=View.GONE
+                        is Resource.Failure -> {
+                            progressBar.visibility = View.GONE
                             Log.d("", "Failure")
                         }
                     }
-                 })
+                })
 
             }
         }

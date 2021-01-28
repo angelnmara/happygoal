@@ -15,6 +15,6 @@ interface RestApi {
 
     @Headers("Content-Type: application/json")
     @GET("calificacion-usuario/")
-    suspend fun getCalificacionByUser(@Query("idUser") idUser: String, @Body calificacionParametros: CalificacionParametros, @Header("Authorization") autHeader: String): CalificacionList
+    suspend fun getCalificacionByUser(@Query("idUser") idUser: String, @Body annioMes: AnnioMes, @Header("Authorization") autHeader: String): CalificacionList
 
 }

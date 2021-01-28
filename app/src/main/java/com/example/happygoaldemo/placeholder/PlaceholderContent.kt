@@ -1,12 +1,8 @@
 package com.example.happygoaldemo.placeholder
 
-import androidx.navigation.findNavController
-import com.example.happygoaldemo.R
 import com.example.happygoaldemo.api.RestApiService
 import com.example.happygoaldemo.data.model.Calificacion
-import com.example.happygoaldemo.data.model.CalificacionParametros
-import com.example.happygoaldemo.ui.login.LoginFragmentDirections
-import com.google.android.material.snackbar.Snackbar
+import com.example.happygoaldemo.data.model.AnnioMes
 import java.util.*
 
 /**
@@ -38,12 +34,12 @@ object PlaceholderContent {
         }
     }
 
-    private fun fillListCalificaciones(){
-        val calificaionParametros = CalificacionParametros(
+    /*private fun fillListCalificaciones(){
+        val calificaionParametros = AnnioMes(
                 annio = 2021,
                 mes = 1
         )
-        /*apiService.calificacionByUserFun("a@b.com", calificaionParametros, "") {
+        *//*apiService.calificacionByUserFun("a@b.com", calificaionParametros, "") {
             if (it?.codeHttp == 200) {
                 // it = newly added user parsed as response
                 // it?.id = newly added user ID
@@ -55,8 +51,8 @@ object PlaceholderContent {
                 //Toast.makeText(context, resources.getText(R.string.msjNoSeEncuentraRegistrado), Toast.LENGTH_LONG).show()
                 Snackbar.make(view, resources.getText(R.string.msjNoSeEncuentraRegistrado), Snackbar.LENGTH_SHORT).show()
             }
-        }*/
-    }
+        }*//*
+    }*/
 
     private fun addItem(item: Calificacion) {
         ITEMS.add(item)
