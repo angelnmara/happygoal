@@ -20,6 +20,12 @@ class DataSource {
                 , token).toList())
     }
 
+    suspend fun getCalificacionByDate(fecha:String
+                                      , token:String): Resource<List<Calificacion>> {
+        return Resource.Success(RetrofitClient.webservice.getCalificacionByDate(fecha
+                , token).toList())
+    }
+
     /*val generateTragosList= Resource.Success(listOf(
         Drink("https://images.absolutdrinks.com/drink-images/Raw/Absolut/c8bc404c-fc30-4ec8-a9a5-0dca3913bbbb.jpg?imwidth=500", "Margarita", "vodka"),
         Drink("https://elresaltador.com.ar/wp-content/uploads/2020/08/Dise%C3%B1o-sin-t%C3%ADtulo-13-1.jpg", "Fernet", "coca"),

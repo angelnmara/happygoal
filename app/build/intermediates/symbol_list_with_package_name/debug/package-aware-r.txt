@@ -956,6 +956,7 @@ color accent_material_dark
 color accent_material_light
 color androidx_core_ripple_material_light
 color androidx_core_secondary_text_default_material_light
+color azul
 color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
@@ -1745,6 +1746,7 @@ id action_mode_bar_stub
 id action_mode_close_button
 id action_testFragment_self
 id action_testFragment_to_acerca_de
+id action_testFragment_to_comentariosDelDiaFragment
 id action_testFragment_to_estadisticaPersonalActivity
 id action_testFragment_to_loginFragment
 id action_testFragment_to_responseFragment
@@ -1795,6 +1797,7 @@ id clip_horizontal
 id clip_vertical
 id collapseActionView
 id collapsing_toolbar_layout
+id comentariosDelDiaFragment
 id confirm_button
 id constraintLayout
 id container
@@ -1944,7 +1947,6 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id multiply
 id nav_cerrar_sesion
-id nav_comentarios_del_dia
 id nav_controller_view_tag
 id nav_graph
 id nav_host_fragment
@@ -2201,6 +2203,8 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_acerca_de
+layout fragment_comentarios_del_dia
+layout fragment_comentarios_del_dia_list
 layout fragment_estadistica_personal_chart
 layout fragment_estadistica_personal_list
 layout fragment_estadistica_personal_list_list

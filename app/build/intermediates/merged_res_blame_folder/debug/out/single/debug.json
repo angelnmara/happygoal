@@ -64,6 +64,10 @@
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable/ic_baseline_bar_chart_24.xml"
     },
     {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/layout_fragment_comentarios_del_dia.xml.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/layout/fragment_comentarios_del_dia.xml"
+    },
+    {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-anydpi-v24_ic_boton_entrar.xml.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_boton_entrar.xml"
     },
@@ -146,6 +150,10 @@
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/layout_tragos_row.xml.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/layout/tragos_row.xml"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/layout_fragment_comentarios_del_dia_list.xml.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/layout/fragment_comentarios_del_dia_list.xml"
     },
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/layout_fragment_estadistica_personal_list_list.xml.flat",

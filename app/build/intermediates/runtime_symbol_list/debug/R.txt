@@ -955,6 +955,7 @@ int color accent_material_dark 0x7f050019
 int color accent_material_light 0x7f05001a
 int color androidx_core_ripple_material_light 0x7f05001b
 int color androidx_core_secondary_text_default_material_light 0x7f05001c
+int color azul 0x7f0500e6
 int color background_floating_material_dark 0x7f05001d
 int color background_floating_material_light 0x7f05001e
 int color background_material_dark 0x7f05001f
@@ -1744,6 +1745,7 @@ int id action_mode_bar_stub 0x7f080043
 int id action_mode_close_button 0x7f080044
 int id action_testFragment_self 0x7f080045
 int id action_testFragment_to_acerca_de 0x7f080046
+int id action_testFragment_to_comentariosDelDiaFragment 0x7f0801bf
 int id action_testFragment_to_estadisticaPersonalActivity 0x7f080047
 int id action_testFragment_to_loginFragment 0x7f080048
 int id action_testFragment_to_responseFragment 0x7f080049
@@ -1794,6 +1796,7 @@ int id clip_horizontal 0x7f080075
 int id clip_vertical 0x7f080076
 int id collapseActionView 0x7f080077
 int id collapsing_toolbar_layout 0x7f080078
+int id comentariosDelDiaFragment 0x7f0801c0
 int id confirm_button 0x7f080079
 int id constraintLayout 0x7f08007a
 int id container 0x7f08007b
@@ -1943,7 +1946,6 @@ int id mtrl_picker_text_input_range_start 0x7f08010a
 int id mtrl_picker_title_text 0x7f08010b
 int id multiply 0x7f08010c
 int id nav_cerrar_sesion 0x7f08010d
-int id nav_comentarios_del_dia 0x7f08010e
 int id nav_controller_view_tag 0x7f08010f
 int id nav_graph 0x7f080110
 int id nav_host_fragment 0x7f080111
@@ -2200,6 +2202,8 @@ int layout design_navigation_menu_item 0x7f0b002b
 int layout design_text_input_end_icon 0x7f0b002c
 int layout design_text_input_start_icon 0x7f0b002d
 int layout fragment_acerca_de 0x7f0b002e
+int layout fragment_comentarios_del_dia 0x7f0b0076
+int layout fragment_comentarios_del_dia_list 0x7f0b0077
 int layout fragment_estadistica_personal_chart 0x7f0b002f
 int layout fragment_estadistica_personal_list 0x7f0b0030
 int layout fragment_estadistica_personal_list_list 0x7f0b0031

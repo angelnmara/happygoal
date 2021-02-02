@@ -20,6 +20,10 @@
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/layout/activity_estadistica_personal.xml"
     },
     {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_comentarios_del_dia.xml",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/layout/fragment_comentarios_del_dia.xml"
+    },
+    {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_test.xml",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/layout/fragment_test.xml"
     },
@@ -30,6 +34,10 @@
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_comentarios_del_dia_list.xml",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/layout/fragment_comentarios_del_dia_list.xml"
     },
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_response.xml",

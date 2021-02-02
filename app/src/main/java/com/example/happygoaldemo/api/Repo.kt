@@ -10,4 +10,6 @@ interface Repo {
                                     , annio:Int?
                                     , mes:Int?
                                     , token:String): Resource<List<Calificacion>>
+    suspend fun getCalificacionDate(fecha:String
+                                    , token:String): Resource<List<Calificacion>>
 }

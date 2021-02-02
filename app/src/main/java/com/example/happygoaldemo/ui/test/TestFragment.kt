@@ -1,6 +1,5 @@
 package com.example.happygoaldemo.ui.test
 
-import android.content.Context
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher

@@ -118,6 +118,18 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="comentariosDelDiaFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="559" />
+                            <option name="y" value="414" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="estadisticaPersonalActivity">
                     <value>
                       <LayoutPositions>

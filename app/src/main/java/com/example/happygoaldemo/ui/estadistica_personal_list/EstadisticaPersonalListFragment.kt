@@ -18,6 +18,7 @@ import com.example.happygoaldemo.api.RepoImpl
 import com.example.happygoaldemo.data.model.AnnioMes
 import com.example.happygoaldemo.data.model.DataSource
 import com.example.happygoaldemo.data.model.Drink
+import com.example.happygoaldemo.data.model.ParametersEstadisticaPersonal
 import com.example.happygoaldemo.tools.Resource
 import com.example.happygoaldemo.tools.Tools
 import com.example.happygoaldemo.tools.VMFactory
@@ -40,9 +41,18 @@ class EstadisticaPersonalListFragment : Fragment(), AdapterView.OnItemSelectedLi
 
     private lateinit var spinnerAdapter:CustomSpinnerAdapter
 
+    private lateinit var rv:RecyclerView
+
+    private lateinit var spinner:Spinner
+
     private var tools = Tools()
 
     private var TAG = javaClass.name
+
+    private lateinit var userNameG: String
+    private lateinit var tokenG: String
+    private lateinit var parametersEstadisticaPersonal: ParametersEstadisticaPersonal
+    
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -59,40 +69,15 @@ class EstadisticaPersonalListFragment : Fragment(), AdapterView.OnItemSelectedLi
         val view =
             inflater.inflate(R.layout.fragment_estadistica_personal_list_list, container, false)
 
-        val spinner: Spinner = view.findViewById(R.id.spnMonth)
+        userNameG = tools.getDefaultsString(getString(R.string.username), requireContext()).toString()
+
+        tokenG = tools.getDefaultsString(getString(R.string.token), requireContext()).toString()
+
+        spinner = view.findViewById(R.id.spnMonth)
 
         spinner.onItemSelectedListener = this
 
-        /*var languages = arrayOf("Java", "PHP", "Kotlin", "Javascript", "Python", "Swift")*/
-
-        var listD = ArrayList<Drink>();
-        var drink = Drink(
-                imagen = "imagen",
-                nombre = "nombre",
-                descripcion = "descripcion"
-        );
-        var drink2 = Drink(
-                imagen = "imagen2",
-                nombre = "nombre2",
-                descripcion = "descripcion2"
-        );
-        listD.add(drink)
-        listD.add(drink2)
-
-        //ArrayAdapter<Drink>(requireContext(), android.R.layout.simple_spinner_dropdown_item, listD)
-
-        /*ArrayAdapter.createFromResource(
-            requireContext(),
-            languages,
-            android.R.layout.simple_spinner_item
-        ).also { adapter ->
-            // Specify the layout to use when the list of choices appears
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-            // Apply the adapter to the spinner
-            spinner.adapter = adapter
-        }*/
-
-        var rv = view.findViewById<RecyclerView>(R.id.list)
+        rv = view.findViewById<RecyclerView>(R.id.list)
         progressBar = view.findViewById<RelativeLayout>(R.id.progressBar)
 
         // Set the adapter
@@ -103,65 +88,54 @@ class EstadisticaPersonalListFragment : Fragment(), AdapterView.OnItemSelectedLi
                     else -> GridLayoutManager(context, columnCount)
                 }
 
-                /*viewModel.fetchTragosList.observe(viewLifecycleOwner, Observer { result ->
-                    when (result) {
-                        is Resource.Loading -> {
-                            progressBar.visibility=View.VISIBLE
-                            Log.d("",  "Loading")
-                        }
-                        is Resource.Success -> {
-                            progressBar.visibility=View.GONE
-                            //rv_tragos.adapter=MainAdapter(requireContext(), result.data, this)
-                            Log.d("", result.data.toString() )
-                            adapter = EstadisticaPersonalRecyclerViewAdapter(result.data)
-                        }
-                        is Resource.Failure -> {
-                            progressBar.visibility=View.GONE
-                            Toast.makeText(requireContext(), "Ocurrio un error al traer los datos ${result.exception}", Toast.LENGTH_SHORT).show()
-                            Log.d("", "failure")
-                        }
-                    }
-                })*/
+                //viewModel.token = tools.getDefaultsString(getString(R.string.token), requireContext()).toString()
+                //viewModel.userName = tools.getDefaultsString(getString(R.string.username), requireContext()).toString()
+                parametersEstadisticaPersonal = ParametersEstadisticaPersonal(
+                    userName = userNameG,
+                    annio = null,
+                    mes = null,
+                    token = tokenG
+                )
+                viewModel.setParametersEstadisticaPersonal(parametersEstadisticaPersonal)
 
-                viewModel.token = tools.getDefaultsString(getString(R.string.token), requireContext()).toString()
-                viewModel.userName = tools.getDefaultsString(getString(R.string.username), requireContext()).toString()
-                //viewModel.annio = null
-                //viewModel.mes = null
-
-                viewModel.fetchCalificacionList.observe(viewLifecycleOwner, Observer { result ->
-                    when (result) {
-                        is Resource.Loading -> {
-                            progressBar.visibility = View.VISIBLE
-                            Log.d("", "Loading")
-                        }
-                        is Resource.Success -> {
-                            progressBar.visibility = View.GONE
-                            adapter = EstadisticaPersonalRecyclerViewAdapter(result.data, requireContext())
-                            var annioMesList = arrayListOf<AnnioMes>()
-                            result.data.forEach {
-                                val c: Calendar = Calendar.getInstance()
-                                c.setTime(it.fechaCreacion)
-                                var annioMes = AnnioMes(
-                                        annio = c.get(Calendar.YEAR),
-                                        mes = c.get(Calendar.MONTH)
-                                )
-                                annioMesList.add(annioMes)
-                            }
-                            Log.d(TAG, annioMesList.toString())
-                            spinnerAdapter = CustomSpinnerAdapter(requireContext(), android.R.layout.simple_spinner_dropdown_item, "mesName", annioMesList.distinctBy { it.mes } as ArrayList<Any>);
-                            spinner.adapter = spinnerAdapter
-                            Log.d(TAG, result.data.toString())
-                        }
-                        is Resource.Failure -> {
-                            progressBar.visibility = View.GONE
-                            Log.d("", "Failure")
-                        }
-                    }
-                })
+                setupObserver(rv)
 
             }
         }
         return view
+    }
+
+    private fun setupObserver(reciclerView:RecyclerView){
+        viewModel.fetchCalificacionList.observe(viewLifecycleOwner, Observer { result ->
+            when (result) {
+                is Resource.Loading -> {
+                    progressBar.visibility = View.VISIBLE
+                    Log.d("", "Loading")
+                }
+                is Resource.Success -> {
+                    progressBar.visibility = View.GONE
+                    reciclerView.adapter = EstadisticaPersonalRecyclerViewAdapter(result.data, requireContext())
+                    var annioMesList = arrayListOf<AnnioMes>()
+                    result.data.forEach {
+                        val c: Calendar = Calendar.getInstance()
+                        c.setTime(it.fechaCreacion)
+                        var annioMes = AnnioMes(
+                                annio = c.get(Calendar.YEAR),
+                                mes = c.get(Calendar.MONTH)
+                        )
+                        annioMesList.add(annioMes)
+                    }
+                    Log.d(TAG, annioMesList.toString())
+                    spinnerAdapter = CustomSpinnerAdapter(requireContext(), android.R.layout.simple_spinner_dropdown_item, "mesName", annioMesList.distinctBy { it.mes } as ArrayList<Any>);
+                    spinner.adapter = spinnerAdapter
+                    Log.d(TAG, result.data.toString())
+                }
+                is Resource.Failure -> {
+                    progressBar.visibility = View.GONE
+                    Log.d("", "Failure")
+                }
+            }
+        })
     }
 
     companion object {
@@ -180,6 +154,13 @@ class EstadisticaPersonalListFragment : Fragment(), AdapterView.OnItemSelectedLi
     }
 
     override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+        var mes = (p1 as AppCompatCheckedTextView).text
+        resources.getStringArray(R.array.meses_array).find {
+            it.contentEquals(mes)
+        }
+        parametersEstadisticaPersonal.annio = 2021
+        parametersEstadisticaPersonal.mes = 2
+        viewModel.setParametersEstadisticaPersonal(parametersEstadisticaPersonal)
         Toast.makeText(requireContext(), (p1 as AppCompatCheckedTextView).text, Toast.LENGTH_LONG).show()
     }
 
@@ -188,3 +169,39 @@ class EstadisticaPersonalListFragment : Fragment(), AdapterView.OnItemSelectedLi
     }
 
 }
+
+
+/*var languages = arrayOf("Java", "PHP", "Kotlin", "Javascript", "Python", "Swift")*/
+
+//ArrayAdapter<Drink>(requireContext(), android.R.layout.simple_spinner_dropdown_item, listD)
+
+/*ArrayAdapter.createFromResource(
+    requireContext(),
+    languages,
+    android.R.layout.simple_spinner_item
+).also { adapter ->
+    // Specify the layout to use when the list of choices appears
+    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+    // Apply the adapter to the spinner
+    spinner.adapter = adapter
+}*/
+
+/*viewModel.fetchTragosList.observe(viewLifecycleOwner, Observer { result ->
+    when (result) {
+        is Resource.Loading -> {
+            progressBar.visibility=View.VISIBLE
+            Log.d("",  "Loading")
+        }
+        is Resource.Success -> {
+            progressBar.visibility=View.GONE
+            //rv_tragos.adapter=MainAdapter(requireContext(), result.data, this)
+            Log.d("", result.data.toString() )
+            adapter = EstadisticaPersonalRecyclerViewAdapter(result.data)
+        }
+        is Resource.Failure -> {
+            progressBar.visibility=View.GONE
+            Toast.makeText(requireContext(), "Ocurrio un error al traer los datos ${result.exception}", Toast.LENGTH_SHORT).show()
+            Log.d("", "failure")
+        }
+    }
+})*/
