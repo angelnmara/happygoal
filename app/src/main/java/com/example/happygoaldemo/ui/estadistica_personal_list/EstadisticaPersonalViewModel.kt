@@ -16,18 +16,42 @@ class EstadisticaPersonalViewModel(private val repo: Repo):ViewModel() {
     lateinit var token:String*/
 
     private val parametersEstadisticaPersonalMutable = MutableLiveData<ParametersEstadisticaPersonal>()
+    private val mesMutable = MutableLiveData<Int>()
+    private val annioMutable = MutableLiveData<Int>()
 
-    fun setParametersEstadisticaPersonal(parametersEstadisticaPersonal: ParametersEstadisticaPersonal){
+    fun setMesMutable(mes:Int){
+        mesMutable.value = mes
+    }
+
+    fun setVariablesMutable(userName:String, annio:Int?, mes:Int?, token:String){
+        val parametersEstadisticaPersonal = ParametersEstadisticaPersonal(
+                userName = userName,
+                annio = annio,
+                mes = mes,
+                token = token
+        )
         parametersEstadisticaPersonalMutable.value = parametersEstadisticaPersonal
     }
 
-    /*val fetchTragosList = liveData(Dispatchers.IO) {
-        emit(Resource.Loading())
-        try{
-            emit(repo.getTragosList("margarita"))
-        }catch (e:Exception){
-            Log.d("", e.toString())
-            //emit(Resource.Failure(e))
+    /*fun setParametersEstadisticaPersonal(parametersEstadisticaPersonal: ParametersEstadisticaPersonal){
+        parametersEstadisticaPersonalMutable.value = parametersEstadisticaPersonal
+    }*/
+
+
+
+
+    /*val fethPrueba = mesMutable.distinctUntilChanged().switchMap {mes ->
+        liveData(Dispatchers.IO) {
+            emit(Resource.Loading())
+            try{
+                emit(repo.getCalificacionList("a@b.com"
+                        , 2021
+                        , mes
+                        , tokenG))
+            }catch (e:Exception){
+                Log.d("", e.toString())
+                //emit(Resource.Failure(e))
+            }
         }
     }*/
 

@@ -15,16 +15,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.happygoaldemo.adapters.CustomSpinnerAdapter
 import com.example.happygoaldemo.api.RepoImpl
-import com.example.happygoaldemo.data.model.AnnioMes
-import com.example.happygoaldemo.data.model.DataSource
-import com.example.happygoaldemo.data.model.Drink
-import com.example.happygoaldemo.data.model.ParametersEstadisticaPersonal
+import com.example.happygoaldemo.data.model.*
 import com.example.happygoaldemo.tools.Resource
 import com.example.happygoaldemo.tools.Tools
 import com.example.happygoaldemo.tools.VMFactory
 import com.example.happygoaldemo.ui.estadistica_personal_list.EstadisticaPersonalRecyclerViewAdapter
 import com.example.happygoaldemo.ui.estadistica_personal_list.EstadisticaPersonalViewModel
-import java.util.*
 import kotlin.collections.ArrayList
 
 /**
@@ -90,23 +86,32 @@ class EstadisticaPersonalListFragment : Fragment(), AdapterView.OnItemSelectedLi
 
                 //viewModel.token = tools.getDefaultsString(getString(R.string.token), requireContext()).toString()
                 //viewModel.userName = tools.getDefaultsString(getString(R.string.username), requireContext()).toString()
-                parametersEstadisticaPersonal = ParametersEstadisticaPersonal(
+                /*parametersEstadisticaPersonal = ParametersEstadisticaPersonal(
                     userName = userNameG,
                     annio = null,
                     mes = null,
                     token = tokenG
-                )
-                viewModel.setParametersEstadisticaPersonal(parametersEstadisticaPersonal)
+                )*/
+                //viewModel.setParametersEstadisticaPersonal(parametersEstadisticaPersonal)
 
+                /*  inicializamos con null  */
+                viewModel.setVariablesMutable(userNameG, null, null, tokenG)
                 setupObserver(rv)
+                //setupObseverText(rv)
 
             }
         }
         return view
     }
 
-    private fun setupObserver(reciclerView:RecyclerView){
-        viewModel.fetchCalificacionList.observe(viewLifecycleOwner, Observer { result ->
+    private fun fillDDLMes(data:List<Calificacion>){
+        tools.fillMesAnnioData(data)
+        spinnerAdapter = CustomSpinnerAdapter(requireContext(), android.R.layout.simple_spinner_dropdown_item, "anniomes", tools.mesDataList as ArrayList<Any>);
+        spinner.adapter = spinnerAdapter
+    }
+
+    /*private fun setupObseverText(reciclerView: RecyclerView){
+        viewModel.fethPrueba.observe(viewLifecycleOwner, Observer { result ->
             when (result) {
                 is Resource.Loading -> {
                     progressBar.visibility = View.VISIBLE
@@ -136,6 +141,30 @@ class EstadisticaPersonalListFragment : Fragment(), AdapterView.OnItemSelectedLi
                 }
             }
         })
+    }*/
+
+    private fun setupObserver(reciclerView:RecyclerView){
+        viewModel.fetchCalificacionList.observe(viewLifecycleOwner, Observer { result ->
+            when (result) {
+                is Resource.Loading -> {
+                    progressBar.visibility = View.VISIBLE
+                    Log.d("", "Loading")
+                }
+                is Resource.Success -> {
+                    progressBar.visibility = View.GONE
+                    reciclerView.adapter = EstadisticaPersonalRecyclerViewAdapter(result.data, requireContext())
+                    Log.d(TAG, result.data.toString())
+
+                    if(spinner.adapter==null){
+                        fillDDLMes(result.data)
+                    }
+                }
+                is Resource.Failure -> {
+                    progressBar.visibility = View.GONE
+                    Log.d("", "Failure")
+                }
+            }
+        })
     }
 
     companion object {
@@ -154,14 +183,15 @@ class EstadisticaPersonalListFragment : Fragment(), AdapterView.OnItemSelectedLi
     }
 
     override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-        var mes = (p1 as AppCompatCheckedTextView).text
-        resources.getStringArray(R.array.meses_array).find {
-            it.contentEquals(mes)
+        var anniomes = (p1 as AppCompatCheckedTextView).text
+        val mesAnnioData = tools.mesDataList.filter {
+            c->c.anniomes == anniomes
         }
-        parametersEstadisticaPersonal.annio = 2021
-        parametersEstadisticaPersonal.mes = 2
-        viewModel.setParametersEstadisticaPersonal(parametersEstadisticaPersonal)
-        Toast.makeText(requireContext(), (p1 as AppCompatCheckedTextView).text, Toast.LENGTH_LONG).show()
+        viewModel.setVariablesMutable(userNameG, mesAnnioData.get(0).annio, mesAnnioData.get(0).idMes, tokenG)
+
+        //viewModel.setMesMutable(2)
+        //viewModel.setVariablesMutable(2021, 1, tokenG)
+
     }
 
     override fun onNothingSelected(p0: AdapterView<*>?) {

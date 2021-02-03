@@ -4,11 +4,17 @@ import android.content.Context
 import android.preference.PreferenceManager
 import androidx.fragment.app.FragmentActivity
 import com.example.happygoaldemo.R
+import com.example.happygoaldemo.data.model.Calificacion
+import com.example.happygoaldemo.data.model.MesAnnioData
 import com.google.android.material.appbar.AppBarLayout
+import java.text.DateFormatSymbols
 import java.util.*
 
 
 class Tools {
+
+    val mesDataList = arrayListOf<MesAnnioData>()
+
     fun savePreferences(context: Context?, name: String, value: String, type: Int){
         val sharedPref = PreferenceManager.getDefaultSharedPreferences(context)?: return
         with(sharedPref.edit()) {
@@ -91,23 +97,47 @@ class Tools {
         return c.get(Calendar.HOUR).toString().padStart(2, '0') + ":" + c.get(Calendar.MINUTE).toString().padStart(2, '0') + ":" + c.get(Calendar.SECOND).toString().padStart(2, '0') + " " + getAMPM(c.get(Calendar.AM_PM), context)
      }
 
-    fun getAMPM(id:Int, context: Context?):String{
+    fun getAMPM(id: Int, context: Context?):String{
         return when(id){
-            Calendar.AM->context?.getString(R.string.am).toString()
-            Calendar.PM->context?.getString(R.string.pm).toString()
+            Calendar.AM -> context?.getString(R.string.am).toString()
+            Calendar.PM -> context?.getString(R.string.pm).toString()
             else -> context?.getString(R.string.am).toString()
         }
     }
 
-    fun getFaceResource(id:Int?):Int{
+    fun getFaceResource(id: Int?):Int{
         return when(id){
-            1->R.drawable.ic_feliz
-            2->R.drawable.ic_motivado
-            3->R.drawable.ic_tranquilo
-            4->R.drawable.ic_estresado
-            5->R.drawable.ic_enojado
+            1 -> R.drawable.ic_feliz
+            2 -> R.drawable.ic_motivado
+            3 -> R.drawable.ic_tranquilo
+            4 -> R.drawable.ic_estresado
+            5 -> R.drawable.ic_enojado
             else -> R.drawable.ic_feliz
         }
     }
 
+    fun fillMesAnnioData(data: List<Calificacion>){
+        val dfs = DateFormatSymbols(Locale("es"))
+        val months = dfs.months
+        data.forEach {
+            val c: Calendar = Calendar.getInstance()
+            c.setTime(it.fechaCreacion)
+            val currentDate:Calendar = Calendar.getInstance()
+            currentDate.add(Calendar.MONTH, -3)
+
+            if(c.time>currentDate.time){
+                val idmes = c.get(Calendar.MONTH)
+                var annioMes = MesAnnioData(
+                        idMes = idmes + 1,
+                        nameMes = months[idmes].capitalize(),
+                        annio = c.get(Calendar.YEAR),
+                        anniomes = months[idmes].capitalize() + " - " + c.get(Calendar.YEAR),
+                        activoMes = true
+                )
+                if(!mesDataList.contains(annioMes)){
+                    mesDataList.add(annioMes)
+                }
+            }
+        }
+    }
 }
