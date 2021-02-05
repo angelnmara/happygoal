@@ -5,7 +5,9 @@ import android.preference.PreferenceManager
 import androidx.fragment.app.FragmentActivity
 import com.example.happygoaldemo.R
 import com.example.happygoaldemo.data.model.Calificacion
+import com.example.happygoaldemo.data.model.Emotion
 import com.example.happygoaldemo.data.model.MesAnnioData
+import com.example.happygoaldemo.data.model.GraphDataEmotion
 import com.google.android.material.appbar.AppBarLayout
 import java.text.DateFormatSymbols
 import java.util.*
@@ -14,6 +16,8 @@ import java.util.*
 class Tools {
 
     val mesDataList = arrayListOf<MesAnnioData>()
+    val emotionList = arrayListOf<Emotion>()
+    var listGraphEmotion = arrayListOf<GraphDataEmotion>()
 
     fun savePreferences(context: Context?, name: String, value: String, type: Int){
         val sharedPref = PreferenceManager.getDefaultSharedPreferences(context)?: return
@@ -114,6 +118,30 @@ class Tools {
             5 -> R.drawable.ic_enojado
             else -> R.drawable.ic_feliz
         }
+    }
+
+    fun fillEmotions(context:Context){
+        var arrayPlanets = context.resources.getStringArray(R.array.emociones_array)
+        var i = 1
+        arrayPlanets.forEach {emocion ->
+            val emotion = Emotion(
+                idEmotion = i,
+                nameEmotion = emocion
+            )
+            i++
+            emotionList.add(emotion)
+        }
+    }
+
+    fun fillCharts(data:List<Calificacion>){
+        emotionList.forEach { cal->
+            val graphDataEmotion = GraphDataEmotion(
+                emotion = cal.nameEmotion,
+                sumEmotion = data.filter { c->c.calificacion==cal.idEmotion }.count()
+            )
+            listGraphEmotion.add(graphDataEmotion)
+        }
+
     }
 
     fun fillMesAnnioData(data: List<Calificacion>){

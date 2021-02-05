@@ -5947,6 +5947,12 @@
         <item>Octubre</item>
         <item>Noviembre</item>
         <item>Diciembre</item>
+    </string-array><string-array name="emociones_array">
+        <item>Feliz</item>
+        <item>Motivado</item>
+        <item>Tranquilo</item>
+        <item>Estresado</item>
+        <item>Enojado</item>
     </string-array></file><file path="/home/daver/Desarrollo/happygoal/app/src/main/res/values/colors.xml" qualifiers=""><color name="purple_200">#FFBB86FC</color><color name="purple_500">#FF6200EE</color><color name="purple_700">#FF3700B3</color><color name="teal_200">#FF03DAC5</color><color name="teal_700">#FF018786</color><color name="black">#FF000000</color><color name="white">#FFFFFFFF</color><color name="enojado">#ff3300</color><color name="estresado">#ff9900</color><color name="motivado">#99ff99</color><color name="tranquilo">#3399ff</color><color name="feliz">#ffff4d</color><color name="morado">#9966ff</color><color name="gris">#e0e0d1</color><color name="transparente">#ff000000</color><color name="azul">#FF3700B3</color></file><file path="/home/daver/Desarrollo/happygoal/app/src/main/res/values/ic_tranquilo_background.xml" qualifiers=""><color name="ic_tranquilo_background">#FFFFFF</color></file><file path="/home/daver/Desarrollo/happygoal/app/src/main/res/values/ic_serio_background.xml" qualifiers=""><color name="ic_serio_background">#FFFFFF</color></file><file path="/home/daver/Desarrollo/happygoal/app/src/main/res/values/ic_enojado_background.xml" qualifiers=""><color name="ic_enojado_background">#3DDC84</color></file><file path="/home/daver/Desarrollo/happygoal/app/src/main/res/values/ic_neutral_background.xml" qualifiers=""><color name="ic_neutral_background">#FFFFFF</color></file><file path="/home/daver/Desarrollo/happygoal/app/src/main/res/values/themes.xml" qualifiers=""><style name="Theme.HappyGoalDemo" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         
         <item name="colorPrimary">@color/teal_200</item>

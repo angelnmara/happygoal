@@ -59,6 +59,7 @@ int animator nav_default_enter_anim 0x7f02000f
 int animator nav_default_exit_anim 0x7f020010
 int animator nav_default_pop_enter_anim 0x7f020011
 int animator nav_default_pop_exit_anim 0x7f020012
+int array emociones_array 0x7f140002
 int array meses_array 0x7f140001
 int array planets_array 0x7f140000
 int attr action 0x7f030000

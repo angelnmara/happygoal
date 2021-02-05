@@ -1,15 +1,27 @@
 package com.example.happygoaldemo.ui.estadistica_personal_chart
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
+import androidx.recyclerview.widget.RecyclerView
 import com.example.happygoaldemo.R
+import com.example.happygoaldemo.api.RepoImpl
+import com.example.happygoaldemo.data.model.DataSource
+import com.example.happygoaldemo.data.model.GraphDataEmotion
+import com.example.happygoaldemo.tools.Resource
+import com.example.happygoaldemo.tools.Tools
+import com.example.happygoaldemo.tools.VMFactory
+import com.example.happygoaldemo.ui.estadistica_personal_list.EstadisticaPersonalRecyclerViewAdapter
+import com.example.happygoaldemo.ui.estadistica_personal_list.EstadisticaPersonalViewModel
 import com.github.aachartmodel.aainfographics.aachartcreator.AAChartModel
 import com.github.aachartmodel.aainfographics.aachartcreator.AAChartType
 import com.github.aachartmodel.aainfographics.aachartcreator.AAChartView
 import com.github.aachartmodel.aainfographics.aachartcreator.AASeriesElement
+import java.util.Observer
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -22,10 +34,18 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class EstadisticaPersonalChartFragment : Fragment() {
+
+    private val TAG = javaClass.name
+    private var tools = Tools()
+    private val viewModel by viewModels<EstadisticaPersonalChartViewModel> { VMFactory(
+        RepoImpl(
+            DataSource()
+        )
+    ) }
+
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
-
     private var aaChartModel: AAChartModel? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,13 +62,20 @@ class EstadisticaPersonalChartFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view:View = inflater.inflate(R.layout.fragment_estadistica_personal_chart, container, false)
-        aaChartModel = configurePieChart()
-        val aaChartView: AAChartView = view.findViewById(R.id.AAChartView)
-        aaChartView.aa_drawChartWithChartModel(aaChartModel!!)
+        viewModel.userName = tools.getDefaultsString(getString(R.string.username), requireContext()).toString()
+        viewModel.token = tools.getDefaultsString(getString(R.string.token), requireContext()).toString()
+        setupObserver(view)
+
         return view
     }
 
-    fun configurePieChart(): AAChartModel  {
+    fun configureGraph(listData:List<GraphDataEmotion>, view: View){
+        aaChartModel = configurePieChart(listData)
+        val aaChartView: AAChartView = view.findViewById(R.id.AAChartView)
+        aaChartView.aa_drawChartWithChartModel(aaChartModel!!)
+    }
+
+    fun configurePieChart(listData:List<GraphDataEmotion>): AAChartModel  {
         return AAChartModel()
             .chartType(AAChartType.Pie)
             .backgroundColor("#ffffff")
@@ -59,13 +86,36 @@ class EstadisticaPersonalChartFragment : Fragment() {
             .series(arrayOf(
                 AASeriesElement()
                     .name("Language market shares")
-                    .data(arrayOf(
-                        arrayOf("Java",   67),
-                        arrayOf("Swift", 999),
-                        arrayOf("Python", 83),
-                        arrayOf("OC",     11),
-                        arrayOf("Go",     30)
-                    ))))
+                    .data(arrayOf(listData.toTypedArray()))))
+    }
+
+    /*arrayOf(
+    arrayOf("Java",   67),
+    arrayOf("Swift", 999),
+    arrayOf("Python", 83),
+    arrayOf("OC",     11),
+    arrayOf("Go",     30)
+    )*/
+
+    private fun setupObserver(view: View){
+        tools.fillEmotions(requireContext())
+        viewModel.fetchCalificacion.observe(
+            viewLifecycleOwner,
+            androidx.lifecycle.Observer { result ->
+                when (result) {
+                    is Resource.Loading -> {
+                        Log.d(TAG, "setupObserver: loading")
+                    }
+                    is Resource.Success -> {
+                        tools.fillCharts(result.data)
+                        configureGraph(tools.listGraphEmotion, view)
+                        Log.d(TAG, "setupObserver: success")
+                    }
+                    is Resource.Failure -> {
+                        Log.d(TAG, "setupObserver: failure")
+                    }
+                }
+            })
     }
 
     companion object {

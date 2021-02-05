@@ -95,4 +95,12 @@
         <item>Diciembre</item>
     </string-array>
 
+    <string-array name="emociones_array">
+        <item>Feliz</item>
+        <item>Motivado</item>
+        <item>Tranquilo</item>
+        <item>Estresado</item>
+        <item>Enojado</item>
+    </string-array>
+
 </resources>
