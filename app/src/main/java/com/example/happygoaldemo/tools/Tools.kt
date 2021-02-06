@@ -2,6 +2,7 @@ package com.example.happygoaldemo.tools
 
 import android.content.Context
 import android.preference.PreferenceManager
+import android.util.Log
 import androidx.fragment.app.FragmentActivity
 import com.example.happygoaldemo.R
 import com.example.happygoaldemo.data.model.Calificacion
@@ -11,13 +12,15 @@ import com.example.happygoaldemo.data.model.GraphDataEmotion
 import com.google.android.material.appbar.AppBarLayout
 import java.text.DateFormatSymbols
 import java.util.*
+import java.util.Date.from
 
 
 class Tools {
 
+    val TAG = javaClass.name
     val mesDataList = arrayListOf<MesAnnioData>()
     val emotionList = arrayListOf<Emotion>()
-    var listGraphEmotion = arrayListOf<GraphDataEmotion>()
+    lateinit var listGraphEmotion:Array<Any>
 
     fun savePreferences(context: Context?, name: String, value: String, type: Int){
         val sharedPref = PreferenceManager.getDefaultSharedPreferences(context)?: return
@@ -134,13 +137,28 @@ class Tools {
     }
 
     fun fillCharts(data:List<Calificacion>){
+        var aoa= arrayListOf(arrayOf(String, Int))
+
+        /*listGraphEmotion = arrayOf(
+                arrayOf("Feliz",   14),
+                arrayOf("Motivado", 14),
+                arrayOf("Tranquilo", 15),
+                arrayOf("Estresado", 19),
+                arrayOf("Enojado", 20))
+
+        listGraphEmotion.forEach {
+            if(it.equals(arrayOf("Feliz", 0))){
+                Log.d(TAG, "fillCharts: " + it.toString())
+            }
+        }*/
+
         emotionList.forEach { cal->
-            val graphDataEmotion = GraphDataEmotion(
-                emotion = cal.nameEmotion,
-                sumEmotion = data.filter { c->c.calificacion==cal.idEmotion }.count()
-            )
-            listGraphEmotion.add(graphDataEmotion)
+            //var graphDataEmotion = GraphDataEmotion(emotion = cal.nameEmotion, sumEmotion = data.filter { c -> c.calificacion == cal.idEmotion }.count())
+            aoa.add(arrayOf(cal.nameEmotion, data.filter { c -> c.calificacion == cal.idEmotion }.count()))
         }
+        aoa.removeAt(0)
+        listGraphEmotion = aoa.toArray()
+
 
     }
 

@@ -69,24 +69,24 @@ class EstadisticaPersonalChartFragment : Fragment() {
         return view
     }
 
-    fun configureGraph(listData:List<GraphDataEmotion>, view: View){
+    fun configureGraph(listData:Array<Any>, view: View){
         aaChartModel = configurePieChart(listData)
         val aaChartView: AAChartView = view.findViewById(R.id.AAChartView)
         aaChartView.aa_drawChartWithChartModel(aaChartModel!!)
     }
 
-    fun configurePieChart(listData:List<GraphDataEmotion>): AAChartModel  {
+    fun configurePieChart(listData:Array<Any>): AAChartModel  {
         return AAChartModel()
             .chartType(AAChartType.Pie)
             .backgroundColor("#ffffff")
-            .title("LANGUAGE MARKET SHARES JANUARY,2020 TO MAY")
-            .subtitle("virtual data")
+            .title("Estadística Personal ")
+            .subtitle("ultimos 3 meses")
             .dataLabelsEnabled(true)//是否直接显示扇形图数据
             .yAxisTitle("℃")
             .series(arrayOf(
                 AASeriesElement()
-                    .name("Language market shares")
-                    .data(arrayOf(listData.toTypedArray()))))
+                    .name("Numero de emociones")
+                    .data(listData)))
     }
 
     /*arrayOf(
