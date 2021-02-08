@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/estadisticaPersonalChartFragment"
         android:name="com.example.happygoaldemo.ui.estadistica_personal_chart.EstadisticaPersonalChartFragment"
-        android:label="fragment_estadistica_personal_chart"
+        android:label="Grafica personal"
         tools:layout="@layout/fragment_estadistica_personal_chart" >
         <action
             android:id="@+id/action_estadisticaPersonalChartFragment_to_estadisticaPersonalListFragment2"
@@ -17,7 +17,7 @@
     <fragment
         android:id="@+id/estadisticaPersonalListFragment"
         android:name="com.example.happygoaldemo.EstadisticaPersonalListFragment"
-        android:label="fragment_estadistica_personal_list_list"
+        android:label="Estadistica personal"
         tools:layout="@layout/fragment_estadistica_personal_list_list" >
         <action
             android:id="@+id/action_estadisticaPersonalListFragment2_to_estadisticaPersonalChartFragment"

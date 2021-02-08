@@ -42,7 +42,6 @@ class EstadisticaPersonalListFragment : Fragment(), AdapterView.OnItemSelectedLi
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         arguments?.let {
             columnCount = it.getInt(ARG_COLUMN_COUNT)
         }
