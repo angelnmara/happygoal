@@ -3,18 +3,19 @@ package com.example.happygoaldemo.ui.test
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
+import android.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import com.example.happygoaldemo.MainActivity
 import com.example.happygoaldemo.R
 import com.example.happygoaldemo.api.RestApiService
 import com.example.happygoaldemo.data.model.Calificacion
 import com.example.happygoaldemo.databinding.FragmentTestBinding
 import com.example.happygoaldemo.tools.Tools
+import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.snackbar.Snackbar
 import java.util.*
 
@@ -44,7 +45,13 @@ class TestFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        tools.muestraToolBar(activity)
+
+        //setHasOptionsMenu(true)
+
+        //tools.muestraToolBar(activity)
+        //var toolbar = activity?.findViewById<AppBarLayout>(R.id.toolbar)
+        //toolbar?.setBackgroundColor(resources.getColor(R.color.black))
+
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
@@ -64,6 +71,11 @@ class TestFragment : Fragment() {
         }
     }
 
+/*    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.happy_goal_menu, menu)
+    }*/
+
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
@@ -75,8 +87,9 @@ class TestFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         validaLogin(view)
+
+        //val toolbar = view.findViewById<Toolbar>(R.id.toolbar)
 
         testViewModel = ViewModelProvider(this, TestViewModelFactory()).get(TestViewModel::class.java)
         val lnlTest = binding.lnlTest

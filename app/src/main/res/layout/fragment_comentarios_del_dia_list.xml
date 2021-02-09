@@ -23,6 +23,20 @@
         </ProgressBar>
     </RelativeLayout>
 
+    <RelativeLayout
+        android:id="@+id/clLeyendaDatos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/leyendaNoDatos"
+            android:textSize="16sp"></TextView>
+    </RelativeLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list"
         android:layout_width="match_parent"

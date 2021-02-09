@@ -32,6 +32,7 @@ class ComentariosDelDiaFragment : Fragment() {
     private var tools = Tools()
     private lateinit var tokenG: String
     private lateinit var progressBar: RelativeLayout
+    private lateinit var leyendaDatos:RelativeLayout
     private lateinit var rv:RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,6 +47,7 @@ class ComentariosDelDiaFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_comentarios_del_dia_list, container, false)
         progressBar = view.findViewById<RelativeLayout>(R.id.progressBar)
+        leyendaDatos= view.findViewById(R.id.clLeyendaDatos)
 
         tokenG = tools.getDefaultsString(getString(R.string.token), requireContext()).toString()
 
@@ -83,7 +85,15 @@ class ComentariosDelDiaFragment : Fragment() {
                 }
                 is Resource.Success -> {
                     progressBar.visibility = View.GONE
-                    reciclerView.adapter = EstadisticaPersonalRecyclerViewAdapter(result.data, requireContext())
+                    if(result.data.count()>0){
+                        reciclerView.adapter = EstadisticaPersonalRecyclerViewAdapter(result.data, requireContext())
+                        leyendaDatos.visibility = View.GONE
+                        rv.visibility = View.VISIBLE
+                    }else{
+                        rv.visibility = View.GONE
+                        leyendaDatos.visibility = View.VISIBLE
+                    }
+
                     Log.d(TAG, "Successs")
                 }
             }

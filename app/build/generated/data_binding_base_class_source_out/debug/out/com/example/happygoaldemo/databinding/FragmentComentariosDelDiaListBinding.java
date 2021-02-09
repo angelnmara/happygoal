@@ -20,14 +20,19 @@ public final class FragmentComentariosDelDiaListBinding implements ViewBinding {
   private final FrameLayout rootView;
 
   @NonNull
+  public final RelativeLayout clLeyendaDatos;
+
+  @NonNull
   public final RecyclerView list;
 
   @NonNull
   public final RelativeLayout progressBar;
 
   private FragmentComentariosDelDiaListBinding(@NonNull FrameLayout rootView,
-      @NonNull RecyclerView list, @NonNull RelativeLayout progressBar) {
+      @NonNull RelativeLayout clLeyendaDatos, @NonNull RecyclerView list,
+      @NonNull RelativeLayout progressBar) {
     this.rootView = rootView;
+    this.clLeyendaDatos = clLeyendaDatos;
     this.list = list;
     this.progressBar = progressBar;
   }
@@ -59,6 +64,12 @@ public final class FragmentComentariosDelDiaListBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.clLeyendaDatos;
+      RelativeLayout clLeyendaDatos = rootView.findViewById(id);
+      if (clLeyendaDatos == null) {
+        break missingId;
+      }
+
       id = R.id.list;
       RecyclerView list = rootView.findViewById(id);
       if (list == null) {
@@ -71,7 +82,8 @@ public final class FragmentComentariosDelDiaListBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentComentariosDelDiaListBinding((FrameLayout) rootView, list, progressBar);
+      return new FragmentComentariosDelDiaListBinding((FrameLayout) rootView, clLeyendaDatos, list,
+          progressBar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

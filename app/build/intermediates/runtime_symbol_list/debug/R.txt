@@ -1761,7 +1761,6 @@ int id all 0x7f090052
 int id always 0x7f090053
 int id animateToEnd 0x7f090054
 int id animateToStart 0x7f090055
-int id app_bar_layout 0x7f090056
 int id asConfigured 0x7f090057
 int id async 0x7f090058
 int id auto 0x7f090059
@@ -1793,11 +1792,11 @@ int id chip2 0x7f090072
 int id chip3 0x7f090073
 int id chip_group 0x7f090074
 int id chronometer 0x7f090075
+int id clLeyendaDatos 0x7f0901c1
 int id clear_text 0x7f090076
 int id clip_horizontal 0x7f090077
 int id clip_vertical 0x7f090078
 int id collapseActionView 0x7f090079
-int id collapsing_toolbar_layout 0x7f09007a
 int id comentariosDelDiaFragment 0x7f09007b
 int id confirm_button 0x7f09007c
 int id constraintLayout 0x7f09007d
@@ -2088,7 +2087,6 @@ int id title 0x7f090199
 int id titleDividerNoCustom 0x7f09019a
 int id title_template 0x7f09019b
 int id toggle 0x7f09019c
-int id toolbar 0x7f09019d
 int id top 0x7f09019e
 int id topPanel 0x7f09019f
 int id touch_outside 0x7f0901a0
@@ -2354,6 +2352,7 @@ int string invalid_username 0x7f110042
 int string isloged 0x7f110043
 int string item_view_role_description 0x7f110044
 int string jueves 0x7f110045
+int string leyendaNoDatos 0x7f110091
 int string login_failed 0x7f110046
 int string lunes 0x7f110047
 int string martes 0x7f110048

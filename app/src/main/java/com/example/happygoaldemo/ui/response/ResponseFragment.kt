@@ -83,7 +83,7 @@ class ResponseFragment : Fragment() {
         super.onCreate(savedInstanceState)
         (activity as AppCompatActivity).supportActionBar?.hide()
 
-        tools.ocultaToolBar(activity)
+        //tools.ocultaToolBar(activity)
 
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)

@@ -34,14 +34,14 @@ class Tools {
         }
     }
 
-    fun ocultaToolBar(activity: FragmentActivity?){
+    /*fun ocultaToolBar(activity: FragmentActivity?){
         val appBarLayout = activity?.findViewById<AppBarLayout>(R.id.app_bar_layout)
         val lp = appBarLayout?.layoutParams
         lp?.height = 0;
         appBarLayout?.layoutParams = lp
-    }
+    }*/
 
-    fun muestraToolBar(activity: FragmentActivity?){
+    /*fun muestraToolBar(activity: FragmentActivity?){
         val appBarLayout = activity?.findViewById<AppBarLayout>(R.id.app_bar_layout)
         val lp = appBarLayout?.layoutParams
         val x: IntArray = intArrayOf(android.R.attr.actionBarSize)
@@ -49,14 +49,14 @@ class Tools {
         lp?.height = attibutes?.getDimension(0, 1F)?.toInt()
         //.resources?.getInteger()?.toInt();
         appBarLayout?.layoutParams = lp
-    }
+    }*/
 
-    fun setDefaults(key: String?, value: String?, context: Context?) {
+    /*fun setDefaults(key: String?, value: String?, context: Context?) {
         val preferences = PreferenceManager.getDefaultSharedPreferences(context)
         val editor = preferences.edit()
         editor.putString(key, value)
         editor.commit()
-    }
+    }*/
 
     fun getDefaultsString(key: String?, context: Context?): String? {
         val preferences = PreferenceManager.getDefaultSharedPreferences(context)

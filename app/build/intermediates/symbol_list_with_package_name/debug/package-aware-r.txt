@@ -1762,7 +1762,6 @@ id all
 id always
 id animateToEnd
 id animateToStart
-id app_bar_layout
 id asConfigured
 id async
 id auto
@@ -1794,11 +1793,11 @@ id chip2
 id chip3
 id chip_group
 id chronometer
+id clLeyendaDatos
 id clear_text
 id clip_horizontal
 id clip_vertical
 id collapseActionView
-id collapsing_toolbar_layout
 id comentariosDelDiaFragment
 id confirm_button
 id constraintLayout
@@ -2089,7 +2088,6 @@ id title
 id titleDividerNoCustom
 id title_template
 id toggle
-id toolbar
 id top
 id topPanel
 id touch_outside
@@ -2355,6 +2353,7 @@ string invalid_username
 string isloged
 string item_view_role_description
 string jueves
+string leyendaNoDatos
 string login_failed
 string lunes
 string martes
