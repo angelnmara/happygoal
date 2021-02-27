@@ -2,8 +2,14 @@
   {
     "name": "nav_graph",
     "navigationXmlIds": [
-      "estadistica_personal_nav_graph"
+      "estadistica_personal_nav_graph",
+      "termometro_general_nav_graph"
     ],
+    "deepLinks": []
+  },
+  {
+    "name": "termometro_general_nav_graph",
+    "navigationXmlIds": [],
     "deepLinks": []
   },
   {

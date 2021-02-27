@@ -5,9 +5,10 @@
       <root url="jar:///usr/local/Cellar/gradle/6.7.1/libexec/caches/transforms-2/files-2.1/4b7a8c7fa5895c18c4fc2955f1b2e70e/activity-1.1.0/jars/classes.jar!/" />
       <root url="file:///usr/local/Cellar/gradle/6.7.1/libexec/caches/transforms-2/files-2.1/4b7a8c7fa5895c18c4fc2955f1b2e70e/activity-1.1.0/AndroidManifest.xml" />
       <root url="file:///usr/local/Cellar/gradle/6.7.1/libexec/caches/transforms-2/files-2.1/4b7a8c7fa5895c18c4fc2955f1b2e70e/activity-1.1.0/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/2dc814ca03eabef30ff32d720a43998e/transformed/activity-1.1.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/2dc814ca03eabef30ff32d720a43998e/transformed/activity-1.1.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/2dc814ca03eabef30ff32d720a43998e/transformed/activity-1.1.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/cec75cd554ac85868f07f960cf7f8ac3/transformed/activity-1.1.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/cec75cd554ac85868f07f960cf7f8ac3/transformed/activity-1.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/cec75cd554ac85868f07f960cf7f8ac3/transformed/activity-1.1.0/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

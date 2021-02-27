@@ -35,5 +35,8 @@ public class TestFragmentDirections private constructor() {
 
     public fun actionTestFragmentToComentariosDelDiaFragment(): NavDirections =
         ActionOnlyNavDirections(R.id.action_testFragment_to_comentariosDelDiaFragment)
+
+    public fun actionTestFragmentToTermometroGeneralNavGraph(): NavDirections =
+        ActionOnlyNavDirections(R.id.action_testFragment_to_termometro_general_nav_graph)
   }
 }

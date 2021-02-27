@@ -33,14 +33,19 @@ public final class ActivityMainBinding implements ViewBinding {
   @NonNull
   public final BottomNavigationView navViewBottom;
 
+  @NonNull
+  public final BottomNavigationView navViewBottomTermometro;
+
   private ActivityMainBinding(@NonNull DrawerLayout rootView, @NonNull DrawerLayout drawerLayout,
       @NonNull FragmentContainerView navHostFragment, @NonNull NavigationView navView,
-      @NonNull BottomNavigationView navViewBottom) {
+      @NonNull BottomNavigationView navViewBottom,
+      @NonNull BottomNavigationView navViewBottomTermometro) {
     this.rootView = rootView;
     this.drawerLayout = drawerLayout;
     this.navHostFragment = navHostFragment;
     this.navView = navView;
     this.navViewBottom = navViewBottom;
+    this.navViewBottomTermometro = navViewBottomTermometro;
   }
 
   @Override
@@ -90,8 +95,14 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.nav_view_bottom_termometro;
+      BottomNavigationView navViewBottomTermometro = ViewBindings.findChildViewById(rootView, id);
+      if (navViewBottomTermometro == null) {
+        break missingId;
+      }
+
       return new ActivityMainBinding((DrawerLayout) rootView, drawerLayout, navHostFragment,
-          navView, navViewBottom);
+          navView, navViewBottom, navViewBottomTermometro);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

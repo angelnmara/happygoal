@@ -1750,6 +1750,7 @@ id action_testFragment_to_acerca_de
 id action_testFragment_to_comentariosDelDiaFragment
 id action_testFragment_to_loginFragment
 id action_testFragment_to_responseFragment
+id action_testFragment_to_termometro_general_nav_graph
 id action_text
 id actions
 id activity_chooser_view_content
@@ -1953,6 +1954,7 @@ id nav_host_fragment_container
 id nav_termometro_general
 id nav_view
 id nav_view_bottom
+id nav_view_bottom_termometro
 id navigation_header_container
 id never
 id noScroll
@@ -2059,6 +2061,9 @@ id tag_screen_reader_focusable
 id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
+id termometroGeneralChartFragment
+id termometroGeneralFragment
+id termometro_general_nav_graph
 id testFragment
 id test_checkbox_android_button_tint
 id test_checkbox_app_button_tint
@@ -2209,6 +2214,9 @@ layout fragment_login
 layout fragment_main
 layout fragment_notifications
 layout fragment_response
+layout fragment_termometro_general
+layout fragment_termometro_general_chart
+layout fragment_termometro_general_list
 layout fragment_test
 layout header_main
 layout mtrl_alert_dialog
@@ -2275,10 +2283,12 @@ layout text_view_without_line_height
 layout tragos_row
 menu estadistica_personal_menu
 menu happy_goal_menu
+menu termometro_general_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 navigation estadistica_personal_nav_graph
 navigation nav_graph
+navigation termometro_general_nav_graph
 plurals mtrl_badge_content_description
 string abc_action_bar_home_description
 string abc_action_bar_up_description
@@ -2413,7 +2423,8 @@ string prompt_password
 string sabado
 string search_menu_title
 string status_bar_notification_info_overflow
-string termómetroGeneral
+string termometroGeneral
+string termometro_general_grafica
 string timeExpiration
 string title_activity_estadistica_personal
 string title_dashboard

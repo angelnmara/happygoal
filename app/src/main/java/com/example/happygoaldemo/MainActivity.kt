@@ -22,21 +22,23 @@ class MainActivity : AppCompatActivity() {
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var appBarConfiguration:AppBarConfiguration
     private lateinit var navView: BottomNavigationView
+    private lateinit var navViewTermometro: BottomNavigationView
     private lateinit var navigagionView:NavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        navView = findViewById(R.id.nav_view_bottom)
+        navViewTermometro = findViewById(R.id.nav_view_bottom_termometro)
         navigagionView = findViewById<NavigationView>(R.id.nav_view)
         drawerLayout = findViewById<DrawerLayout>(R.id.drawer_layout)
 
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
-        navView = findViewById(R.id.nav_view_bottom)
         navController = navHostFragment.navController
-        //setupActionBarWithNavController(navController, appBarConfiguration)
         navigagionView.setupWithNavController(navController)
         navView.setupWithNavController(navController)
+        navViewTermometro.setupWithNavController(navController)
 
         configureMenu()
 
@@ -50,6 +52,11 @@ class MainActivity : AppCompatActivity() {
                 R.id.estadisticaPersonalActivity->{
                     configureEstadisticas()
                     navController.navigate(R.id.estadistica_personal_nav_graph)
+                    true
+                }
+                R.id.nav_termometro_general->{
+                    configureTermometro()
+                    navController.navigate(R.id.termometro_general_nav_graph)
                     true
                 }
                 else->{
@@ -68,9 +75,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun configureMenu(){
         appBarConfiguration = AppBarConfiguration(navController.graph, drawerLayout)
-
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.visibility= View.GONE
+        navViewTermometro.visibility= View.GONE
     }
 
     private fun configureEstadisticas(){
@@ -81,6 +88,18 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.visibility= View.VISIBLE
+        navViewTermometro.visibility= View.GONE
+    }
+
+    private fun configureTermometro(){
+        appBarConfiguration = AppBarConfiguration(
+            setOf(
+                R.id.termometroGeneralFragment, R.id.termometroGeneralChartFragment
+            )
+        )
+        setupActionBarWithNavController(navController, appBarConfiguration)
+        navViewTermometro.visibility= View.VISIBLE
+        navView.visibility= View.GONE
     }
 
     override fun onSupportNavigateUp(): Boolean {

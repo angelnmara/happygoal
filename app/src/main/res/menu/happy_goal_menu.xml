@@ -13,7 +13,7 @@
         <item
             android:id="@+id/nav_termometro_general"
             android:icon="@drawable/ic_baseline_local_fire_department_24"
-            android:title="@string/termómetroGeneral" />
+            android:title="@string/termometroGeneral" />
         <item
             android:id="@+id/acerca_de"
             android:icon="@drawable/ic_baseline_info_24"

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/termometroGeneralFragment"
+        android:checked="true"
+        android:icon="@drawable/ic_baseline_list_24"
+        android:title="@string/termometroGeneral" />
+    <item
+        android:id="@+id/termometroGeneralChartFragment"
+        android:icon="@drawable/ic_baseline_bar_chart_24"
+        android:title="@string/termometro_general_grafica" />
+</menu>
