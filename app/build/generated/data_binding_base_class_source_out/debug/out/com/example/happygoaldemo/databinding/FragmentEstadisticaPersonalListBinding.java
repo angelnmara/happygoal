@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.example.happygoaldemo.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -73,31 +74,31 @@ public final class FragmentEstadisticaPersonalListBinding implements ViewBinding
     int id;
     missingId: {
       id = R.id.content;
-      TextView content = rootView.findViewById(id);
+      TextView content = ViewBindings.findChildViewById(rootView, id);
       if (content == null) {
         break missingId;
       }
 
       id = R.id.img_sentimiento;
-      ImageView imgSentimiento = rootView.findViewById(id);
+      ImageView imgSentimiento = ViewBindings.findChildViewById(rootView, id);
       if (imgSentimiento == null) {
         break missingId;
       }
 
       id = R.id.item_number;
-      TextView itemNumber = rootView.findViewById(id);
+      TextView itemNumber = ViewBindings.findChildViewById(rootView, id);
       if (itemNumber == null) {
         break missingId;
       }
 
       id = R.id.txt_dia;
-      TextView txtDia = rootView.findViewById(id);
+      TextView txtDia = ViewBindings.findChildViewById(rootView, id);
       if (txtDia == null) {
         break missingId;
       }
 
       id = R.id.txt_dia_numero;
-      TextView txtDiaNumero = rootView.findViewById(id);
+      TextView txtDiaNumero = ViewBindings.findChildViewById(rootView, id);
       if (txtDiaNumero == null) {
         break missingId;
       }

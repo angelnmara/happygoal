@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.example.happygoaldemo.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -65,19 +66,19 @@ public final class FragmentComentariosDelDiaListBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.clLeyendaDatos;
-      RelativeLayout clLeyendaDatos = rootView.findViewById(id);
+      RelativeLayout clLeyendaDatos = ViewBindings.findChildViewById(rootView, id);
       if (clLeyendaDatos == null) {
         break missingId;
       }
 
       id = R.id.list;
-      RecyclerView list = rootView.findViewById(id);
+      RecyclerView list = ViewBindings.findChildViewById(rootView, id);
       if (list == null) {
         break missingId;
       }
 
       id = R.id.progressBar;
-      RelativeLayout progressBar = rootView.findViewById(id);
+      RelativeLayout progressBar = ViewBindings.findChildViewById(rootView, id);
       if (progressBar == null) {
         break missingId;
       }

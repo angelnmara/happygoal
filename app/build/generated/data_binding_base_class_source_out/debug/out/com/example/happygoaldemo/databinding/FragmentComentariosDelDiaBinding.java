@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.example.happygoaldemo.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -59,13 +60,13 @@ public final class FragmentComentariosDelDiaBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.content;
-      TextView content = rootView.findViewById(id);
+      TextView content = ViewBindings.findChildViewById(rootView, id);
       if (content == null) {
         break missingId;
       }
 
       id = R.id.item_number;
-      TextView itemNumber = rootView.findViewById(id);
+      TextView itemNumber = ViewBindings.findChildViewById(rootView, id);
       if (itemNumber == null) {
         break missingId;
       }

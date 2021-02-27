@@ -38,9 +38,6 @@
             android:id="@+id/action_testFragment_self"
             app:destination="@id/testFragment"/>
         <action
-            android:id="@+id/action_testFragment_to_estadisticaPersonalActivity"
-            app:destination="@id/estadisticaPersonalActivity" />
-        <action
             android:id="@+id/action_testFragment_to_comentariosDelDiaFragment"
             app:destination="@id/comentariosDelDiaFragment" />
     </fragment>
@@ -52,20 +49,20 @@
         <argument
             android:name="calificacion"
             app:argType="string" />
+        <action
+            android:id="@+id/action_responseFragment_to_estadistica_personal_nav_graph"
+            app:destination="@id/estadistica_personal_nav_graph" />
     </fragment>
     <fragment
         android:id="@+id/acerca_de"
         android:name="com.example.happygoaldemo.ui.acerca_de.Acerca_de"
         android:label="Acerca de"
         tools:layout="@layout/fragment_acerca_de" />
-    <activity
-        android:id="@+id/estadisticaPersonalActivity"
-        android:name="com.example.happygoaldemo.EstadisticaPersonalActivity"
-        android:label="EstadisticaPersonalActivity" />
     <fragment
         android:id="@+id/comentariosDelDiaFragment"
         android:name="com.example.happygoaldemo.ui.comentarios_del_dia.ComentariosDelDiaFragment"
         android:label="Comentario del dia"
         tools:layout="@layout/fragment_comentarios_del_dia_list" />
+    <include app:graph="@navigation/estadistica_personal_nav_graph" />
 
 </navigation>

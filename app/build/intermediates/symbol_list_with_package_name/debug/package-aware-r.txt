@@ -1737,8 +1737,6 @@ id action_bar_title
 id action_container
 id action_context_bar
 id action_divider
-id action_estadisticaPersonalChartFragment_to_estadisticaPersonalListFragment2
-id action_estadisticaPersonalListFragment2_to_estadisticaPersonalChartFragment
 id action_image
 id action_loginFragment_to_testFragment
 id action_menu_divider
@@ -1746,10 +1744,10 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
+id action_responseFragment_to_estadistica_personal_nav_graph
 id action_testFragment_self
 id action_testFragment_to_acerca_de
 id action_testFragment_to_comentariosDelDiaFragment
-id action_testFragment_to_estadisticaPersonalActivity
 id action_testFragment_to_loginFragment
 id action_testFragment_to_responseFragment
 id action_text
@@ -1951,10 +1949,10 @@ id nav_cerrar_sesion
 id nav_controller_view_tag
 id nav_graph
 id nav_host_fragment
-id nav_host_fragment_activity_estadistica_personal
 id nav_host_fragment_container
 id nav_termometro_general
 id nav_view
+id nav_view_bottom
 id navigation_header_container
 id never
 id noScroll
@@ -2184,7 +2182,6 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
-layout activity_estadistica_personal
 layout activity_main
 layout custom_dialog
 layout design_bottom_navigation_item

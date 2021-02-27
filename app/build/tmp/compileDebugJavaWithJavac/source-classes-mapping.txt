@@ -24,8 +24,6 @@ com/example/happygoaldemo/databinding/HeaderMainBinding.java
  com.example.happygoaldemo.databinding.HeaderMainBinding
 com/example/happygoaldemo/databinding/FragmentEstadisticaPersonalChartBinding.java
  com.example.happygoaldemo.databinding.FragmentEstadisticaPersonalChartBinding
-com/example/happygoaldemo/databinding/ActivityEstadisticaPersonalBinding.java
- com.example.happygoaldemo.databinding.ActivityEstadisticaPersonalBinding
 com/example/happygoaldemo/databinding/FragmentAcercaDeBinding.java
  com.example.happygoaldemo.databinding.FragmentAcercaDeBinding
 com/example/happygoaldemo/databinding/FragmentEstadisticaPersonalListListBinding.java

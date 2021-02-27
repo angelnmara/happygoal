@@ -1,7 +1,9 @@
 [
   {
     "name": "nav_graph",
-    "navigationXmlIds": [],
+    "navigationXmlIds": [
+      "estadistica_personal_nav_graph"
+    ],
     "deepLinks": []
   },
   {

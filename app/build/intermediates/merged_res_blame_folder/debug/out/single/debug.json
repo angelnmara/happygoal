@@ -44,10 +44,6 @@
         "source": "/home/daver/Desarrollo/happygoal/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_boton_entrar.png"
     },
     {
-        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/layout_activity_estadistica_personal.xml.flat",
-        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/layout/activity_estadistica_personal.xml"
-    },
-    {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_baseline_list_24.xml.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable/ic_baseline_list_24.xml"
     },

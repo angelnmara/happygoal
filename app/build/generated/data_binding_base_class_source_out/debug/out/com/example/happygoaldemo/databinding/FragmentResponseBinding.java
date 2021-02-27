@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.example.happygoaldemo.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -70,19 +71,19 @@ public final class FragmentResponseBinding implements ViewBinding {
       LinearLayout lnlResponse = (LinearLayout) rootView;
 
       id = R.id.lnlSvg;
-      LinearLayout lnlSvg = rootView.findViewById(id);
+      LinearLayout lnlSvg = ViewBindings.findChildViewById(rootView, id);
       if (lnlSvg == null) {
         break missingId;
       }
 
       id = R.id.txtAlternText;
-      TextView txtAlternText = rootView.findViewById(id);
+      TextView txtAlternText = ViewBindings.findChildViewById(rootView, id);
       if (txtAlternText == null) {
         break missingId;
       }
 
       id = R.id.txtMainText;
-      TextView txtMainText = rootView.findViewById(id);
+      TextView txtMainText = ViewBindings.findChildViewById(rootView, id);
       if (txtMainText == null) {
         break missingId;
       }

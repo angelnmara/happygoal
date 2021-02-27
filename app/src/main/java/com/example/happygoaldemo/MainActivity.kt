@@ -2,6 +2,7 @@ package com.example.happygoaldemo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
@@ -11,6 +12,7 @@ import androidx.navigation.ui.*
 import com.example.happygoaldemo.tools.Tools
 import com.example.happygoaldemo.ui.test.TestFragmentDirections
 import com.google.android.material.appbar.CollapsingToolbarLayout
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -19,24 +21,24 @@ class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var appBarConfiguration:AppBarConfiguration
+    private lateinit var navView: BottomNavigationView
+    private lateinit var navigagionView:NavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //supportActionBar?.hide()
-        var navigagionView = findViewById<NavigationView>(R.id.nav_view)
+        navigagionView = findViewById<NavigationView>(R.id.nav_view)
         drawerLayout = findViewById<DrawerLayout>(R.id.drawer_layout)
-        //val layout = findViewById<CollapsingToolbarLayout>(R.id.collapsing_toolbar_layout)
-        //val toolbar = findViewById<Toolbar>(R.id.toolbar)
+
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        navView = findViewById(R.id.nav_view_bottom)
         navController = navHostFragment.navController
-        appBarConfiguration = AppBarConfiguration(navController.graph, drawerLayout)
-        findViewById<NavigationView>(R.id.nav_view).setupWithNavController(navController)
-        //layout.setupWithNavController(toolbar, navController, appBarConfiguration)
+        //setupActionBarWithNavController(navController, appBarConfiguration)
+        navigagionView.setupWithNavController(navController)
+        navView.setupWithNavController(navController)
 
-        setupActionBarWithNavController(navController, appBarConfiguration)
-
+        configureMenu()
 
         navigagionView.setNavigationItemSelectedListener {
             drawerLayout.closeDrawers()
@@ -45,12 +47,40 @@ class MainActivity : AppCompatActivity() {
                     cerrarSesion()
                     true
                 }
+                R.id.estadisticaPersonalActivity->{
+                    configureEstadisticas()
+                    navController.navigate(R.id.estadistica_personal_nav_graph)
+                    true
+                }
                 else->{
+                    configureMenu()
                     it.onNavDestinationSelected(navController)
                     true
                 }
             }
         }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        configureMenu()
+    }
+
+    private fun configureMenu(){
+        appBarConfiguration = AppBarConfiguration(navController.graph, drawerLayout)
+
+        setupActionBarWithNavController(navController, appBarConfiguration)
+        navView.visibility= View.GONE
+    }
+
+    private fun configureEstadisticas(){
+        appBarConfiguration = AppBarConfiguration(
+            setOf(
+                R.id.estadisticaPersonalListFragment, R.id.estadisticaPersonalChartFragment
+            )
+        )
+        setupActionBarWithNavController(navController, appBarConfiguration)
+        navView.visibility= View.VISIBLE
     }
 
     override fun onSupportNavigateUp(): Boolean {

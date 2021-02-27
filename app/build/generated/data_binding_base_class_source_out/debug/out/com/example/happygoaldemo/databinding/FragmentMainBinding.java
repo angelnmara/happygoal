@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.example.happygoaldemo.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -60,13 +61,13 @@ public final class FragmentMainBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.progressBar;
-      RelativeLayout progressBar = rootView.findViewById(id);
+      RelativeLayout progressBar = ViewBindings.findChildViewById(rootView, id);
       if (progressBar == null) {
         break missingId;
       }
 
       id = R.id.rv_tragos;
-      RecyclerView rvTragos = rootView.findViewById(id);
+      RecyclerView rvTragos = ViewBindings.findChildViewById(rootView, id);
       if (rvTragos == null) {
         break missingId;
       }

@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.example.happygoaldemo.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -64,19 +65,19 @@ public final class TragosRowBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.img_trago;
-      ImageView imgTrago = rootView.findViewById(id);
+      ImageView imgTrago = ViewBindings.findChildViewById(rootView, id);
       if (imgTrago == null) {
         break missingId;
       }
 
       id = R.id.txt_descripcion;
-      TextView txtDescripcion = rootView.findViewById(id);
+      TextView txtDescripcion = ViewBindings.findChildViewById(rootView, id);
       if (txtDescripcion == null) {
         break missingId;
       }
 
       id = R.id.txt_titulo;
-      TextView txtTitulo = rootView.findViewById(id);
+      TextView txtTitulo = ViewBindings.findChildViewById(rootView, id);
       if (txtTitulo == null) {
         break missingId;
       }

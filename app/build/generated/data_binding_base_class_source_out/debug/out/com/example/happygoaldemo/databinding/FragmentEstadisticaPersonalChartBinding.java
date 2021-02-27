@@ -8,6 +8,7 @@ import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.example.happygoaldemo.R;
 import com.github.aachartmodel.aainfographics.aachartcreator.AAChartView;
 import java.lang.NullPointerException;
@@ -55,7 +56,7 @@ public final class FragmentEstadisticaPersonalChartBinding implements ViewBindin
     int id;
     missingId: {
       id = R.id.AAChartView;
-      AAChartView AAChartView = rootView.findViewById(id);
+      AAChartView AAChartView = ViewBindings.findChildViewById(rootView, id);
       if (AAChartView == null) {
         break missingId;
       }

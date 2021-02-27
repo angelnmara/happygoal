@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.example.happygoaldemo.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -94,7 +95,7 @@ public final class FragmentLoginBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.constraintLayout;
-      ConstraintLayout constraintLayout = rootView.findViewById(id);
+      ConstraintLayout constraintLayout = ViewBindings.findChildViewById(rootView, id);
       if (constraintLayout == null) {
         break missingId;
       }
@@ -102,43 +103,43 @@ public final class FragmentLoginBinding implements ViewBinding {
       CoordinatorLayout container = (CoordinatorLayout) rootView;
 
       id = R.id.loading;
-      ProgressBar loading = rootView.findViewById(id);
+      ProgressBar loading = ViewBindings.findChildViewById(rootView, id);
       if (loading == null) {
         break missingId;
       }
 
       id = R.id.login;
-      Button login = rootView.findViewById(id);
+      Button login = ViewBindings.findChildViewById(rootView, id);
       if (login == null) {
         break missingId;
       }
 
       id = R.id.password;
-      EditText password = rootView.findViewById(id);
+      EditText password = ViewBindings.findChildViewById(rootView, id);
       if (password == null) {
         break missingId;
       }
 
       id = R.id.textView;
-      TextView textView = rootView.findViewById(id);
+      TextView textView = ViewBindings.findChildViewById(rootView, id);
       if (textView == null) {
         break missingId;
       }
 
       id = R.id.txtAppName;
-      TextView txtAppName = rootView.findViewById(id);
+      TextView txtAppName = ViewBindings.findChildViewById(rootView, id);
       if (txtAppName == null) {
         break missingId;
       }
 
       id = R.id.txtBienvenido;
-      TextView txtBienvenido = rootView.findViewById(id);
+      TextView txtBienvenido = ViewBindings.findChildViewById(rootView, id);
       if (txtBienvenido == null) {
         break missingId;
       }
 
       id = R.id.username;
-      EditText username = rootView.findViewById(id);
+      EditText username = ViewBindings.findChildViewById(rootView, id);
       if (username == null) {
         break missingId;
       }

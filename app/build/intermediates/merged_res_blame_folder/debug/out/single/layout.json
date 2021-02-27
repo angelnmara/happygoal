@@ -16,10 +16,6 @@
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/layout/fragment_estadistica_personal_chart.xml"
     },
     {
-        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_estadistica_personal.xml",
-        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/layout/activity_estadistica_personal.xml"
-    },
-    {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_comentarios_del_dia.xml",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/layout/fragment_comentarios_del_dia.xml"
     },

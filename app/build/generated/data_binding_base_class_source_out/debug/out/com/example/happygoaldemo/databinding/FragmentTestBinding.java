@@ -12,6 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.example.happygoaldemo.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -102,43 +103,43 @@ public final class FragmentTestBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.btnComenta;
-      Button btnComenta = rootView.findViewById(id);
+      Button btnComenta = ViewBindings.findChildViewById(rootView, id);
       if (btnComenta == null) {
         break missingId;
       }
 
       id = R.id.imgEnojado;
-      ImageView imgEnojado = rootView.findViewById(id);
+      ImageView imgEnojado = ViewBindings.findChildViewById(rootView, id);
       if (imgEnojado == null) {
         break missingId;
       }
 
       id = R.id.imgEstresado;
-      ImageView imgEstresado = rootView.findViewById(id);
+      ImageView imgEstresado = ViewBindings.findChildViewById(rootView, id);
       if (imgEstresado == null) {
         break missingId;
       }
 
       id = R.id.imgFeliz;
-      ImageView imgFeliz = rootView.findViewById(id);
+      ImageView imgFeliz = ViewBindings.findChildViewById(rootView, id);
       if (imgFeliz == null) {
         break missingId;
       }
 
       id = R.id.imgMotivado;
-      ImageView imgMotivado = rootView.findViewById(id);
+      ImageView imgMotivado = ViewBindings.findChildViewById(rootView, id);
       if (imgMotivado == null) {
         break missingId;
       }
 
       id = R.id.imgTranquilo;
-      ImageView imgTranquilo = rootView.findViewById(id);
+      ImageView imgTranquilo = ViewBindings.findChildViewById(rootView, id);
       if (imgTranquilo == null) {
         break missingId;
       }
 
       id = R.id.lnlBtnComenta;
-      LinearLayout lnlBtnComenta = rootView.findViewById(id);
+      LinearLayout lnlBtnComenta = ViewBindings.findChildViewById(rootView, id);
       if (lnlBtnComenta == null) {
         break missingId;
       }
@@ -146,19 +147,19 @@ public final class FragmentTestBinding implements ViewBinding {
       LinearLayout lnlTest = (LinearLayout) rootView;
 
       id = R.id.lnlTxtComenta;
-      LinearLayout lnlTxtComenta = rootView.findViewById(id);
+      LinearLayout lnlTxtComenta = ViewBindings.findChildViewById(rootView, id);
       if (lnlTxtComenta == null) {
         break missingId;
       }
 
       id = R.id.txtComenta;
-      EditText txtComenta = rootView.findViewById(id);
+      EditText txtComenta = ViewBindings.findChildViewById(rootView, id);
       if (txtComenta == null) {
         break missingId;
       }
 
       id = R.id.txtTitulo;
-      TextView txtTitulo = rootView.findViewById(id);
+      TextView txtTitulo = ViewBindings.findChildViewById(rootView, id);
       if (txtTitulo == null) {
         break missingId;
       }

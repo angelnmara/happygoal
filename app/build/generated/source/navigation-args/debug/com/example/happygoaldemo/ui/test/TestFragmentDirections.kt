@@ -33,9 +33,6 @@ public class TestFragmentDirections private constructor() {
     public fun actionTestFragmentSelf(): NavDirections =
         ActionOnlyNavDirections(R.id.action_testFragment_self)
 
-    public fun actionTestFragmentToEstadisticaPersonalActivity(): NavDirections =
-        ActionOnlyNavDirections(R.id.action_testFragment_to_estadisticaPersonalActivity)
-
     public fun actionTestFragmentToComentariosDelDiaFragment(): NavDirections =
         ActionOnlyNavDirections(R.id.action_testFragment_to_comentariosDelDiaFragment)
   }
