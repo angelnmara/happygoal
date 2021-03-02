@@ -1049,6 +1049,8 @@ color ic_preocupado_r_background
 color ic_serio_background
 color ic_tranquilo_background
 color ic_triste_background
+color itemIconTint
+color itemTextColor
 color material_blue_grey_800
 color material_blue_grey_900
 color material_blue_grey_950
@@ -1617,8 +1619,13 @@ drawable background_enojado
 drawable background_feliz
 drawable background_login
 drawable background_motivado
+drawable background_respuesta_estresado
+drawable background_respuesta_feliz
+drawable background_respuesta_motivado
+drawable background_respuesta_tranquilo
 drawable background_test
 drawable background_tranquilo
+drawable backgrouond_respuesta_enojado
 drawable boton_login
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
@@ -1626,6 +1633,7 @@ drawable btn_checkbox_unchecked_mtrl
 drawable btn_checkbox_unchecked_to_checked_mtrl_animation
 drawable btn_login
 drawable btn_login_disabled
+drawable btn_morado
 drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
@@ -1636,6 +1644,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable ic_acerca_de
 drawable ic_baseline_bar_chart_24
 drawable ic_baseline_close_24
 drawable ic_baseline_comment_24
@@ -1644,9 +1653,12 @@ drawable ic_baseline_list_24
 drawable ic_baseline_local_fire_department_24
 drawable ic_baseline_menu_24
 drawable ic_boton_entrar
+drawable ic_cerrar_sesion
+drawable ic_comentario_dia
 drawable ic_dashboard_black_24dp
 drawable ic_enojado
 drawable ic_enojado_r
+drawable ic_estadistica_personal
 drawable ic_estresado
 drawable ic_estresado_r
 drawable ic_feliz
@@ -1663,6 +1675,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_notifications_black_24dp
+drawable ic_termometro
 drawable ic_tranquilo
 drawable ic_tranquilo_r
 drawable material_ic_calendar_black_24dp

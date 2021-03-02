@@ -1,11 +1,19 @@
 [
     {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_comentario_dia.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxhdpi/ic_comentario_dia.png"
+    },
+    {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-hdpi_background_motivado.png.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-hdpi/background_motivado.png"
     },
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-mdpi_background_motivado.png.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-mdpi/background_motivado.png"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxhdpi_background_respuesta_feliz.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxhdpi/background_respuesta_feliz.png"
     },
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_boton_login.png.flat",
@@ -16,12 +24,20 @@
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxhdpi_background_feliz.png.flat",
-        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxhdpi/background_feliz.png"
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-mdpi_backgrouond_respuesta_enojado.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-mdpi/backgrouond_respuesta_enojado.png"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_cerrar_sesion.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-hdpi/ic_cerrar_sesion.png"
     },
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/navigation_nav_graph.xml.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/navigation/nav_graph.xml"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxhdpi_background_feliz.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxhdpi/background_feliz.png"
     },
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_motivado.xml.flat",
@@ -36,24 +52,48 @@
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxxhdpi/backgroudn_estresado.png"
     },
     {
-        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
-    },
-    {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_background_login.png.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxxhdpi/background_login.png"
     },
     {
-        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxhdpi_background_enojado.png.flat",
-        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxhdpi/background_enojado.png"
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_estadistica_personal.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxxhdpi/ic_estadistica_personal.png"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_estadistica_personal.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxhdpi/ic_estadistica_personal.png"
     },
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-mdpi_btn_login.png.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-mdpi/btn_login.png"
     },
     {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxhdpi_background_enojado.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxhdpi/background_enojado.png"
+    },
+    {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-mdpi_backgroudn_estresado.png.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-mdpi/backgroudn_estresado.png"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-hdpi_background_respuesta_tranquilo.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-hdpi/background_respuesta_tranquilo.png"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_termometro.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxxhdpi/ic_termometro.png"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xhdpi_background_respuesta_estresado.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xhdpi/background_respuesta_estresado.png"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxhdpi_backgrouond_respuesta_enojado.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxhdpi/backgrouond_respuesta_enojado.png"
     },
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xhdpi_background_acerca_de.png.flat",
@@ -64,12 +104,20 @@
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xhdpi/background_tranquilo.png"
     },
     {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/layout_fragment_test.xml.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/layout/fragment_test.xml"
+    },
+    {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxhdpi_background_tranquilo.png.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxhdpi/background_tranquilo.png"
     },
     {
-        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/layout_fragment_test.xml.flat",
-        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/layout/fragment_test.xml"
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_termometro.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-hdpi/ic_termometro.png"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_termometro.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-mdpi/ic_termometro.png"
     },
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_background_test.png.flat",
@@ -80,12 +128,44 @@
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xhdpi/background_enojado.png"
     },
     {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_btn_morado.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxxhdpi/btn_morado.png"
+    },
+    {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/layout_fragment_comentarios_del_dia.xml.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/layout/fragment_comentarios_del_dia.xml"
     },
     {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_estadistica_personal.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-hdpi/ic_estadistica_personal.png"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xhdpi_background_respuesta_motivado.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xhdpi/background_respuesta_motivado.png"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_cerrar_sesion.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xhdpi/ic_cerrar_sesion.png"
+    },
+    {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-anydpi-v24_ic_boton_entrar.xml.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_boton_entrar.xml"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_acerca_de.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-hdpi/ic_acerca_de.png"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxhdpi_background_respuesta_estresado.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxhdpi/background_respuesta_estresado.png"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_backgrouond_respuesta_enojado.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxxhdpi/backgrouond_respuesta_enojado.png"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_estadistica_personal.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xhdpi/ic_estadistica_personal.png"
     },
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/layout_fragment_main.xml.flat",
@@ -124,6 +204,10 @@
         "source": "/home/daver/Desarrollo/happygoal/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_boton_entrar.png"
     },
     {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_cerrar_sesion.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxhdpi/ic_cerrar_sesion.png"
+    },
+    {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/layout_fragment_termometro_general.xml.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/layout/fragment_termometro_general.xml"
     },
@@ -160,12 +244,36 @@
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxhdpi/boton_login.png"
     },
     {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_cerrar_sesion.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxxhdpi/ic_cerrar_sesion.png"
+    },
+    {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-mdpi_background_acerca_de.png.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-mdpi/background_acerca_de.png"
     },
     {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_acerca_de.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxhdpi/ic_acerca_de.png"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_acerca_de.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-mdpi/ic_acerca_de.png"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-mdpi_background_respuesta_estresado.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-mdpi/background_respuesta_estresado.png"
+    },
+    {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_background_tranquilo.png.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxxhdpi/background_tranquilo.png"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxhdpi_btn_morado.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxhdpi/btn_morado.png"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_background_respuesta_feliz.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxxhdpi/background_respuesta_feliz.png"
     },
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xhdpi_btn_login.png.flat",
@@ -196,6 +304,10 @@
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/layout/fragment_comentarios_del_dia_chart.xml"
     },
     {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_comentario_dia.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xhdpi/ic_comentario_dia.png"
+    },
+    {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/layout_fragment_termometro_general_list.xml.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/layout/fragment_termometro_general_list.xml"
     },
@@ -204,12 +316,32 @@
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xhdpi/btn_login_disabled.png"
     },
     {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_estadistica_personal.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-mdpi/ic_estadistica_personal.png"
+    },
+    {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_boton_entrar.png.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/build/generated/res/pngs/debug/drawable-ldpi/ic_boton_entrar.png"
     },
     {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_background_respuesta_estresado.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxxhdpi/background_respuesta_estresado.png"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_termometro.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxhdpi/ic_termometro.png"
+    },
+    {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_baseline_info_24.xml.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable/ic_baseline_info_24.xml"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-mdpi_background_respuesta_motivado.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-mdpi/background_respuesta_motivado.png"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_acerca_de.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xhdpi/ic_acerca_de.png"
     },
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_fondo_pantalla_3.xml.flat",
@@ -240,6 +372,10 @@
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable/ic_fondo_pantalla_1.xml"
     },
     {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-mdpi_background_respuesta_tranquilo.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-mdpi/background_respuesta_tranquilo.png"
+    },
+    {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/menu_estadistica_personal_menu.xml.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/menu/estadistica_personal_menu.xml"
     },
@@ -256,6 +392,14 @@
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable/ic_baseline_local_fire_department_24.xml"
     },
     {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_comentario_dia.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-hdpi/ic_comentario_dia.png"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_background_respuesta_tranquilo.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxxhdpi/background_respuesta_tranquilo.png"
+    },
+    {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-hdpi_backgroudn_estresado.png.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-hdpi/backgroudn_estresado.png"
     },
@@ -266,6 +410,14 @@
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_tranquilo_r.xml.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable/ic_tranquilo_r.xml"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxhdpi_background_respuesta_tranquilo.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxhdpi/background_respuesta_tranquilo.png"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xhdpi_backgrouond_respuesta_enojado.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xhdpi/backgrouond_respuesta_enojado.png"
     },
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/font_actor.xml.flat",
@@ -284,6 +436,10 @@
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable/ic_estresado.xml"
     },
     {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxhdpi_background_respuesta_motivado.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxhdpi/background_respuesta_motivado.png"
+    },
+    {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_baseline_bar_chart_24.xml.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable/ic_baseline_bar_chart_24.xml"
     },
@@ -292,8 +448,20 @@
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxhdpi/background_login.png"
     },
     {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-hdpi_background_respuesta_estresado.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-hdpi/background_respuesta_estresado.png"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-mdpi_background_respuesta_feliz.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-mdpi/background_respuesta_feliz.png"
+    },
+    {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-hdpi_btn_login_disabled.png.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-hdpi/btn_login_disabled.png"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_acerca_de.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxxhdpi/ic_acerca_de.png"
     },
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_background_motivado.png.flat",
@@ -306,6 +474,10 @@
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_feliz.xml.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable/ic_feliz.xml"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_background_respuesta_motivado.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxxhdpi/background_respuesta_motivado.png"
     },
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_baseline_close_24.xml.flat",
@@ -340,6 +512,10 @@
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxxhdpi/btn_login.png"
     },
     {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xhdpi_btn_morado.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xhdpi/btn_morado.png"
+    },
+    {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_motivado_r.xml.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable/ic_motivado_r.xml"
     },
@@ -372,6 +548,14 @@
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xhdpi/backgroudn_estresado.png"
     },
     {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-hdpi_background_respuesta_feliz.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-hdpi/background_respuesta_feliz.png"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-hdpi_backgrouond_respuesta_enojado.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-hdpi/backgrouond_respuesta_enojado.png"
+    },
+    {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-mdpi_background_test.png.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-mdpi/background_test.png"
     },
@@ -396,12 +580,20 @@
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xhdpi/boton_login.png"
     },
     {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_comentario_dia.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-mdpi/ic_comentario_dia.png"
+    },
+    {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/layout_tragos_row.xml.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/layout/tragos_row.xml"
     },
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/menu_comentarios_del_dia_menu.xml.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/menu/comentarios_del_dia_menu.xml"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_comentario_dia.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxxhdpi/ic_comentario_dia.png"
     },
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/layout_fragment_comentarios_del_dia_list.xml.flat",
@@ -420,6 +612,14 @@
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-mdpi/background_feliz.png"
     },
     {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xhdpi_background_respuesta_tranquilo.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xhdpi/background_respuesta_tranquilo.png"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xhdpi_background_respuesta_feliz.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xhdpi/background_respuesta_feliz.png"
+    },
+    {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_estresado_r.xml.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable/ic_estresado_r.xml"
     },
@@ -436,12 +636,24 @@
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxhdpi/background_acerca_de.png"
     },
     {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-mdpi_btn_morado.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-mdpi/btn_morado.png"
+    },
+    {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-hdpi_background_login.png.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-hdpi/background_login.png"
     },
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/layout_fragment_termometro_general_chart.xml.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/layout/fragment_termometro_general_chart.xml"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_cerrar_sesion.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-mdpi/ic_cerrar_sesion.png"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-hdpi_btn_morado.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-hdpi/btn_morado.png"
     },
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_dashboard_black_24dp.xml.flat",
@@ -460,7 +672,15 @@
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-hdpi/btn_login.png"
     },
     {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-hdpi_background_respuesta_motivado.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-hdpi/background_respuesta_motivado.png"
+    },
+    {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_background_acerca_de.png.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxxhdpi/background_acerca_de.png"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_termometro.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xhdpi/ic_termometro.png"
     }
 ]

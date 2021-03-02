@@ -8,11 +8,11 @@
     <fragment
         android:id="@+id/termometroGeneralFragment"
         android:name="com.example.happygoaldemo.TermometroGeneralFragment"
-        android:label="fragment_termometro_general_list"
+        android:label="@string/termometroGeneral"
         tools:layout="@layout/fragment_termometro_general_list" />
     <fragment
         android:id="@+id/termometroGeneralChartFragment"
         android:name="com.example.happygoaldemo.TermometroGeneralChartFragment"
-        android:label="fragment_termometro_general_chart"
+        android:label="@string/termometro_general_grafica"
         tools:layout="@layout/fragment_termometro_general_chart" />
 </navigation>

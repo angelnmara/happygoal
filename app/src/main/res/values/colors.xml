@@ -22,4 +22,6 @@
     <color name="grisSecundario">#ccccff</color>
     <color name="grisSecundarioClaro">#e6e6ff</color>
     <color name="grisSecundarioObscuro">#b3b3ff</color>
+    <color name="itemTextColor">#a6a6a6</color>
+    <color name="itemIconTint">#686868</color>
 </resources>

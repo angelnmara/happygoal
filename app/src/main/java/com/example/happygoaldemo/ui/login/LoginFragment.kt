@@ -60,9 +60,9 @@ class LoginFragment : Fragment() {
         val loginButton = binding.login
         val loadingProgressBar = binding.loading
 
-        loginButton.isClickable = false
         loginButton.isEnabled = false
-        loginButton.setBackgroundResource(R.drawable.btn_login_disabled)
+        //loginButton.isClickable = false
+        //loginButton.setBackgroundResource(R.drawable.btn_login_disabled)
 
         loginViewModel.loginFormState.observe(viewLifecycleOwner,
                 Observer { loginFormState ->
@@ -70,11 +70,11 @@ class LoginFragment : Fragment() {
                         return@Observer
                     }
                     loginButton.isEnabled = loginFormState.isDataValid
-                    if(loginButton.isEnabled){
+                    /*if(loginButton.isEnabled){
                         loginButton.setBackgroundResource(R.drawable.btn_login)
                     }else{
                         loginButton.setBackgroundResource(R.drawable.btn_login_disabled)
-                    }
+                    }*/
                     loginFormState.usernameError?.let {
                         usernameEditText.error = getString(it)
                     }

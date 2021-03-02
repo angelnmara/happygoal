@@ -4,8 +4,8 @@ package com.example.happygoaldemo.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -34,7 +34,7 @@ public final class FragmentLoginBinding implements ViewBinding {
   public final ProgressBar loading;
 
   @NonNull
-  public final ImageButton login;
+  public final Button login;
 
   @NonNull
   public final EditText password;
@@ -59,7 +59,7 @@ public final class FragmentLoginBinding implements ViewBinding {
 
   private FragmentLoginBinding(@NonNull CoordinatorLayout rootView,
       @NonNull ConstraintLayout constraintLayout, @NonNull CoordinatorLayout container,
-      @NonNull ProgressBar loading, @NonNull ImageButton login, @NonNull EditText password,
+      @NonNull ProgressBar loading, @NonNull Button login, @NonNull EditText password,
       @NonNull TextView textView, @NonNull TextInputLayout tilPassword,
       @NonNull TextInputLayout tilUsername, @NonNull TextView txtAppName,
       @NonNull TextView txtBienvenido, @NonNull EditText username) {
@@ -119,7 +119,7 @@ public final class FragmentLoginBinding implements ViewBinding {
       }
 
       id = R.id.login;
-      ImageButton login = ViewBindings.findChildViewById(rootView, id);
+      Button login = ViewBindings.findChildViewById(rootView, id);
       if (login == null) {
         break missingId;
       }

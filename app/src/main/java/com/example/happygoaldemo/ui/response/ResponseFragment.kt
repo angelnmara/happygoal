@@ -1,10 +1,13 @@
 package com.example.happygoaldemo.ui.response
 
+import android.app.Activity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
+import android.view.inputmethod.InputMethodManager
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -31,6 +34,13 @@ class ResponseFragment : Fragment() {
     val tools = Tools()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        // full screan
+        requireActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+
+        // oculta teclado
+        val imm = requireActivity().getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+        imm.hideSoftInputFromWindow(view.windowToken, 0)
+
         val tv: TextView = view.findViewById(R.id.txtAlternText)
         val mainText: TextView = view.findViewById(R.id.txtMainText)
         var lnlResponse: LinearLayout = view.findViewById(R.id.lnlResponse)
@@ -41,41 +51,41 @@ class ResponseFragment : Fragment() {
 
         if(calificacion.contains(getString(R.string.feliz))){
             tv.setText(R.string.felizSentence)
-            tv.setTextColor(resources.getColor(R.color.black))
-            mainText.setTextColor(resources.getColor(R.color.black))
-            color = resources.getColor(R.color.feliz)
-            resource = R.drawable.ic_fondo_pantalla_1
+            //tv.setTextColor(resources.getColor(R.color.black))
+            //mainText.setTextColor(resources.getColor(R.color.black))
+            //color = resources.getColor(R.color.feliz)
+            resource = R.drawable.background_respuesta_feliz
 
         }else if(calificacion.contains(getString(R.string.enojado))){
             tv.setText(R.string.enojadoSentence)
-            tv.setTextColor(resources.getColor(R.color.white))
-            mainText.setTextColor(resources.getColor(R.color.white))
-            color = resources.getColor(R.color.enojado)
-            resource = R.drawable.ic_fondo_pantalla_2
+            //tv.setTextColor(resources.getColor(R.color.white))
+            //mainText.setTextColor(resources.getColor(R.color.white))
+            //color = resources.getColor(R.color.enojado)
+            resource = R.drawable.backgrouond_respuesta_enojado
 
         }else if(calificacion.contains(getString(R.string.estresado))){
             tv.setText(R.string.estresadoSentence)
-            tv.setTextColor(resources.getColor(R.color.white))
-            mainText.setTextColor(resources.getColor(R.color.white))
-            color = resources.getColor(R.color.estresado)
-            resource = R.drawable.ic_fondo_pantalla_3
+            //tv.setTextColor(resources.getColor(R.color.white))
+            //mainText.setTextColor(resources.getColor(R.color.white))
+            //color = resources.getColor(R.color.estresado)
+            resource = R.drawable.background_respuesta_estresado
 
         }else if(calificacion.contains(getString(R.string.motivado))){
             tv.setText(R.string.motivadoSentence)
-            tv.setTextColor(resources.getColor(R.color.black))
-            mainText.setTextColor(resources.getColor(R.color.black))
-            color = resources.getColor(R.color.motivado)
-            resource = R.drawable.ic_fondo_pantalla_1
+            //tv.setTextColor(resources.getColor(R.color.black))
+            //mainText.setTextColor(resources.getColor(R.color.black))
+            //color = resources.getColor(R.color.motivado)
+            resource = R.drawable.background_respuesta_motivado
 
         }else if(calificacion.contains(getString(R.string.tranquilo))){
             tv.setText(R.string.tranquiloSentence)
-            tv.setTextColor(resources.getColor(R.color.black))
-            mainText.setTextColor(resources.getColor(R.color.black))
-            color = resources.getColor(R.color.tranquilo)
-            resource = R.drawable.ic_fondo_pantalla_2
+            //tv.setTextColor(resources.getColor(R.color.black))
+            //mainText.setTextColor(resources.getColor(R.color.black))
+            //color = resources.getColor(R.color.tranquilo)
+            resource = R.drawable.background_respuesta_tranquilo
 
         }
-        lnlResponse.setBackgroundColor(color)
+        //lnlResponse.setBackgroundColor(color)
         lnlSvg.setBackgroundResource(resource)
     }
 
