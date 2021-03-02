@@ -20,6 +20,8 @@ com/example/happygoaldemo/databinding/FragmentMainBinding.java
  com.example.happygoaldemo.databinding.FragmentMainBinding
 com/example/happygoaldemo/databinding/FragmentTermometroGeneralBinding.java
  com.example.happygoaldemo.databinding.FragmentTermometroGeneralBinding
+com/example/happygoaldemo/databinding/FragmentComentariosDelDiaChartBinding.java
+ com.example.happygoaldemo.databinding.FragmentComentariosDelDiaChartBinding
 com/example/happygoaldemo/databinding/ActivityMainBinding.java
  com.example.happygoaldemo.databinding.ActivityMainBinding
 com/example/happygoaldemo/databinding/FragmentResponseBinding.java

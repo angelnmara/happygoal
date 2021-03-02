@@ -66,6 +66,7 @@ class TestFragment : Fragment() {
         var dateLoged = tools.getDefaultsLong(getString(R.string.dateloged), context) //sharedPref.getLong(getString(R.string.dateloged), 0)
         userName = tools.getDefaultsString(getString(R.string.username), context).toString() //sharedPref.getString(getString(R.string.username), "").toString()
         if(!(isloged && (dateLoged > Calendar.getInstance().timeInMillis))){
+            (requireActivity() as MainActivity).supportActionBar!!.hide()
             val action = TestFragmentDirections.actionTestFragmentToLoginFragment()
             view.findNavController().navigate(action)
         }
@@ -113,8 +114,8 @@ class TestFragment : Fragment() {
 
         enojado.setOnClickListener{
             titulo.setText(R.string.enojado)
-            titulo.setTextColor(resources.getColor(R.color.white))
-            lnlTest.setBackgroundColor(resources.getColor(R.color.enojado))
+            //titulo.setTextColor(resources.getColor(R.color.white))
+            lnlTest.setBackgroundResource(R.drawable.background_enojado)
             cleanFaces()
             enojado.setImageResource(R.drawable.ic_enojado_r)
             setVisible(view)
@@ -122,8 +123,8 @@ class TestFragment : Fragment() {
         }
         feliz.setOnClickListener {
             titulo.setText(R.string.feliz)
-            titulo.setTextColor(resources.getColor(R.color.black))
-            lnlTest.setBackgroundColor(resources.getColor(R.color.feliz))
+            //titulo.setTextColor(resources.getColor(R.color.black))
+            lnlTest.setBackgroundResource(R.drawable.background_feliz)
             cleanFaces()
             feliz.setImageResource(R.drawable.ic_feliz_r)
             setVisible(view)
@@ -131,8 +132,8 @@ class TestFragment : Fragment() {
         }
         estresado.setOnClickListener {
             titulo.setText(R.string.estresado)
-            titulo.setTextColor(resources.getColor(R.color.white))
-            lnlTest.setBackgroundColor(resources.getColor(R.color.estresado))
+            //titulo.setTextColor(resources.getColor(R.color.white))
+            lnlTest.setBackgroundResource(R.drawable.backgroudn_estresado)
             cleanFaces()
             estresado.setImageResource(R.drawable.ic_estresado_r)
             setVisible(view)
@@ -140,8 +141,8 @@ class TestFragment : Fragment() {
         }
         neutral.setOnClickListener {
             titulo.setText(R.string.tranquilo)
-            titulo.setTextColor(resources.getColor(R.color.black))
-            lnlTest.setBackgroundColor(resources.getColor(R.color.tranquilo))
+            //titulo.setTextColor(resources.getColor(R.color.black))
+            lnlTest.setBackgroundResource(R.drawable.background_tranquilo)
             cleanFaces()
             neutral.setImageResource(R.drawable.ic_tranquilo_r)
             setVisible(view)
@@ -149,8 +150,8 @@ class TestFragment : Fragment() {
         }
         motivado.setOnClickListener {
             titulo.setText(R.string.motivado)
-            titulo.setTextColor(resources.getColor(R.color.black))
-            lnlTest.setBackgroundColor(resources.getColor(R.color.motivado))
+            //titulo.setTextColor(resources.getColor(R.color.black))
+            lnlTest.setBackgroundResource(R.drawable.background_motivado)
             cleanFaces()
             motivado.setImageResource(R.drawable.ic_motivado_r)
             setVisible(view)

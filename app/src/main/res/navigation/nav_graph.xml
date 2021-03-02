@@ -38,11 +38,11 @@
             android:id="@+id/action_testFragment_self"
             app:destination="@id/testFragment"/>
         <action
-            android:id="@+id/action_testFragment_to_comentariosDelDiaFragment"
-            app:destination="@id/comentariosDelDiaFragment" />
-        <action
             android:id="@+id/action_testFragment_to_termometro_general_nav_graph"
             app:destination="@id/termometro_general_nav_graph" />
+        <action
+            android:id="@+id/action_testFragment_to_comentarios_del_dia_nav_graph"
+            app:destination="@id/comentarios_del_dia_nav_graph" />
     </fragment>
     <fragment
         android:id="@+id/responseFragment"
@@ -61,12 +61,8 @@
         android:name="com.example.happygoaldemo.ui.acerca_de.Acerca_de"
         android:label="Acerca de"
         tools:layout="@layout/fragment_acerca_de" />
-    <fragment
-        android:id="@+id/comentariosDelDiaFragment"
-        android:name="com.example.happygoaldemo.ui.comentarios_del_dia.ComentariosDelDiaFragment"
-        android:label="Comentario del dia"
-        tools:layout="@layout/fragment_comentarios_del_dia_list" />
     <include app:graph="@navigation/estadistica_personal_nav_graph" />
     <include app:graph="@navigation/termometro_general_nav_graph" />
+    <include app:graph="@navigation/comentarios_del_dia_nav_graph" />
 
 </navigation>

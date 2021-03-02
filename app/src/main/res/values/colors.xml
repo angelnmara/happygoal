@@ -16,4 +16,10 @@
     <color name="gris">#e0e0d1</color>
     <color name="transparente">#ff000000</color>
     <color name="azul">#FF3700B3</color>
+    <color name="moradoPrimario">#715cda</color>
+    <color name="moradoPrimarioObscuro">#3b26a6</color>
+    <color name="moradoPrimarioClaro">#edeafa</color>
+    <color name="grisSecundario">#ccccff</color>
+    <color name="grisSecundarioClaro">#e6e6ff</color>
+    <color name="grisSecundarioObscuro">#b3b3ff</color>
 </resources>

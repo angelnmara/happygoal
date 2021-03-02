@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/comentarios_del_dia_nav_graph"
+    app:startDestination="@id/comentariosDelDiaFragment">
+
+    <fragment
+        android:id="@+id/comentariosDelDiaFragment"
+        android:name="com.example.happygoaldemo.ui.comentarios_del_dia.ComentariosDelDiaFragment"
+        android:label="@string/comentarioDelDia"
+        tools:layout="@layout/fragment_comentarios_del_dia_list" />
+    <fragment
+        android:id="@+id/comentariosDelDiaChartFragment"
+        android:name="com.example.happygoaldemo.ComentariosDelDiaChartFragment"
+        android:label="@string/comentarios_del_dia_grafica"
+        tools:layout="@layout/fragment_comentarios_del_dia_chart" />
+</navigation>

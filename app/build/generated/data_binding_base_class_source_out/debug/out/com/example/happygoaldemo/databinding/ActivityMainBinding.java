@@ -34,17 +34,22 @@ public final class ActivityMainBinding implements ViewBinding {
   public final BottomNavigationView navViewBottom;
 
   @NonNull
+  public final BottomNavigationView navViewBottomComentariosDia;
+
+  @NonNull
   public final BottomNavigationView navViewBottomTermometro;
 
   private ActivityMainBinding(@NonNull DrawerLayout rootView, @NonNull DrawerLayout drawerLayout,
       @NonNull FragmentContainerView navHostFragment, @NonNull NavigationView navView,
       @NonNull BottomNavigationView navViewBottom,
+      @NonNull BottomNavigationView navViewBottomComentariosDia,
       @NonNull BottomNavigationView navViewBottomTermometro) {
     this.rootView = rootView;
     this.drawerLayout = drawerLayout;
     this.navHostFragment = navHostFragment;
     this.navView = navView;
     this.navViewBottom = navViewBottom;
+    this.navViewBottomComentariosDia = navViewBottomComentariosDia;
     this.navViewBottomTermometro = navViewBottomTermometro;
   }
 
@@ -95,6 +100,12 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.nav_view_bottom_comentarios_dia;
+      BottomNavigationView navViewBottomComentariosDia = ViewBindings.findChildViewById(rootView, id);
+      if (navViewBottomComentariosDia == null) {
+        break missingId;
+      }
+
       id = R.id.nav_view_bottom_termometro;
       BottomNavigationView navViewBottomTermometro = ViewBindings.findChildViewById(rootView, id);
       if (navViewBottomTermometro == null) {
@@ -102,7 +113,7 @@ public final class ActivityMainBinding implements ViewBinding {
       }
 
       return new ActivityMainBinding((DrawerLayout) rootView, drawerLayout, navHostFragment,
-          navView, navViewBottom, navViewBottomTermometro);
+          navView, navViewBottom, navViewBottomComentariosDia, navViewBottomTermometro);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

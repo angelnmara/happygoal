@@ -3,10 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TestFragment"
+    tools:context=".ui.test.TestFragment"
     android:orientation="vertical"
     android:weightSum="10"
     android:padding="20dp"
+    android:background="@drawable/background_test"
     android:id="@+id/lnlTest">
 
     <LinearLayout
@@ -19,8 +20,9 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="@string/comoTeSientes"
-            android:textColor="@color/morado"
+            android:textColor="@color/white"
             android:textStyle="bold"
+            android:fontFamily="@font/actor"
             android:gravity="center"
             android:layout_gravity="center"
             android:autoSizeTextType="uniform">
@@ -80,17 +82,18 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_weight="6"
-        android:gravity="center"
-        android:visibility="gone">
+        android:gravity="center">
         <EditText
             android:id="@+id/txtComenta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:lines="6"
             android:gravity="top"
-            android:background="@color/gris"
+            android:background="@drawable/rounded_edittext"
             android:focusedByDefault="true"
-            android:hint="@string/msjNoComentario">
+            android:hint="@string/msjNoComentario"
+            android:elevation="2dp"
+            android:padding="10dp">
         </EditText>
     </LinearLayout>
 

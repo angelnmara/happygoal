@@ -4,8 +4,8 @@ package com.example.happygoaldemo.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -15,6 +15,7 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.happygoaldemo.R;
+import com.google.android.material.textfield.TextInputLayout;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -33,13 +34,19 @@ public final class FragmentLoginBinding implements ViewBinding {
   public final ProgressBar loading;
 
   @NonNull
-  public final Button login;
+  public final ImageButton login;
 
   @NonNull
   public final EditText password;
 
   @NonNull
   public final TextView textView;
+
+  @NonNull
+  public final TextInputLayout tilPassword;
+
+  @NonNull
+  public final TextInputLayout tilUsername;
 
   @NonNull
   public final TextView txtAppName;
@@ -52,9 +59,10 @@ public final class FragmentLoginBinding implements ViewBinding {
 
   private FragmentLoginBinding(@NonNull CoordinatorLayout rootView,
       @NonNull ConstraintLayout constraintLayout, @NonNull CoordinatorLayout container,
-      @NonNull ProgressBar loading, @NonNull Button login, @NonNull EditText password,
-      @NonNull TextView textView, @NonNull TextView txtAppName, @NonNull TextView txtBienvenido,
-      @NonNull EditText username) {
+      @NonNull ProgressBar loading, @NonNull ImageButton login, @NonNull EditText password,
+      @NonNull TextView textView, @NonNull TextInputLayout tilPassword,
+      @NonNull TextInputLayout tilUsername, @NonNull TextView txtAppName,
+      @NonNull TextView txtBienvenido, @NonNull EditText username) {
     this.rootView = rootView;
     this.constraintLayout = constraintLayout;
     this.container = container;
@@ -62,6 +70,8 @@ public final class FragmentLoginBinding implements ViewBinding {
     this.login = login;
     this.password = password;
     this.textView = textView;
+    this.tilPassword = tilPassword;
+    this.tilUsername = tilUsername;
     this.txtAppName = txtAppName;
     this.txtBienvenido = txtBienvenido;
     this.username = username;
@@ -109,7 +119,7 @@ public final class FragmentLoginBinding implements ViewBinding {
       }
 
       id = R.id.login;
-      Button login = ViewBindings.findChildViewById(rootView, id);
+      ImageButton login = ViewBindings.findChildViewById(rootView, id);
       if (login == null) {
         break missingId;
       }
@@ -123,6 +133,18 @@ public final class FragmentLoginBinding implements ViewBinding {
       id = R.id.textView;
       TextView textView = ViewBindings.findChildViewById(rootView, id);
       if (textView == null) {
+        break missingId;
+      }
+
+      id = R.id.tilPassword;
+      TextInputLayout tilPassword = ViewBindings.findChildViewById(rootView, id);
+      if (tilPassword == null) {
+        break missingId;
+      }
+
+      id = R.id.tilUsername;
+      TextInputLayout tilUsername = ViewBindings.findChildViewById(rootView, id);
+      if (tilUsername == null) {
         break missingId;
       }
 
@@ -145,7 +167,8 @@ public final class FragmentLoginBinding implements ViewBinding {
       }
 
       return new FragmentLoginBinding((CoordinatorLayout) rootView, constraintLayout, container,
-          loading, login, password, textView, txtAppName, txtBienvenido, username);
+          loading, login, password, textView, tilPassword, tilUsername, txtAppName, txtBienvenido,
+          username);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import com.example.happygoaldemo.MainActivity
 import com.example.happygoaldemo.R
 import com.example.happygoaldemo.api.RestApiService
 import com.example.happygoaldemo.data.model.Login
@@ -38,6 +39,7 @@ class LoginFragment : Fragment() {
     ): View? {
 
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
+
         return binding.root
 
     }
@@ -58,12 +60,21 @@ class LoginFragment : Fragment() {
         val loginButton = binding.login
         val loadingProgressBar = binding.loading
 
+        loginButton.isClickable = false
+        loginButton.isEnabled = false
+        loginButton.setBackgroundResource(R.drawable.btn_login_disabled)
+
         loginViewModel.loginFormState.observe(viewLifecycleOwner,
                 Observer { loginFormState ->
                     if (loginFormState == null) {
                         return@Observer
                     }
                     loginButton.isEnabled = loginFormState.isDataValid
+                    if(loginButton.isEnabled){
+                        loginButton.setBackgroundResource(R.drawable.btn_login)
+                    }else{
+                        loginButton.setBackgroundResource(R.drawable.btn_login_disabled)
+                    }
                     loginFormState.usernameError?.let {
                         usernameEditText.error = getString(it)
                     }
@@ -139,6 +150,7 @@ class LoginFragment : Fragment() {
                 tools.savePreferences(activity, getString(R.string.username), userName, 1 )
                 val action = LoginFragmentDirections.actionLoginFragmentToTestFragment()
                 view.findNavController().navigate(action)
+                (requireActivity() as MainActivity).supportActionBar!!.show()
             } else {
                 //Timber.d("Error registering new user")
                 //Toast.makeText(context, resources.getText(R.string.msjNoSeEncuentraRegistrado), Toast.LENGTH_LONG).show()

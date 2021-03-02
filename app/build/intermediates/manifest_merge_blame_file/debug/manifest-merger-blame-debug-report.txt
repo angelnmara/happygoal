@@ -15,7 +15,7 @@
 11-->/home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:5:22-64
 12
 13    <application
-13-->/home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:7:5-27:19
+13-->/home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:7:5-31:19
 14        android:allowBackup="true"
 14-->/home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:8:9-35
 15        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -59,16 +59,23 @@
 35            </intent-filter>
 36        </activity>
 37
-38        <provider
-38-->[androidx.lifecycle:lifecycle-process:2.2.0] /root/.gradle/caches/transforms-3/03c2e8f39b513f47c0376d7eadc464de/transformed/lifecycle-process-2.2.0/AndroidManifest.xml:25:9-29:43
-39            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-39-->[androidx.lifecycle:lifecycle-process:2.2.0] /root/.gradle/caches/transforms-3/03c2e8f39b513f47c0376d7eadc464de/transformed/lifecycle-process-2.2.0/AndroidManifest.xml:26:13-79
-40            android:authorities="com.example.happygoaldemo.lifecycle-process"
-40-->[androidx.lifecycle:lifecycle-process:2.2.0] /root/.gradle/caches/transforms-3/03c2e8f39b513f47c0376d7eadc464de/transformed/lifecycle-process-2.2.0/AndroidManifest.xml:27:13-69
-41            android:exported="false"
-41-->[androidx.lifecycle:lifecycle-process:2.2.0] /root/.gradle/caches/transforms-3/03c2e8f39b513f47c0376d7eadc464de/transformed/lifecycle-process-2.2.0/AndroidManifest.xml:28:13-37
-42            android:multiprocess="true" />
-42-->[androidx.lifecycle:lifecycle-process:2.2.0] /root/.gradle/caches/transforms-3/03c2e8f39b513f47c0376d7eadc464de/transformed/lifecycle-process-2.2.0/AndroidManifest.xml:29:13-40
-43    </application>
-44
-45</manifest>
+38        <meta-data
+38-->/home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:28:9-30:57
+39            android:name="preloaded_fonts"
+39-->/home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:29:13-43
+40            android:resource="@array/preloaded_fonts" />
+40-->/home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:30:13-54
+41
+42        <provider
+42-->[androidx.lifecycle:lifecycle-process:2.2.0] /root/.gradle/caches/transforms-3/03c2e8f39b513f47c0376d7eadc464de/transformed/lifecycle-process-2.2.0/AndroidManifest.xml:25:9-29:43
+43            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+43-->[androidx.lifecycle:lifecycle-process:2.2.0] /root/.gradle/caches/transforms-3/03c2e8f39b513f47c0376d7eadc464de/transformed/lifecycle-process-2.2.0/AndroidManifest.xml:26:13-79
+44            android:authorities="com.example.happygoaldemo.lifecycle-process"
+44-->[androidx.lifecycle:lifecycle-process:2.2.0] /root/.gradle/caches/transforms-3/03c2e8f39b513f47c0376d7eadc464de/transformed/lifecycle-process-2.2.0/AndroidManifest.xml:27:13-69
+45            android:exported="false"
+45-->[androidx.lifecycle:lifecycle-process:2.2.0] /root/.gradle/caches/transforms-3/03c2e8f39b513f47c0376d7eadc464de/transformed/lifecycle-process-2.2.0/AndroidManifest.xml:28:13-37
+46            android:multiprocess="true" />
+46-->[androidx.lifecycle:lifecycle-process:2.2.0] /root/.gradle/caches/transforms-3/03c2e8f39b513f47c0376d7eadc464de/transformed/lifecycle-process-2.2.0/AndroidManifest.xml:29:13-40
+47    </application>
+48
+49</manifest>

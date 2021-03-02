@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_comentarios_del_dia_chart.xml",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/layout/fragment_comentarios_del_dia_chart.xml"
+    },
+    {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_notifications.xml",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/layout/fragment_notifications.xml"
     },

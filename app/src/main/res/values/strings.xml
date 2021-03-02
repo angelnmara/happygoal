@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">HappyGoal</string>
+    <string name="app_name">HappyGOAL</string>
     <!-- Strings related to login -->
     <string name="prompt_email">Correo electrónico</string>
     <string name="prompt_password">Introduce tu código</string>
@@ -60,6 +60,12 @@
 
     <!--termometro general-->
     <string name="termometro_general_grafica">Termómetro general gráfica</string>
+
+    <!--comentarios del dia-->
+    <string name="comentarios_del_dia_grafica">Comentarios del día grafica</string>
+
+    <!--acerca de-->
+    <string name="acerca_de">“Happy Goal es una aplicación para medir la felicidad en el trabajo, fue creada por EXO21. Todos los derechos reservados Escribenos a: contacto@exo21.com Versión 1.0 Enero 2021”</string>
 
     <!--dias-->
     <string name="domingo">Domingo</string>

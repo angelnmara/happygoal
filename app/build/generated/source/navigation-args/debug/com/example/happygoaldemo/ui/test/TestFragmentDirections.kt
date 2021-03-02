@@ -33,10 +33,10 @@ public class TestFragmentDirections private constructor() {
     public fun actionTestFragmentSelf(): NavDirections =
         ActionOnlyNavDirections(R.id.action_testFragment_self)
 
-    public fun actionTestFragmentToComentariosDelDiaFragment(): NavDirections =
-        ActionOnlyNavDirections(R.id.action_testFragment_to_comentariosDelDiaFragment)
-
     public fun actionTestFragmentToTermometroGeneralNavGraph(): NavDirections =
         ActionOnlyNavDirections(R.id.action_testFragment_to_termometro_general_nav_graph)
+
+    public fun actionTestFragmentToComentariosDelDiaNavGraph(): NavDirections =
+        ActionOnlyNavDirections(R.id.action_testFragment_to_comentarios_del_dia_nav_graph)
   }
 }

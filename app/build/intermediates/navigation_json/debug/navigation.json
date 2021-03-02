@@ -1,9 +1,15 @@
 [
   {
+    "name": "comentarios_del_dia_nav_graph",
+    "navigationXmlIds": [],
+    "deepLinks": []
+  },
+  {
     "name": "nav_graph",
     "navigationXmlIds": [
       "estadistica_personal_nav_graph",
-      "termometro_general_nav_graph"
+      "termometro_general_nav_graph",
+      "comentarios_del_dia_nav_graph"
     ],
     "deepLinks": []
   },
