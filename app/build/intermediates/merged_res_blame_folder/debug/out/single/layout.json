@@ -28,6 +28,10 @@
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/layout/fragment_comentarios_del_dia.xml"
     },
     {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/custom_spinner_item.xml",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/layout/custom_spinner_item.xml"
+    },
+    {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_test.xml",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/layout/fragment_test.xml"
     },

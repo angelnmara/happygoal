@@ -6,6 +6,8 @@ com/example/happygoaldemo/databinding/FragmentComentariosDelDiaListBinding.java
  com.example.happygoaldemo.databinding.FragmentComentariosDelDiaListBinding
 com/example/happygoaldemo/databinding/FragmentTermometroGeneralListBinding.java
  com.example.happygoaldemo.databinding.FragmentTermometroGeneralListBinding
+com/example/happygoaldemo/databinding/CustomSpinnerItemBinding.java
+ com.example.happygoaldemo.databinding.CustomSpinnerItemBinding
 com/example/happygoaldemo/DataBindingTriggerClass.java
  com.example.happygoaldemo.DataBindingTriggerClass
 com/example/happygoaldemo/databinding/TragosRowBinding.java

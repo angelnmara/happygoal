@@ -525,20 +525,20 @@
                 {
                     "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/values/themes.xml",
                     "from": {
-                        "startLines": "2,15",
-                        "startColumns": "4,4",
-                        "startOffsets": "100,889",
-                        "endLines": "14,20",
-                        "endColumns": "12,12",
-                        "endOffsets": "884,1146"
+                        "startLines": "2,-1,21",
+                        "startColumns": "4,-1,4",
+                        "startOffsets": "100,-1,1151",
+                        "endLines": "14,-1,24",
+                        "endColumns": "12,-1,12",
+                        "endOffsets": "884,-1,1368"
                     },
                     "to": {
-                        "startLines": "3714,4791",
-                        "startColumns": "4,4",
-                        "startOffsets": "240890,311733",
-                        "endLines": "3726,4796",
-                        "endColumns": "12,12",
-                        "endOffsets": "241672,311990"
+                        "startLines": "3714,4791,4797",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "240890,311733,311995",
+                        "endLines": "3726,4796,4800",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "241672,311990,312212"
                     }
                 },
                 {

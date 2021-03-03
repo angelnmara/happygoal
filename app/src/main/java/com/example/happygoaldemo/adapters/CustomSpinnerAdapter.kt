@@ -1,6 +1,7 @@
 package com.example.happygoaldemo.adapters
 
 import android.content.Context
+import android.content.res.Configuration
 import android.graphics.Color
 import android.view.View
 import android.view.ViewGroup
@@ -25,7 +26,13 @@ import kotlin.collections.ArrayList
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         var label = super.getView(position, convertView, parent) as AppCompatCheckedTextView
-        label.setTextColor(Color.BLACK)
+        val nightModeFlags = context.resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
+        when (nightModeFlags) {
+            Configuration.UI_MODE_NIGHT_YES -> label.setTextColor(Color.WHITE)
+            Configuration.UI_MODE_NIGHT_NO -> label.setTextColor(Color.BLACK)
+            Configuration.UI_MODE_NIGHT_UNDEFINED -> label.setTextColor(Color.BLACK)
+        }
+
         var campo = objects[position].javaClass.getDeclaredField(campo);
         campo.isAccessible = true
         label.text = campo.get(objects[position]).toString()
@@ -34,7 +41,12 @@ import kotlin.collections.ArrayList
 
     override fun getDropDownView(position: Int, convertView: View?, parent: ViewGroup): View {
         var label = super.getView(position, convertView, parent) as AppCompatCheckedTextView
-        label.setTextColor(Color.BLACK)
+        val nightModeFlags = context.resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
+        when (nightModeFlags) {
+            Configuration.UI_MODE_NIGHT_YES -> label.setTextColor(Color.WHITE)
+            Configuration.UI_MODE_NIGHT_NO -> label.setTextColor(Color.BLACK)
+            Configuration.UI_MODE_NIGHT_UNDEFINED -> label.setTextColor(Color.BLACK)
+        }
         var campo = objects[position].javaClass.getDeclaredField(campo);
         campo.isAccessible = true
         label.text = campo.get(objects[position]).toString()
