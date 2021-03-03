@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:2:1-33:12
-INJECTED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:2:1-33:12
-INJECTED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:2:1-33:12
-INJECTED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:2:1-33:12
+ADDED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:2:1-30:12
 MERGED from [androidx.databinding:databinding-adapters:7.0.0-alpha08] /root/.gradle/caches/transforms-3/2eb2981a524c546424431c309e0b8257/transformed/databinding-adapters-7.0.0-alpha08/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.databinding:databinding-ktx:7.0.0-alpha08] /root/.gradle/caches/transforms-3/6a0436650a0bb411c5a6e3878dbf088f/transformed/databinding-ktx-7.0.0-alpha08/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.databinding:databinding-runtime:7.0.0-alpha08] /root/.gradle/caches/transforms-3/6579ec891c09be3c4079c6ce880fa54b/transformed/databinding-runtime-7.0.0-alpha08/AndroidManifest.xml:17:1-22:12
@@ -70,20 +70,20 @@ MERGED from [androidx.print:print:1.0.0] /root/.gradle/caches/transforms-3/00860
 MERGED from [androidx.interpolator:interpolator:1.0.0] /root/.gradle/caches/transforms-3/ccfa6012f3cb8a25b804451cd9072522/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] /root/.gradle/caches/transforms-3/f5642e1da2c2c7dfd11bfd5a87b5ad51/transformed/rxandroid-2.0.1/AndroidManifest.xml:15:1-21:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] /root/.gradle/caches/transforms-3/5a15010a5488f0b85a9d923eb9f67c98/transformed/annotation-experimental-1.0.0/AndroidManifest.xml:17:1-24:12
-INJECTED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:2:1-33:12
-INJECTED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:2:1-33:12
-INJECTED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:2:1-30:12
 	package
 		ADDED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:3:5-40
 		INJECTED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml
 		INJECTED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml
-		ADDED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:2:1-33:12
+		ADDED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:2:1-30:12
 		INJECTED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml
-		ADDED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:2:1-33:12
+		ADDED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:2:1-30:12
 		INJECTED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:2:11-69
@@ -92,7 +92,7 @@ ADDED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:5:5
 	android:name
 		ADDED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:5:22-64
 application
-ADDED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:7:5-31:19
+ADDED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:7:5-28:19
 MERGED from [com.google.android.material:material:1.2.1] /root/.gradle/caches/transforms-3/f0990323c1ef2928c318b94d436a89eb/transformed/material-1.2.1/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.2.1] /root/.gradle/caches/transforms-3/f0990323c1ef2928c318b94d436a89eb/transformed/material-1.2.1/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /root/.gradle/caches/transforms-3/701a75ec3671574b8ace6acc1ba22fdd/transformed/constraintlayout-2.0.4/AndroidManifest.xml:9:5-20
@@ -125,34 +125,30 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /root/.grad
 		ADDED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:13:9-51
 	android:usesCleartextTraffic
 		ADDED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:14:9-44
-activity#com.example.happygoaldemo.EstadisticaPersonalActivity
-ADDED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:15:9-17:84
-	android:label
-		ADDED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:17:13-72
-	android:name
-		ADDED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:16:13-56
 activity#com.example.happygoaldemo.MainActivity
-ADDED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:18:9-26:20
+ADDED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:15:9-23:20
+	android:screenOrientation
+		ADDED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:17:13-49
 	android:windowSoftInputMode
-		ADDED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:20:13-55
+		ADDED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:18:13-55
 	android:name
-		ADDED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:19:13-41
+		ADDED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:16:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:21:13-25:29
+ADDED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:19:13-22:29
 action#android.intent.action.MAIN
-ADDED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:22:17-69
+ADDED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:20:17-69
 	android:name
-		ADDED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:22:25-66
+		ADDED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:20:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:24:17-77
+ADDED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:21:17-77
 	android:name
-		ADDED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:24:27-74
+		ADDED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:21:27-74
 meta-data#preloaded_fonts
-ADDED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:28:9-30:57
+ADDED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:25:9-27:57
 	android:resource
-		ADDED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:30:13-54
+		ADDED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:27:13-54
 	android:name
-		ADDED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:29:13-43
+		ADDED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml:26:13-43
 uses-sdk
 INJECTED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/daver/Desarrollo/happygoal/app/src/main/AndroidManifest.xml

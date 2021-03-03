@@ -3713,17 +3713,17 @@
     <item name="windowNoTitle">true</item>
   </style>
     <style name="Theme.HappyGoalDemo" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        
+        <!-- Primary brand color. -->
         <item name="colorPrimary">@color/moradoPrimario</item>
         <item name="colorPrimaryVariant">@color/moradoPrimarioObscuro</item>
         <item name="colorOnPrimary">@color/moradoPrimarioClaro</item>
-        
+        <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/grisSecundario</item>
         <item name="colorSecondaryVariant">@color/grisSecundarioObscuro</item>
         <item name="colorOnSecondary">@color/grisSecundarioClaro</item>
-        
+        <!-- Status bar color. -->
         <item name="android:statusBarColor" ns2:targetApi="l">?attr/colorPrimaryVariant</item>
-        
+        <!-- Customize your theme here. -->
     </style>
     <style name="Theme.MaterialComponents" parent="Base.Theme.MaterialComponents"/>
     <style name="Theme.MaterialComponents.BottomSheetDialog" parent="Theme.MaterialComponents.Dialog">
@@ -4788,6 +4788,12 @@
   </style>
     <style name="Widget.Support.CoordinatorLayout" parent="android:Widget">
         <item name="statusBarBackground">#000000</item>
+    </style>
+    <style name="editTextLine">
+        <item name="android:lines">6</item>
+        <item name="android:background">@drawable/rounded_edittext</item>
+        <item name="android:elevation">2dp</item>
+        <item name="android:padding">10dp</item>
     </style>
     <declare-styleable name="ActionBar">
         
