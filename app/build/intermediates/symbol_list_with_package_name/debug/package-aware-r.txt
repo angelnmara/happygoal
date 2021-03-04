@@ -1171,6 +1171,8 @@ color tooltip_background_light
 color tranquilo
 color transparente
 color white
+color zebraClaroReciclerView
+color zebraObscuroReciclerView
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
 dimen abc_action_bar_default_height_material
@@ -2035,6 +2037,7 @@ id reverseSawtooth
 id right
 id right_icon
 id right_side
+id rootView
 id rounded
 id row_index_key
 id rv_tragos
@@ -2461,6 +2464,7 @@ string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
 string nav_app_bar_navigate_up_description
 string nav_app_bar_open_drawer_description
+string no_existen_comentarios_del_dia
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through

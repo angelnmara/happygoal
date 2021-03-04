@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -25,7 +26,6 @@ class EstadisticaPersonalRecyclerViewAdapter(
     var tools = Tools()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-
         return ViewHolder(
                 FragmentEstadisticaPersonalListBinding.inflate(
                         LayoutInflater.from(parent.context),
@@ -37,6 +37,14 @@ class EstadisticaPersonalRecyclerViewAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        if(position % 2 == 0)
+        {
+            holder.rootView.setBackgroundResource(R.color.white);
+        }
+        else
+        {
+            holder.rootView.setBackgroundResource(R.color.zebraClaroReciclerView);
+        }
         val item = values[position]
         holder.idView.text = tools.getHora(item.fechaCreacion, context)
         holder.contentView.text = item.emocion
@@ -54,6 +62,7 @@ class EstadisticaPersonalRecyclerViewAdapter(
         val txtDiaNumero: TextView = binding.txtDiaNumero
         val txtDia: TextView = binding.txtDia
         val imgSentimiento: ImageView = binding.imgSentimiento
+        val rootView:LinearLayout = binding.rootView
 
         override fun toString(): String {
             return super.toString() + " '" + contentView.text + "'"

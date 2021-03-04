@@ -24,4 +24,6 @@
     <color name="grisSecundarioObscuro">#b3b3ff</color>
     <color name="itemTextColor">#a6a6a6</color>
     <color name="itemIconTint">#686868</color>
+    <color name="zebraObscuroReciclerView">#dbd5f6</color>
+    <color name="zebraClaroReciclerView">#edeafa</color>
 </resources>

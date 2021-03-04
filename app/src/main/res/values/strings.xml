@@ -44,6 +44,7 @@
     <string name="comentarioDelDia">Comentario del día</string>
     <string name="termometroGeneral">Termómetro general</string>
     <string name="acercaDe">Acerca de</string>
+
     <string name="cerrarSesion">Cerrar sesión</string>
     <!--menu estadistica personal-->
     <string name="misEstadisticasPersonales">Mis estadísticas personales</string>
@@ -51,6 +52,7 @@
     <string name="leyendaNoDatos">Registra tus emociones para que puedas visualizar tu estadística personal</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <!--errores-->
     <string name="errorEmocion">Ocurrio un error al guardar tu emoción</string>
     <string name="title_activity_estadistica_personal">MainActivity</string>
@@ -63,6 +65,7 @@
 
     <!--comentarios del dia-->
     <string name="comentarios_del_dia_grafica">Comentarios del día grafica</string>
+    <string name="no_existen_comentarios_del_dia">“Registra tus comentarios del día y sé el primero en mostrar anónimamente tu estado emocional”</string>
 
     <!--acerca de-->
     <string name="acerca_de">“Happy Goal es una aplicación para medir la felicidad en el trabajo, fue creada por EXO21. Todos los derechos reservados Escribenos a: contacto@exo21.com Versión 1.0 Enero 2021”</string>

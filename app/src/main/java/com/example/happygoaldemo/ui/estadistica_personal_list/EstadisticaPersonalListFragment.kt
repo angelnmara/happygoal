@@ -85,7 +85,7 @@ class EstadisticaPersonalListFragment : Fragment(), AdapterView.OnItemSelectedLi
 
     private fun fillDDLMes(data:List<Calificacion>){
         tools.fillMesAnnioData(data)
-        spinnerAdapter = CustomSpinnerAdapter(requireContext(), R.layout.custom_spinner_item, "anniomes", tools.mesDataList as ArrayList<Any>);
+        spinnerAdapter = CustomSpinnerAdapter(requireContext(), android.R.layout.simple_spinner_dropdown_item, "anniomes", tools.mesDataList as ArrayList<Any>);
         spinner.adapter = spinnerAdapter
     }
 

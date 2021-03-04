@@ -1170,6 +1170,8 @@ int color tooltip_background_light 0x7f0600eb
 int color tranquilo 0x7f0600ec
 int color transparente 0x7f0600ed
 int color white 0x7f0600ee
+int color zebraClaroReciclerView 0x7f0600ef
+int color zebraObscuroReciclerView 0x7f0600f0
 int dimen abc_action_bar_content_inset_material 0x7f070000
 int dimen abc_action_bar_content_inset_with_nav 0x7f070001
 int dimen abc_action_bar_default_height_material 0x7f070002
@@ -2034,6 +2036,7 @@ int id reverseSawtooth 0x7f0a013e
 int id right 0x7f0a013f
 int id right_icon 0x7f0a0140
 int id right_side 0x7f0a0141
+int id rootView 0x7f0a01c8
 int id rounded 0x7f0a0142
 int id row_index_key 0x7f0a0143
 int id rv_tragos 0x7f0a0144
@@ -2460,6 +2463,7 @@ int string mtrl_picker_toggle_to_text_input_mode 0x7f120078
 int string mtrl_picker_toggle_to_year_selection 0x7f120079
 int string nav_app_bar_navigate_up_description 0x7f12007a
 int string nav_app_bar_open_drawer_description 0x7f12007b
+int string no_existen_comentarios_del_dia 0x7f120095
 int string password_toggle_content_description 0x7f12007c
 int string path_password_eye 0x7f12007d
 int string path_password_eye_mask_strike_through 0x7f12007e
