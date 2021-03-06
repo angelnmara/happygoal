@@ -10,6 +10,10 @@ class DataSource {
         return Resource.Success(RetrofitClient.webservice.getTragoByName(tragoName).drinkList)
     }
 
+    suspend fun getCalificacion(token: String):Resource<List<Calificacion>>{
+        return Resource.Success(RetrofitClient.webservice.getCalificacion(token).toList())
+    }
+
     suspend fun getCalificacionByUser(userName:String
                                       , annio:Int?
                                       , mes:Int?

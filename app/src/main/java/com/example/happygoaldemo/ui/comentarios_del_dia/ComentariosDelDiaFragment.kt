@@ -51,7 +51,7 @@ class ComentariosDelDiaFragment : Fragment() {
 
         tokenG = tools.getDefaultsString(getString(R.string.token), requireContext()).toString()
 
-        rv = view.findViewById<RecyclerView>(R.id.list)
+        rv = view.findViewById<RecyclerView>(R.id.listComentariosDia)
 
         // Set the adapter
         if (rv is RecyclerView) {

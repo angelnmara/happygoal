@@ -4,30 +4,43 @@ package com.example.happygoaldemo.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
+import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.example.happygoaldemo.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class FragmentTermometroGeneralListBinding implements ViewBinding {
   @NonNull
-  private final RecyclerView rootView;
+  private final FrameLayout rootView;
 
   @NonNull
-  public final RecyclerView list;
+  public final RelativeLayout clLeyendaTermometro;
 
-  private FragmentTermometroGeneralListBinding(@NonNull RecyclerView rootView,
-      @NonNull RecyclerView list) {
+  @NonNull
+  public final RecyclerView listTermometro;
+
+  @NonNull
+  public final RelativeLayout progressBar;
+
+  private FragmentTermometroGeneralListBinding(@NonNull FrameLayout rootView,
+      @NonNull RelativeLayout clLeyendaTermometro, @NonNull RecyclerView listTermometro,
+      @NonNull RelativeLayout progressBar) {
     this.rootView = rootView;
-    this.list = list;
+    this.clLeyendaTermometro = clLeyendaTermometro;
+    this.listTermometro = listTermometro;
+    this.progressBar = progressBar;
   }
 
   @Override
   @NonNull
-  public RecyclerView getRoot() {
+  public FrameLayout getRoot() {
     return rootView;
   }
 
@@ -48,12 +61,32 @@ public final class FragmentTermometroGeneralListBinding implements ViewBinding {
 
   @NonNull
   public static FragmentTermometroGeneralListBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.clLeyendaTermometro;
+      RelativeLayout clLeyendaTermometro = ViewBindings.findChildViewById(rootView, id);
+      if (clLeyendaTermometro == null) {
+        break missingId;
+      }
+
+      id = R.id.listTermometro;
+      RecyclerView listTermometro = ViewBindings.findChildViewById(rootView, id);
+      if (listTermometro == null) {
+        break missingId;
+      }
+
+      id = R.id.progressBar;
+      RelativeLayout progressBar = ViewBindings.findChildViewById(rootView, id);
+      if (progressBar == null) {
+        break missingId;
+      }
+
+      return new FragmentTermometroGeneralListBinding((FrameLayout) rootView, clLeyendaTermometro,
+          listTermometro, progressBar);
     }
-
-    RecyclerView list = (RecyclerView) rootView;
-
-    return new FragmentTermometroGeneralListBinding((RecyclerView) rootView, list);
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

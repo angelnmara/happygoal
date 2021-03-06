@@ -3,12 +3,17 @@ package com.example.happygoaldemo.tools
 import android.content.Context
 import android.preference.PreferenceManager
 import android.util.Log
+import android.view.View
 import androidx.fragment.app.FragmentActivity
 import com.example.happygoaldemo.R
 import com.example.happygoaldemo.data.model.Calificacion
 import com.example.happygoaldemo.data.model.Emotion
 import com.example.happygoaldemo.data.model.MesAnnioData
 import com.example.happygoaldemo.data.model.GraphDataEmotion
+import com.github.aachartmodel.aainfographics.aachartcreator.AAChartModel
+import com.github.aachartmodel.aainfographics.aachartcreator.AAChartType
+import com.github.aachartmodel.aainfographics.aachartcreator.AAChartView
+import com.github.aachartmodel.aainfographics.aachartcreator.AASeriesElement
 import com.google.android.material.appbar.AppBarLayout
 import java.text.DateFormatSymbols
 import java.util.*
@@ -21,6 +26,7 @@ class Tools {
     val mesDataList = arrayListOf<MesAnnioData>()
     val emotionList = arrayListOf<Emotion>()
     lateinit var listGraphEmotion:Array<Any>
+    private var aaChartModel: AAChartModel? = null
 
     fun savePreferences(context: Context?, name: String, value: String, type: Int){
         val sharedPref = PreferenceManager.getDefaultSharedPreferences(context)?: return
@@ -32,6 +38,26 @@ class Tools {
             }
             commit()
         }
+    }
+
+    fun configureGraph(listData:Array<Any>, view: View){
+        aaChartModel = configurePieChart(listData)
+        val aaChartView: AAChartView = view.findViewById(R.id.AAChartView)
+        aaChartView.aa_drawChartWithChartModel(aaChartModel!!)
+    }
+
+    fun configurePieChart(listData:Array<Any>): AAChartModel  {
+        return AAChartModel()
+            .chartType(AAChartType.Pie)
+            .backgroundColor("#ffffff")
+            .title("Estadística Personal ")
+            .subtitle("ultimos 3 meses")
+            .dataLabelsEnabled(true)//是否直接显示扇形图数据
+            .yAxisTitle("℃")
+            .series(arrayOf(
+                AASeriesElement()
+                    .name("Numero de emociones")
+                    .data(listData)))
     }
 
     /*fun ocultaToolBar(activity: FragmentActivity?){
@@ -136,7 +162,8 @@ class Tools {
         }
     }
 
-    fun fillCharts(data:List<Calificacion>){
+    fun fillCharts(data:List<Calificacion>, context: Context){
+        fillEmotions(context)
         var aoa= arrayListOf(arrayOf(String, Int))
 
         /*listGraphEmotion = arrayOf(

@@ -20,5 +20,9 @@ interface WebService {
     suspend fun getCalificacionByDate(@Path("fecha") fecha: String
                                       , @Header("Authorization") autHeader: String): List<Calificacion>
 
+    @Headers("Content-Type: application/json")
+    @GET("calificacion/")
+    suspend fun getCalificacion(@Header("Authorization") autHeader: String): List<Calificacion>
+
 
 }

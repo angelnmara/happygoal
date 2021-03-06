@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import androidx.annotation.NonNull;
@@ -22,7 +23,13 @@ public final class FragmentEstadisticaPersonalListListBinding implements ViewBin
   private final FrameLayout rootView;
 
   @NonNull
-  public final RecyclerView list;
+  public final RelativeLayout clLeyendaDatosEstadistica;
+
+  @NonNull
+  public final RecyclerView listEstadisticaPersonal;
+
+  @NonNull
+  public final LinearLayout lnlListEstadistica;
 
   @NonNull
   public final RelativeLayout progressBar;
@@ -31,9 +38,13 @@ public final class FragmentEstadisticaPersonalListListBinding implements ViewBin
   public final Spinner spnMonth;
 
   private FragmentEstadisticaPersonalListListBinding(@NonNull FrameLayout rootView,
-      @NonNull RecyclerView list, @NonNull RelativeLayout progressBar, @NonNull Spinner spnMonth) {
+      @NonNull RelativeLayout clLeyendaDatosEstadistica,
+      @NonNull RecyclerView listEstadisticaPersonal, @NonNull LinearLayout lnlListEstadistica,
+      @NonNull RelativeLayout progressBar, @NonNull Spinner spnMonth) {
     this.rootView = rootView;
-    this.list = list;
+    this.clLeyendaDatosEstadistica = clLeyendaDatosEstadistica;
+    this.listEstadisticaPersonal = listEstadisticaPersonal;
+    this.lnlListEstadistica = lnlListEstadistica;
     this.progressBar = progressBar;
     this.spnMonth = spnMonth;
   }
@@ -66,9 +77,21 @@ public final class FragmentEstadisticaPersonalListListBinding implements ViewBin
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.list;
-      RecyclerView list = ViewBindings.findChildViewById(rootView, id);
-      if (list == null) {
+      id = R.id.clLeyendaDatosEstadistica;
+      RelativeLayout clLeyendaDatosEstadistica = ViewBindings.findChildViewById(rootView, id);
+      if (clLeyendaDatosEstadistica == null) {
+        break missingId;
+      }
+
+      id = R.id.listEstadisticaPersonal;
+      RecyclerView listEstadisticaPersonal = ViewBindings.findChildViewById(rootView, id);
+      if (listEstadisticaPersonal == null) {
+        break missingId;
+      }
+
+      id = R.id.lnlListEstadistica;
+      LinearLayout lnlListEstadistica = ViewBindings.findChildViewById(rootView, id);
+      if (lnlListEstadistica == null) {
         break missingId;
       }
 
@@ -84,8 +107,9 @@ public final class FragmentEstadisticaPersonalListListBinding implements ViewBin
         break missingId;
       }
 
-      return new FragmentEstadisticaPersonalListListBinding((FrameLayout) rootView, list,
-          progressBar, spnMonth);
+      return new FragmentEstadisticaPersonalListListBinding((FrameLayout) rootView,
+          clLeyendaDatosEstadistica, listEstadisticaPersonal, lnlListEstadistica, progressBar,
+          spnMonth);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

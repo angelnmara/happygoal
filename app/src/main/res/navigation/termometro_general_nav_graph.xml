@@ -7,12 +7,12 @@
 
     <fragment
         android:id="@+id/termometroGeneralFragment"
-        android:name="com.example.happygoaldemo.TermometroGeneralFragment"
+        android:name="com.example.happygoaldemo.ui.termometro_general.TermometroGeneralFragment"
         android:label="@string/termometroGeneral"
         tools:layout="@layout/fragment_termometro_general_list" />
     <fragment
         android:id="@+id/termometroGeneralChartFragment"
-        android:name="com.example.happygoaldemo.TermometroGeneralChartFragment"
+        android:name="com.example.happygoaldemo.ui.termometro_general.TermometroGeneralChartFragment"
         android:label="@string/termometro_general_grafica"
         tools:layout="@layout/fragment_termometro_general_chart" />
 </navigation>

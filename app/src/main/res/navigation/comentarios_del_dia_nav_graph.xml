@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_comentarios_del_dia_list" />
     <fragment
         android:id="@+id/comentariosDelDiaChartFragment"
-        android:name="com.example.happygoaldemo.ComentariosDelDiaChartFragment"
+        android:name="com.example.happygoaldemo.ui.comentarios_del_dia.ComentariosDelDiaChartFragment"
         android:label="@string/comentarios_del_dia_grafica"
         tools:layout="@layout/fragment_comentarios_del_dia_chart" />
 </navigation>

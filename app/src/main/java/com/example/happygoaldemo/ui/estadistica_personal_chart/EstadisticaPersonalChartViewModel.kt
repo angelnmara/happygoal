@@ -11,6 +11,8 @@ import java.lang.Exception
 class EstadisticaPersonalChartViewModel(private val repo: Repo):ViewModel() {
     lateinit var userName:String
     lateinit var token:String
+    private val TAG = javaClass.name
+
     val fetchCalificacion = liveData(Dispatchers.IO) {
         emit(Resource.Loading())
         try{
@@ -19,7 +21,7 @@ class EstadisticaPersonalChartViewModel(private val repo: Repo):ViewModel() {
                 , null
                 , token))
         }catch (e: Exception){
-            Log.d("", e.toString())
+            Log.d(TAG, e.toString())
             //emit(Resource.Failure(e))
         }
     }

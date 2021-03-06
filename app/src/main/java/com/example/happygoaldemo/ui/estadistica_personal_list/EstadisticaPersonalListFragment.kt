@@ -38,6 +38,8 @@ class EstadisticaPersonalListFragment : Fragment(), AdapterView.OnItemSelectedLi
     private var TAG = javaClass.name
     private lateinit var userNameG: String
     private lateinit var tokenG: String
+    private lateinit var rlLeyenda: RelativeLayout
+    private lateinit var lnlLista: LinearLayout
     
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -58,11 +60,14 @@ class EstadisticaPersonalListFragment : Fragment(), AdapterView.OnItemSelectedLi
 
         tokenG = tools.getDefaultsString(getString(R.string.token), requireContext()).toString()
 
+        rlLeyenda = view.findViewById(R.id.clLeyendaDatosEstadistica)
+        lnlLista = view.findViewById(R.id.lnlListEstadistica)
+
         spinner = view.findViewById(R.id.spnMonth)
 
         spinner.onItemSelectedListener = this
 
-        rv = view.findViewById<RecyclerView>(R.id.list)
+        rv = view.findViewById<RecyclerView>(R.id.listEstadisticaPersonal)
         progressBar = view.findViewById<RelativeLayout>(R.id.progressBar)
 
         // Set the adapter
@@ -98,8 +103,15 @@ class EstadisticaPersonalListFragment : Fragment(), AdapterView.OnItemSelectedLi
                 }
                 is Resource.Success -> {
                     progressBar.visibility = View.GONE
-                    reciclerView.adapter = EstadisticaPersonalRecyclerViewAdapter(result.data, requireContext())
-                    Log.d(TAG, result.data.toString())
+                    if(result.data.isEmpty()){
+                        rlLeyenda.visibility = View.VISIBLE
+                        lnlLista.visibility = View.GONE
+                    }else{
+                        rlLeyenda.visibility = View.GONE
+                        lnlLista.visibility = View.VISIBLE
+                        reciclerView.adapter = EstadisticaPersonalRecyclerViewAdapter(result.data, requireContext())
+                        Log.d(TAG, result.data.toString())
+                    }
 
                     if(spinner.adapter==null){
                         fillDDLMes(result.data)
@@ -107,6 +119,7 @@ class EstadisticaPersonalListFragment : Fragment(), AdapterView.OnItemSelectedLi
                 }
                 is Resource.Failure -> {
                     progressBar.visibility = View.GONE
+                    rlLeyenda.visibility = View.VISIBLE
                     Log.d("", "Failure")
                 }
             }

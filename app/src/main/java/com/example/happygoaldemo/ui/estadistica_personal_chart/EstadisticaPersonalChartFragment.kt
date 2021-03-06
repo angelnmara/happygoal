@@ -46,7 +46,6 @@ class EstadisticaPersonalChartFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
-    private var aaChartModel: AAChartModel? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -69,25 +68,7 @@ class EstadisticaPersonalChartFragment : Fragment() {
         return view
     }
 
-    fun configureGraph(listData:Array<Any>, view: View){
-        aaChartModel = configurePieChart(listData)
-        val aaChartView: AAChartView = view.findViewById(R.id.AAChartView)
-        aaChartView.aa_drawChartWithChartModel(aaChartModel!!)
-    }
 
-    fun configurePieChart(listData:Array<Any>): AAChartModel  {
-        return AAChartModel()
-            .chartType(AAChartType.Pie)
-            .backgroundColor("#ffffff")
-            .title("Estadística Personal ")
-            .subtitle("ultimos 3 meses")
-            .dataLabelsEnabled(true)//是否直接显示扇形图数据
-            .yAxisTitle("℃")
-            .series(arrayOf(
-                AASeriesElement()
-                    .name("Numero de emociones")
-                    .data(listData)))
-    }
 
     /*arrayOf(
     arrayOf("Java",   67),
@@ -98,7 +79,7 @@ class EstadisticaPersonalChartFragment : Fragment() {
     )*/
 
     private fun setupObserver(view: View){
-        tools.fillEmotions(requireContext())
+        //tools.fillEmotions(requireContext())
         viewModel.fetchCalificacion.observe(
             viewLifecycleOwner,
             androidx.lifecycle.Observer { result ->
@@ -107,8 +88,8 @@ class EstadisticaPersonalChartFragment : Fragment() {
                         Log.d(TAG, "setupObserver: loading")
                     }
                     is Resource.Success -> {
-                        tools.fillCharts(result.data)
-                        configureGraph(tools.listGraphEmotion, view)
+                        tools.fillCharts(result.data, requireContext())
+                        tools.configureGraph(tools.listGraphEmotion, view)
                         Log.d(TAG, "setupObserver: success")
                     }
                     is Resource.Failure -> {

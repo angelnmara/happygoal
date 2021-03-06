@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layoutManager="LinearLayoutManager"
+    android:layout_marginBottom="?attr/actionBarSize"
     tools:context=".ui.comentarios_del_dia.ComentariosDelDiaFragment">
 
     <RelativeLayout
@@ -38,7 +39,7 @@
     </RelativeLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/list"
+        android:id="@+id/listComentariosDia"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="visible"

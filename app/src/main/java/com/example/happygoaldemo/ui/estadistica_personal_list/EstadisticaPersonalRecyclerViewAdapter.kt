@@ -33,7 +33,6 @@ class EstadisticaPersonalRecyclerViewAdapter(
                         false
                 )
         )
-
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {

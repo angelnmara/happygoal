@@ -22,10 +22,29 @@
         </ProgressBar>
     </RelativeLayout>
 
+    <RelativeLayout
+        android:id="@+id/clLeyendaDatosEstadistica"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_acerca_de"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:fontFamily="@font/actor"
+            android:textColor="@color/white"
+            android:text="@string/no_existen_comentarios_estadistica_personal"
+            android:textSize="24sp"></TextView>
+    </RelativeLayout>
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:id="@+id/lnlListEstadistica"
+        android:visibility="visible">
 
         <Spinner
             android:id="@+id/spnMonth"
@@ -34,7 +53,7 @@
         </Spinner>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/list"
+            android:id="@+id/listEstadisticaPersonal"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:listitem="@layout/fragment_estadistica_personal_list">

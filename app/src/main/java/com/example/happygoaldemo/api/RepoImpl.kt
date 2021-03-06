@@ -10,6 +10,10 @@ class RepoImpl(private val dataSource: DataSource): Repo {
         return dataSource.getTragoByName(tragoName)
     }
 
+    override suspend fun getCalificacionList(token: String): Resource<List<Calificacion>> {
+        return dataSource.getCalificacion(token)
+    }
+
     override suspend fun getCalificacionList(
         userName: String,
         annio:Int?,

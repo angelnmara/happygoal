@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        navViewEstadisticas = findViewById(R.id.nav_view_bottom)
+        navViewEstadisticas = findViewById(R.id.nav_view_bottom_estadistica)
         navViewTermometro = findViewById(R.id.nav_view_bottom_termometro)
         navViewComentariosDia = findViewById(R.id.nav_view_bottom_comentarios_dia)
         navigagionView = findViewById<NavigationView>(R.id.nav_view)

@@ -49,7 +49,7 @@
     <!--menu estadistica personal-->
     <string name="misEstadisticasPersonales">Mis estadísticas personales</string>
     <string name="miGrafica">Mi gráfica</string>
-    <string name="leyendaNoDatos">Registra tus emociones para que puedas visualizar tu estadística personal</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
@@ -60,8 +60,12 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
 
+    <!--estadistica personal-->
+    <string name="no_existen_comentarios_estadistica_personal">"Registra tus emociones para que puedas visualizar tu estadística personal"</string>
+
     <!--termometro general-->
     <string name="termometro_general_grafica">Termómetro general gráfica</string>
+    <string name="no_existen_datos_termometro">En caso de que no existan datos para el termómetro general: “Para poder visualizar el Termómetro General es importante que registres tus comentarios del día, sé el primero en registrar y se muestre en el Termómetro General</string>
 
     <!--comentarios del dia-->
     <string name="comentarios_del_dia_grafica">Comentarios del día grafica</string>
