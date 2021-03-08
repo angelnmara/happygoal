@@ -64,7 +64,7 @@ class TermometroGeneralChartFragment : Fragment() {
                 }
                 is Resource.Success->{
                     tools.fillCharts(result.data, requireContext())
-                    tools.configureGraph(tools.listGraphEmotion, view)
+                    tools.configureGraph(tools.listGraphEmotion, view, "Termometro General", "Últimos 3 meses", "Número de emociones")
                 }
                 is Resource.Failure->{
                     Log.d(TAG, "setupObserver: failure")

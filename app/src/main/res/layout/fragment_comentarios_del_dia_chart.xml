@@ -3,12 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ComentariosDelDiaChartFragment">
+    tools:context=".ui.comentarios_del_dia.ComentariosDelDiaChartFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <com.github.aachartmodel.aainfographics.aachartcreator.AAChartView
+        android:id="@+id/AAChartView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Comentarios del dia Chart fragment" />
+        android:layout_height="match_parent" />
 
 </FrameLayout>

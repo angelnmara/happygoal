@@ -1,11 +1,19 @@
 package com.example.happygoaldemo.ui.comentarios_del_dia
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import com.example.happygoaldemo.R
+import com.example.happygoaldemo.api.RepoImpl
+import com.example.happygoaldemo.data.model.DataSource
+import com.example.happygoaldemo.tools.Resource
+import com.example.happygoaldemo.tools.Tools
+import com.example.happygoaldemo.tools.VMFactory
+import java.util.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -21,6 +29,9 @@ class ComentariosDelDiaChartFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    private val TAG = javaClass.name
+    private var tools = Tools()
+    private val viewModel by viewModels<ComentariosDelDiaViewModel> { VMFactory(RepoImpl(DataSource())) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,7 +46,33 @@ class ComentariosDelDiaChartFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_comentarios_del_dia_chart, container, false)
+        val view:View = inflater.inflate(R.layout.fragment_comentarios_del_dia_chart, container, false)
+        val cal = Calendar.getInstance()
+        val dayOfMonth = cal[Calendar.DAY_OF_MONTH].toString().padStart(2, '0')
+        val Month = (cal[Calendar.MONTH] + 1).toString().padStart(2, '0')
+        val Year = cal[Calendar.YEAR].toString()
+        viewModel.fecha = Year + Month + dayOfMonth
+        viewModel.token = tools.getDefaultsString(getString(R.string.token), requireContext()).toString()
+        setupObserver(view)
+        return view
+    }
+
+    private fun setupObserver(view: View){
+        viewModel.fetchListaByFecha.observe(viewLifecycleOwner, androidx.lifecycle.Observer {
+                result->
+            when(result){
+                is Resource.Loading->{
+                    Log.d(TAG, "setupObserver: loading")
+                }
+                is Resource.Success->{
+                    tools.fillCharts(result.data, requireContext())
+                    tools.configureGraph(tools.listGraphEmotion, view, "Comentarios del día", "Comentarios del día", "Número de emociones")
+                }
+                is Resource.Failure->{
+                    Log.d(TAG, "setupObserver: failure")
+                }
+            }
+        })
     }
 
     companion object {

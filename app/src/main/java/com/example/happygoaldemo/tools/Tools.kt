@@ -40,23 +40,23 @@ class Tools {
         }
     }
 
-    fun configureGraph(listData:Array<Any>, view: View){
-        aaChartModel = configurePieChart(listData)
+    fun configureGraph(listData:Array<Any>, view: View, titulo:String, subtitulo:String, descripcion:String){
+        aaChartModel = configurePieChart(listData, titulo, subtitulo, descripcion)
         val aaChartView: AAChartView = view.findViewById(R.id.AAChartView)
         aaChartView.aa_drawChartWithChartModel(aaChartModel!!)
     }
 
-    fun configurePieChart(listData:Array<Any>): AAChartModel  {
+    fun configurePieChart(listData:Array<Any>, titulo:String, subtitulo:String, descripcion:String): AAChartModel  {
         return AAChartModel()
             .chartType(AAChartType.Pie)
             .backgroundColor("#ffffff")
-            .title("Estadística Personal ")
-            .subtitle("ultimos 3 meses")
+            .title(titulo)
+            .subtitle(subtitulo)
             .dataLabelsEnabled(true)//是否直接显示扇形图数据
             .yAxisTitle("℃")
             .series(arrayOf(
                 AASeriesElement()
-                    .name("Numero de emociones")
+                    .name(descripcion)
                     .data(listData)))
     }
 

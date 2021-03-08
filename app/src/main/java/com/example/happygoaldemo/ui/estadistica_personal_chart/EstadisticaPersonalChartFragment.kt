@@ -89,7 +89,7 @@ class EstadisticaPersonalChartFragment : Fragment() {
                     }
                     is Resource.Success -> {
                         tools.fillCharts(result.data, requireContext())
-                        tools.configureGraph(tools.listGraphEmotion, view)
+                        tools.configureGraph(tools.listGraphEmotion, view, "Estadística Personal", "Últimos tres meses", "Número de emociones")
                         Log.d(TAG, "setupObserver: success")
                     }
                     is Resource.Failure -> {
