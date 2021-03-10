@@ -61,18 +61,18 @@
     <string name="title_notifications">Notifications</string>
 
     <!--estadistica personal-->
-    <string name="no_existen_comentarios_estadistica_personal">"Registra tus emociones para que puedas visualizar tu estadística personal"</string>
+    <string name="no_existen_comentarios_estadistica_personal">Registra tus emociones para que puedas visualizar tu estadística personal</string>
 
     <!--termometro general-->
     <string name="termometro_general_grafica">Termómetro general gráfica</string>
-    <string name="no_existen_datos_termometro">En caso de que no existan datos para el termómetro general: “Para poder visualizar el Termómetro General es importante que registres tus comentarios del día, sé el primero en registrar y se muestre en el Termómetro General</string>
+    <string name="no_existen_datos_termometro">Para poder visualizar el Termómetro General es importante que registres tus comentarios del día, sé el primero en registrar y se muestre en el Termómetro General</string>
 
     <!--comentarios del dia-->
     <string name="comentarios_del_dia_grafica">Comentarios del día grafica</string>
-    <string name="no_existen_comentarios_del_dia">“Registra tus comentarios del día y sé el primero en mostrar anónimamente tu estado emocional”</string>
+    <string name="no_existen_comentarios_del_dia">Registra tus comentarios del día y sé el primero en mostrar anónimamente tu estado emocional</string>
 
     <!--acerca de-->
-    <string name="acerca_de">“HAPPY GOAL ES UNA APLICACIÓN PARA MEDIR LA FELICIDAD EN EL TRABAJO, FUE CREADA POR EXO21. TODOS LOS DERECHOS RESERVADOS ESCRIBENOS A: CONTACTO@EXO21.COM VERSIÓN 1.0 ENERO 2021”</string>
+    <string name="acerca_de">HAPPY GOAL ES UNA APLICACIÓN PARA MEDIR LA FELICIDAD EN EL TRABAJO, FUE CREADA POR EXO21. TODOS LOS DERECHOS RESERVADOS ESCRIBENOS A: CONTACTO@EXO21.COM VERSIÓN 1.0 ENERO 2021</string>
 
     <!--dias-->
     <string name="domingo">Domingo</string>
