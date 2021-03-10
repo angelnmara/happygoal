@@ -10,10 +10,10 @@ import com.example.happygoaldemo.data.model.Calificacion
 import com.example.happygoaldemo.data.model.Emotion
 import com.example.happygoaldemo.data.model.MesAnnioData
 import com.example.happygoaldemo.data.model.GraphDataEmotion
-import com.github.aachartmodel.aainfographics.aachartcreator.AAChartModel
-import com.github.aachartmodel.aainfographics.aachartcreator.AAChartType
-import com.github.aachartmodel.aainfographics.aachartcreator.AAChartView
-import com.github.aachartmodel.aainfographics.aachartcreator.AASeriesElement
+import com.github.aachartmodel.aainfographics.aachartcreator.*
+import com.github.aachartmodel.aainfographics.aaoptionsmodel.AADataLabels
+import com.github.aachartmodel.aainfographics.aaoptionsmodel.AAStyle
+import com.github.aachartmodel.aainfographics.aatools.AAColor
 import com.google.android.material.appbar.AppBarLayout
 import java.text.DateFormatSymbols
 import java.util.*
@@ -41,9 +41,72 @@ class Tools {
     }
 
     fun configureGraph(listData:Array<Any>, view: View, titulo:String, subtitulo:String, descripcion:String){
-        aaChartModel = configurePieChart(listData, titulo, subtitulo, descripcion)
+        var tipo = 0
+        when(tipo){
+            0->{
+                aaChartModel = customChart(listData, titulo, subtitulo, descripcion)
+            }
+            1->{
+                aaChartModel = configurePieChart(listData, titulo, subtitulo, descripcion)
+            }
+            2->{
+                aaChartModel = configurePyramidChart(listData, titulo, subtitulo, descripcion)
+            }
+            3->{
+                aaChartModel = configureFunnelChart(listData, titulo, subtitulo, descripcion)
+            }
+            else->{
+                aaChartModel = customChart(listData, titulo, subtitulo, descripcion)
+            }
+        }
         val aaChartView: AAChartView = view.findViewById(R.id.AAChartView)
         aaChartView.aa_drawChartWithChartModel(aaChartModel!!)
+    }
+
+    fun customChart(listData: Array<Any>, titulo: String, subtitulo: String, descripcion: String):AAChartModel{
+        return AAChartModel()
+            .chartType(AAChartType.Column)
+            .backgroundColor("#FFFFFF")
+            .dataLabelsEnabled(false)
+            .yAxisGridLineWidth(0f)
+            .legendEnabled(true)
+            .touchEventEnabled(true)
+            .title(titulo)
+            .subtitle(subtitulo)
+            .yAxisTitle("Emociones")
+            .categories(arrayOf(
+                "Feliz",
+                "Motivado",
+                "Tranquilo",
+                "Estresado",
+                "Enojado"
+            ))
+            .series(arrayOf(
+                AASeriesElement()
+                    .name(descripcion)
+                    .data(listData)))
+    }
+
+    fun configureFunnelChart(listData: Array<Any>, titulo: String, subtitulo: String, descripcion: String): AAChartModel  {
+        return AAChartModel()
+            .chartType(AAChartType.Funnel)
+            .title(titulo)
+            .subtitle(subtitulo)
+            .yAxisTitle("Emociones")
+            .series(arrayOf(
+                AASeriesElement()
+                    .name(descripcion)
+                    .dataLabels(
+                        AADataLabels()
+                        .enabled(true)
+                        .inside(true)
+                        .verticalAlign(AAChartVerticalAlignType.Middle)
+                        .color(AAColor.Black)
+                        .style(
+                            AAStyle()
+                            .fontSize(25f)
+                            .textOutline("0px 0px contrast")))
+                    .data(listData)))
     }
 
     fun configurePieChart(listData:Array<Any>, titulo:String, subtitulo:String, descripcion:String): AAChartModel  {
@@ -59,6 +122,20 @@ class Tools {
                     .name(descripcion)
                     .data(listData)))
     }
+
+    fun configurePyramidChart(listData: Array<Any>, titulo: String, subtitulo: String, descripcion: String): AAChartModel  {
+        return AAChartModel()
+            .chartType(AAChartType.Pyramid)
+            .title(titulo)
+            .subtitle(subtitulo)
+            .yAxisTitle("℃")
+            .series(arrayOf(
+                AASeriesElement()
+                    .name(descripcion)
+                    .data(listData)))
+    }
+
+
 
     /*fun ocultaToolBar(activity: FragmentActivity?){
         val appBarLayout = activity?.findViewById<AppBarLayout>(R.id.app_bar_layout)

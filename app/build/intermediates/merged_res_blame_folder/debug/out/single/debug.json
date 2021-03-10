@@ -20,12 +20,12 @@
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxxhdpi/boton_login.png"
     },
     {
-        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
-    },
-    {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-mdpi_backgrouond_respuesta_enojado.png.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-mdpi/backgrouond_respuesta_enojado.png"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_cerrar_sesion.png.flat",
@@ -40,12 +40,12 @@
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxhdpi/background_feliz.png"
     },
     {
-        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_motivado.xml.flat",
-        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable/ic_motivado.xml"
-    },
-    {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_enojado_r.png.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxxhdpi/ic_enojado_r.png"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_motivado.xml.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable/ic_motivado.xml"
     },
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxhdpi_background_test.png.flat",
@@ -600,12 +600,12 @@
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xhdpi/boton_login.png"
     },
     {
-        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/layout_tragos_row.xml.flat",
-        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/layout/tragos_row.xml"
-    },
-    {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_enojado.png.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxxhdpi/ic_enojado.png"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/layout_tragos_row.xml.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/layout/tragos_row.xml"
     },
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_comentario_dia.png.flat",
@@ -616,12 +616,12 @@
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/menu/comentarios_del_dia_menu.xml"
     },
     {
-        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/layout_fragment_comentarios_del_dia_list.xml.flat",
-        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/layout/fragment_comentarios_del_dia_list.xml"
-    },
-    {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_enojado.png.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-mdpi/ic_enojado.png"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/layout_fragment_comentarios_del_dia_list.xml.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/layout/fragment_comentarios_del_dia_list.xml"
     },
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/layout_fragment_estadistica_personal_list_list.xml.flat",

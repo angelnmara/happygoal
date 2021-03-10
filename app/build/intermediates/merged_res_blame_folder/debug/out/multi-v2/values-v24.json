@@ -4,7 +4,17 @@
             "outputFile": "/home/daver/Desarrollo/happygoal/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "/root/.gradle/caches/transforms-3/1b6310214aceb1d8bd10133a91347898/transformed/media-1.0.0/res/values-v24/values-v24.xml",
+                    "source": "/root/.gradle/caches/transforms-3/e767a6ba0058c726fead51d2d57d1c99/transformed/appcompat-1.2.0/res/values-v24/values-v24.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,212",
+                        "endColumns": "156,134",
+                        "endOffsets": "207,342"
+                    }
+                },
+                {
+                    "source": "/root/.gradle/caches/transforms-3/b69e68d3e459dc0615b73dc28a26b1cd/transformed/media-1.0.0/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -18,16 +28,6 @@
                         "startOffsets": "347,413,474,540",
                         "endColumns": "65,60,65,66",
                         "endOffsets": "408,469,535,602"
-                    }
-                },
-                {
-                    "source": "/root/.gradle/caches/transforms-3/0eeb601947f335ed7c68af2a0986a31e/transformed/appcompat-1.2.0/res/values-v24/values-v24.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,212",
-                        "endColumns": "156,134",
-                        "endOffsets": "207,342"
                     }
                 }
             ]
