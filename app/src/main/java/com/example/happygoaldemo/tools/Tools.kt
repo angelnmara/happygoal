@@ -240,7 +240,9 @@ class Tools {
     }
 
     fun fillCharts(data:List<Calificacion>, context: Context){
-        fillEmotions(context)
+        if(emotionList.isEmpty()){
+            fillEmotions(context)
+        }
         var aoa= arrayListOf(arrayOf(String, Int))
 
         /*listGraphEmotion = arrayOf(
@@ -261,7 +263,7 @@ class Tools {
             aoa.add(arrayOf(cal.nameEmotion, data.filter { c -> c.calificacion == cal.idEmotion }.count()))
         }
         aoa.removeAt(0)
-        listGraphEmotion = aoa.toArray()
+            listGraphEmotion = aoa.toArray()
 
 
     }

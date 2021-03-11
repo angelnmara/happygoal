@@ -6,10 +6,16 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
+import android.widget.Spinner
+import android.widget.SpinnerAdapter
+import androidx.appcompat.widget.AppCompatCheckedTextView
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.RecyclerView
 import com.example.happygoaldemo.R
+import com.example.happygoaldemo.adapters.CustomSpinnerAdapter
 import com.example.happygoaldemo.api.RepoImpl
+import com.example.happygoaldemo.data.model.Calificacion
 import com.example.happygoaldemo.data.model.DataSource
 import com.example.happygoaldemo.data.model.GraphDataEmotion
 import com.example.happygoaldemo.tools.Resource
@@ -33,11 +39,17 @@ private const val ARG_PARAM2 = "param2"
  * Use the [EstadisticaPersonalChartFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class EstadisticaPersonalChartFragment : Fragment() {
+class EstadisticaPersonalChartFragment : Fragment(), AdapterView.OnItemSelectedListener {
 
     private val TAG = javaClass.name
     private var tools = Tools()
-    private val viewModel by viewModels<EstadisticaPersonalChartViewModel> { VMFactory(
+    private lateinit var spinner: Spinner
+    private lateinit var spinnerAdapter: CustomSpinnerAdapter
+    private lateinit var userNameG: String
+    private lateinit var tokenG: String
+
+
+    private val viewModel by viewModels<EstadisticaPersonalViewModel> { VMFactory(
         RepoImpl(
             DataSource()
         )
@@ -61,8 +73,13 @@ class EstadisticaPersonalChartFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view:View = inflater.inflate(R.layout.fragment_estadistica_personal_chart, container, false)
-        viewModel.userName = tools.getDefaultsString(getString(R.string.username), requireContext()).toString()
-        viewModel.token = tools.getDefaultsString(getString(R.string.token), requireContext()).toString()
+        /*viewModel.userName = tools.getDefaultsString(getString(R.string.username), requireContext()).toString()
+        viewModel.token = tools.getDefaultsString(getString(R.string.token), requireContext()).toString()*/
+        userNameG = tools.getDefaultsString(getString(R.string.username), requireContext()).toString()
+        tokenG = tools.getDefaultsString(getString(R.string.token), requireContext()).toString()
+        viewModel.setVariablesMutable(userNameG, null, null, tokenG)
+        spinner = view.findViewById(R.id.spnMonthChart)
+        spinner.onItemSelectedListener = this
         setupObserver(view)
 
         return view
@@ -77,10 +94,11 @@ class EstadisticaPersonalChartFragment : Fragment() {
     arrayOf("OC",     11),
     arrayOf("Go",     30)
     )*/
-
+/*viewModel.userName = tools.getDefaultsString(getString(R.string.username), requireContext()).toString()
+        viewModel.token = tools.getDefaultsString(getString(R.string.token), requireContext()).toString()*/
     private fun setupObserver(view: View){
         //tools.fillEmotions(requireContext())
-        viewModel.fetchCalificacion.observe(
+        viewModel.fetchCalificacionList.observe(
             viewLifecycleOwner,
             androidx.lifecycle.Observer { result ->
                 when (result) {
@@ -91,12 +109,21 @@ class EstadisticaPersonalChartFragment : Fragment() {
                         tools.fillCharts(result.data, requireContext())
                         tools.configureGraph(tools.listGraphEmotion, view, "Estadística Personal", "Últimos tres meses", "Número de emociones")
                         Log.d(TAG, "setupObserver: success")
+                        if(spinner.adapter==null){
+                            fillDDLMes(result.data)
+                        }
                     }
                     is Resource.Failure -> {
                         Log.d(TAG, "setupObserver: failure")
                     }
                 }
             })
+    }
+
+    private fun fillDDLMes(data:List<Calificacion>){
+        tools.fillMesAnnioData(data)
+        spinnerAdapter = CustomSpinnerAdapter(requireContext(), android.R.layout.simple_spinner_dropdown_item, "anniomes", tools.mesDataList as ArrayList<Any>);
+        spinner.adapter = spinnerAdapter
     }
 
     companion object {
@@ -117,5 +144,19 @@ class EstadisticaPersonalChartFragment : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+        if(p1!=null){
+            var anniomes = (p1 as AppCompatCheckedTextView).text
+            val mesAnnioData = tools.mesDataList.filter {
+                    c->c.anniomes == anniomes
+            }
+            viewModel.setVariablesMutable(userNameG, mesAnnioData.get(0).annio, mesAnnioData.get(0).idMes, tokenG)
+        }
+    }
+
+    override fun onNothingSelected(p0: AdapterView<*>?) {
+        TODO("Not yet implemented")
     }
 }

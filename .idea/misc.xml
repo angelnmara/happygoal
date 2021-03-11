@@ -9,10 +9,15 @@
         <entry key="app/src/main/res/drawable/ic_enojado.xml" value="2.23125" />
         <entry key="app/src/main/res/drawable/ic_enojado_r.xml" value="0.36615384615384616" />
         <entry key="app/src/main/res/drawable/ic_estresado.xml" value="0.371875" />
+        <entry key="app/src/main/res/drawable/ic_estresado_r.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/ic_feliz.xml" value="0.371875" />
+        <entry key="app/src/main/res/drawable/ic_feliz_r.xml" value="0.25" />
         <entry key="app/src/main/res/drawable/ic_fondo_pantalla_2.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/ic_motivado.xml" value="0.371875" />
+        <entry key="app/src/main/res/drawable/ic_motivado_r.xml" value="0.371875" />
+        <entry key="app/src/main/res/drawable/ic_rojo_r.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/ic_tranquilo.xml" value="0.371875" />
+        <entry key="app/src/main/res/drawable/ic_tranquilo_r.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/rounded_edittext.xml" value="0.371875" />
         <entry key="app/src/main/res/layout/activity_estadistica_personal.xml" value="0.28532608695652173" />
         <entry key="app/src/main/res/layout/activity_estadistica_personal_bak.xml" value="0.35190217391304346" />

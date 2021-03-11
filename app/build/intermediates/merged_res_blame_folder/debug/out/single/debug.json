@@ -20,12 +20,12 @@
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxxhdpi/boton_login.png"
     },
     {
-        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-mdpi_backgrouond_respuesta_enojado.png.flat",
-        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-mdpi/backgrouond_respuesta_enojado.png"
-    },
-    {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-mdpi_backgrouond_respuesta_enojado.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-mdpi/backgrouond_respuesta_enojado.png"
     },
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_cerrar_sesion.png.flat",
@@ -38,10 +38,6 @@
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxhdpi_background_feliz.png.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxhdpi/background_feliz.png"
-    },
-    {
-        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_enojado_r.png.flat",
-        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxxhdpi/ic_enojado_r.png"
     },
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_motivado.xml.flat",
@@ -174,10 +170,6 @@
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/layout_fragment_main.xml.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/layout/fragment_main.xml"
-    },
-    {
-        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_enojado.png.flat",
-        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xhdpi/ic_enojado.png"
     },
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-mdpi_background_login.png.flat",
@@ -336,6 +328,10 @@
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxxhdpi/background_respuesta_estresado.png"
     },
     {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_naranja_r.xml.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable/ic_naranja_r.xml"
+    },
+    {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_termometro.png.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxhdpi/ic_termometro.png"
     },
@@ -472,10 +468,6 @@
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-hdpi/btn_login_disabled.png"
     },
     {
-        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_enojado.png.flat",
-        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxhdpi/ic_enojado.png"
-    },
-    {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_background_motivado.png.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxxhdpi/background_motivado.png"
     },
@@ -490,6 +482,10 @@
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_feliz.xml.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable/ic_feliz.xml"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_azul_r.xml.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable/ic_azul_r.xml"
     },
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_background_respuesta_motivado.png.flat",
@@ -536,6 +532,10 @@
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable/ic_motivado_r.xml"
     },
     {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_amarillo_r.xml.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable/ic_amarillo_r.xml"
+    },
+    {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/menu_termometro_general_menu.xml.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/menu/termometro_general_menu.xml"
     },
@@ -558,6 +558,10 @@
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/layout_fragment_response.xml.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/layout/fragment_response.xml"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_rojo_r.xml.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable/ic_rojo_r.xml"
     },
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-hdpi_background_respuesta_feliz.png.flat",
@@ -600,10 +604,6 @@
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xhdpi/boton_login.png"
     },
     {
-        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_enojado.png.flat",
-        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxxhdpi/ic_enojado.png"
-    },
-    {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/layout_tragos_row.xml.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/layout/tragos_row.xml"
     },
@@ -614,10 +614,6 @@
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/menu_comentarios_del_dia_menu.xml.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/menu/comentarios_del_dia_menu.xml"
-    },
-    {
-        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_enojado.png.flat",
-        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-mdpi/ic_enojado.png"
     },
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/layout_fragment_comentarios_del_dia_list.xml.flat",
@@ -642,6 +638,10 @@
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_tranquilo.xml.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable/ic_tranquilo.xml"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_verde_r.xml.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable/ic_verde_r.xml"
     },
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xhdpi_background_respuesta_feliz.png.flat",
@@ -670,10 +670,6 @@
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-hdpi_background_login.png.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-hdpi/background_login.png"
-    },
-    {
-        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_enojado.png.flat",
-        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-hdpi/ic_enojado.png"
     },
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/layout_fragment_termometro_general_chart.xml.flat",
