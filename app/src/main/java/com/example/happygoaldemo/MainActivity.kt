@@ -8,6 +8,7 @@ import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.*
+import com.example.happygoaldemo.tools.BeeperControl
 import com.example.happygoaldemo.tools.Tools
 import com.example.happygoaldemo.ui.test.TestFragmentDirections
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -27,6 +28,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        //Tarea cron en kotlin
+        //val beepControl = BeeperControl()
+        //beepControl.beepForAnHour()
 
         navViewEstadisticas = findViewById(R.id.nav_view_bottom_estadistica)
         navViewTermometro = findViewById(R.id.nav_view_bottom_termometro)
@@ -88,36 +92,36 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun configureEstadisticas(){
-        appBarConfiguration = AppBarConfiguration(
+        /*appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.estadisticaPersonalListFragment, R.id.estadisticaPersonalChartFragment
             )
         )
-        setupActionBarWithNavController(navController, appBarConfiguration)
+        setupActionBarWithNavController(navController, appBarConfiguration)*/
         navViewEstadisticas.visibility= View.VISIBLE
         navViewTermometro.visibility= View.GONE
         navViewComentariosDia.visibility = View.GONE
     }
 
     private fun configureTermometro(){
-        appBarConfiguration = AppBarConfiguration(
+        /*appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.termometroGeneralFragment, R.id.termometroGeneralChartFragment
             )
         )
-        setupActionBarWithNavController(navController, appBarConfiguration)
+        setupActionBarWithNavController(navController, appBarConfiguration)*/
         navViewTermometro.visibility= View.VISIBLE
         navViewEstadisticas.visibility= View.GONE
         navViewComentariosDia.visibility = View.GONE
     }
 
     private fun configureComentariosDia(){
-        appBarConfiguration = AppBarConfiguration(
+        /*appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.comentariosDelDiaFragment, R.id.comentariosDelDiaChartFragment
             )
-        )
-        setupActionBarWithNavController(navController, appBarConfiguration)
+        )*/
+        //setupActionBarWithNavController(navController, appBarConfiguration)
         navViewComentariosDia.visibility = View.VISIBLE
         navViewTermometro.visibility= View.GONE
         navViewEstadisticas.visibility= View.GONE
