@@ -40,11 +40,22 @@
             android:textSize="24sp"></TextView>
     </RelativeLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/listTermometro"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="visible"
-        tools:listitem="@layout/fragment_termometro_general" />
+        android:orientation="vertical">
+        <Spinner
+            android:id="@+id/spnMonthTermometro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </Spinner>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listTermometro"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            tools:listitem="@layout/fragment_termometro_general" />
+    </LinearLayout>
+
 </FrameLayout>
 

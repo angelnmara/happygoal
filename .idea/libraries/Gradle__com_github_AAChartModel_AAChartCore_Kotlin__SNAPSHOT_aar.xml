@@ -6,9 +6,10 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/155d20c6e3b0f5d65fafe21c9ac240c0/AAChartCore-Kotlin--SNAPSHOT/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/019ee55752df639d1676cb45898730ef/transformed/AAChartCore-Kotlin--SNAPSHOT/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/33aed75f5767452e016c3bc79be35e00/transformed/AAChartCore-Kotlin--SNAPSHOT/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f5346de4ee3423ffc93e225220ae360b/transformed/AAChartCore-Kotlin--SNAPSHOT/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/f5346de4ee3423ffc93e225220ae360b/transformed/AAChartCore-Kotlin--SNAPSHOT/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f5346de4ee3423ffc93e225220ae360b/transformed/AAChartCore-Kotlin--SNAPSHOT/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/33319e1ff815f9e4951c8cdc2bc8e806/transformed/AAChartCore-Kotlin--SNAPSHOT/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/33319e1ff815f9e4951c8cdc2bc8e806/transformed/AAChartCore-Kotlin--SNAPSHOT/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/33319e1ff815f9e4951c8cdc2bc8e806/transformed/AAChartCore-Kotlin--SNAPSHOT/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

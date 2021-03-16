@@ -1,8 +1,11 @@
 package com.example.happygoaldemo
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.view.View
+import android.widget.Toast
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
@@ -46,6 +49,7 @@ class MainActivity : AppCompatActivity() {
         navViewComentariosDia.setupWithNavController(navController)
 
         configureMenu()
+            //.setHomeAsUpIndicator()
 
         navigagionView.setNavigationItemSelectedListener {
             drawerLayout.closeDrawers()
@@ -140,6 +144,17 @@ class MainActivity : AppCompatActivity() {
         navController.navigate(action)
     }
 
-
-
+    @SuppressLint("RestrictedApi")
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            android.R.id.home->{
+                if(navController.backStack.count()>3){
+                    configureMenu()
+                }
+                return super.onOptionsItemSelected(item)
+            }else->{
+                return super.onOptionsItemSelected(item)
+            }
+        }
+    }
 }

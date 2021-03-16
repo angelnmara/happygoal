@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.Spinner
 import android.widget.SpinnerAdapter
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatCheckedTextView
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.RecyclerView
@@ -61,6 +62,7 @@ class EstadisticaPersonalChartFragment : Fragment(), AdapterView.OnItemSelectedL
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        (activity as AppCompatActivity?)!!.supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_arrow)
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)

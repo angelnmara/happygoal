@@ -9,12 +9,18 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import android.widget.RelativeLayout
+import android.widget.Spinner
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatCheckedTextView
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import com.example.happygoaldemo.R
+import com.example.happygoaldemo.adapters.CustomSpinnerAdapter
 import com.example.happygoaldemo.api.RepoImpl
+import com.example.happygoaldemo.data.model.Calificacion
 import com.example.happygoaldemo.data.model.DataSource
 import com.example.happygoaldemo.tools.Resource
 import com.example.happygoaldemo.tools.Tools
@@ -24,7 +30,7 @@ import com.example.happygoaldemo.ui.estadistica_personal_list.EstadisticaPersona
 /**
  * A fragment representing a list of Items.
  */
-class TermometroGeneralFragment : Fragment() {
+class TermometroGeneralFragment : Fragment(), AdapterView.OnItemSelectedListener {
 
     private val viewModel by viewModels<TermometroGeneralViewModel>{VMFactory(RepoImpl(DataSource()))}
     private var columnCount = 1
@@ -35,9 +41,12 @@ class TermometroGeneralFragment : Fragment() {
     private lateinit var clLeyendaTermometro:RelativeLayout
     private lateinit var listTermometro:RecyclerView
     private val TAG = javaClass.name
+    private lateinit var spinnerAdapter:CustomSpinnerAdapter
+    private lateinit var spinner: Spinner
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        (activity as AppCompatActivity?)!!.supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_arrow)
         tokenG = tools.getDefaultsString(getString(R.string.token), requireContext()).toString()
         arguments?.let {
             columnCount = it.getInt(ARG_COLUMN_COUNT)
@@ -53,6 +62,8 @@ class TermometroGeneralFragment : Fragment() {
         progresBar = view.findViewById(R.id.progressBar)
         clLeyendaTermometro = view.findViewById(R.id.clLeyendaTermometro)
         listTermometro = view.findViewById(R.id.listTermometro)
+        spinner = view.findViewById(R.id.spnMonthTermometro)
+        spinner.onItemSelectedListener = this
 
         // Set the adapter
         if (listTermometro is RecyclerView) {
@@ -66,6 +77,12 @@ class TermometroGeneralFragment : Fragment() {
             }
         }
         return view
+    }
+
+    private fun fillDDLMes(data:List<Calificacion>){
+        tools.fillMesAnnioData(data)
+        spinnerAdapter = CustomSpinnerAdapter(requireContext(), android.R.layout.simple_spinner_dropdown_item, "anniomes", tools.mesDataList as ArrayList<Any>);
+        spinner.adapter = spinnerAdapter
     }
 
     private fun setupObserver(recyclerView: RecyclerView){
@@ -85,6 +102,7 @@ class TermometroGeneralFragment : Fragment() {
                         clLeyendaTermometro.visibility = View.GONE
                         listTermometro.visibility = View.VISIBLE
                         recyclerView.adapter = EstadisticaPersonalRecyclerViewAdapter(result.data, requireContext())
+                        fillDDLMes(result.data)
                     }
                 }
                 is Resource.Failure->{
@@ -110,5 +128,19 @@ class TermometroGeneralFragment : Fragment() {
                     putInt(ARG_COLUMN_COUNT, columnCount)
                 }
             }
+    }
+
+    override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+        if(p1!=null){
+            var anniomes = (p1 as AppCompatCheckedTextView).text
+            val mesAnnioData = tools.mesDataList.filter {
+                    c->c.anniomes == anniomes
+            }
+            viewModel.setVariablesMutable(userNameG, mesAnnioData.get(0).annio, mesAnnioData.get(0).idMes, tokenG)
+        }
+    }
+
+    override fun onNothingSelected(p0: AdapterView<*>?) {
+        TODO("Not yet implemented")
     }
 }

@@ -20,12 +20,12 @@
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxxhdpi/boton_login.png"
     },
     {
-        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
-    },
-    {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-mdpi_backgrouond_respuesta_enojado.png.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-mdpi/backgrouond_respuesta_enojado.png"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_cerrar_sesion.png.flat",
@@ -58,6 +58,10 @@
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_arrow.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxhdpi/ic_arrow.png"
     },
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_estadistica_personal.png.flat",
@@ -194,6 +198,10 @@
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_notifications_black_24dp.xml.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable/ic_notifications_black_24dp.xml"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_arrow.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xhdpi/ic_arrow.png"
     },
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-hdpi_background_acerca_de.png.flat",
@@ -380,6 +388,10 @@
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-mdpi/background_respuesta_tranquilo.png"
     },
     {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_arrow.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-hdpi/ic_arrow.png"
+    },
+    {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/menu_estadistica_personal_menu.xml.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/menu/estadistica_personal_menu.xml"
     },
@@ -430,6 +442,10 @@
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/font_actor.xml.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/font/actor.xml"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_arrow.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xxxhdpi/ic_arrow.png"
     },
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_baseline_list_24.xml.flat",
@@ -528,12 +544,12 @@
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-xhdpi/btn_morado.png"
     },
     {
-        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_motivado_r.xml.flat",
-        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable/ic_motivado_r.xml"
-    },
-    {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_amarillo_r.xml.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable/ic_amarillo_r.xml"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_motivado_r.xml.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable/ic_motivado_r.xml"
     },
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/menu_termometro_general_menu.xml.flat",
@@ -556,12 +572,12 @@
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-hdpi/background_enojado.png"
     },
     {
-        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/layout_fragment_response.xml.flat",
-        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/layout/fragment_response.xml"
-    },
-    {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable_ic_rojo_r.xml.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable/ic_rojo_r.xml"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/layout_fragment_response.xml.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/layout/fragment_response.xml"
     },
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-hdpi_background_respuesta_feliz.png.flat",
@@ -658,6 +674,10 @@
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_boton_entrar.png.flat",
         "source": "/home/daver/Desarrollo/happygoal/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_boton_entrar.png"
+    },
+    {
+        "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_arrow.png.flat",
+        "source": "/home/daver/Desarrollo/happygoal/app/src/main/res/drawable-mdpi/ic_arrow.png"
     },
     {
         "merged": "/home/daver/Desarrollo/happygoal/app/build/intermediates/res/merged/debug/drawable-xxhdpi_background_acerca_de.png.flat",

@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatCheckedTextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -44,6 +45,7 @@ class EstadisticaPersonalListFragment : Fragment(), AdapterView.OnItemSelectedLi
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        (activity as AppCompatActivity?)!!.supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_arrow)
         arguments?.let {
             columnCount = it.getInt(ARG_COLUMN_COUNT)
         }

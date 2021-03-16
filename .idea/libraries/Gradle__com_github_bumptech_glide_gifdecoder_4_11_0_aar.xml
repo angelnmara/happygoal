@@ -2,7 +2,7 @@
   <library name="Gradle: com.github.bumptech.glide:gifdecoder:4.11.0@aar">
     <ANNOTATIONS>
       <root url="jar:///usr/local/Cellar/gradle/6.7.1/libexec/caches/transforms-2/files-2.1/87a8400da16ba5248f1f3266c892d2de/gifdecoder-4.11.0/annotations.zip!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/44d7ab4eb80b5f3d630319df95cb072d/transformed/gifdecoder-4.11.0/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/44f072519a419f1513359ea2efb36bfe/transformed/gifdecoder-4.11.0/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="jar:///usr/local/Cellar/gradle/6.7.1/libexec/caches/transforms-2/files-2.1/87a8400da16ba5248f1f3266c892d2de/gifdecoder-4.11.0/jars/classes.jar!/" />
@@ -12,8 +12,9 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/826914b901d95ec3aa3f6775646038c2/transformed/gifdecoder-4.11.0/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/7631e02e0bb8fa45d3c9ddb63879922a/transformed/gifdecoder-4.11.0/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/44d7ab4eb80b5f3d630319df95cb072d/transformed/gifdecoder-4.11.0/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/44d7ab4eb80b5f3d630319df95cb072d/transformed/gifdecoder-4.11.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/44d7ab4eb80b5f3d630319df95cb072d/transformed/gifdecoder-4.11.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/44f072519a419f1513359ea2efb36bfe/transformed/gifdecoder-4.11.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/44f072519a419f1513359ea2efb36bfe/transformed/gifdecoder-4.11.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/44f072519a419f1513359ea2efb36bfe/transformed/gifdecoder-4.11.0/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar:///usr/local/Cellar/gradle/6.7.1/libexec/caches/modules-2/files-2.1/com.github.bumptech.glide/gifdecoder/4.11.0/aa879357fc550aa27b5047d401997803a6a6bf38/gifdecoder-4.11.0-javadoc.jar!/" />

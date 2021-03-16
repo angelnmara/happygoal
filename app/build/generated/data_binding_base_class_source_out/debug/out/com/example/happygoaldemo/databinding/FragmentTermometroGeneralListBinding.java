@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
+import android.widget.Spinner;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
@@ -29,13 +30,17 @@ public final class FragmentTermometroGeneralListBinding implements ViewBinding {
   @NonNull
   public final RelativeLayout progressBar;
 
+  @NonNull
+  public final Spinner spnMonth;
+
   private FragmentTermometroGeneralListBinding(@NonNull FrameLayout rootView,
       @NonNull RelativeLayout clLeyendaTermometro, @NonNull RecyclerView listTermometro,
-      @NonNull RelativeLayout progressBar) {
+      @NonNull RelativeLayout progressBar, @NonNull Spinner spnMonth) {
     this.rootView = rootView;
     this.clLeyendaTermometro = clLeyendaTermometro;
     this.listTermometro = listTermometro;
     this.progressBar = progressBar;
+    this.spnMonth = spnMonth;
   }
 
   @Override
@@ -83,8 +88,14 @@ public final class FragmentTermometroGeneralListBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.spnMonth;
+      Spinner spnMonth = ViewBindings.findChildViewById(rootView, id);
+      if (spnMonth == null) {
+        break missingId;
+      }
+
       return new FragmentTermometroGeneralListBinding((FrameLayout) rootView, clLeyendaTermometro,
-          listTermometro, progressBar);
+          listTermometro, progressBar, spnMonth);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

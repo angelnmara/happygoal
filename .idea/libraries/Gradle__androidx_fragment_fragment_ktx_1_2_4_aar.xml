@@ -7,9 +7,10 @@
       <root url="jar:///usr/local/Cellar/gradle/6.7.1/libexec/caches/transforms-2/files-2.1/440740101aa6bbf19ba0384ec36f6f81/fragment-ktx-1.2.4/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/c6cad60433eeefe31e29c9ecbf118026/transformed/fragment-ktx-1.2.4/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/55941971a4878433425e4efe030bb65e/transformed/fragment-ktx-1.2.4/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/289cf4be36e2ac02e296c01df309b063/transformed/fragment-ktx-1.2.4/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/289cf4be36e2ac02e296c01df309b063/transformed/fragment-ktx-1.2.4/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/289cf4be36e2ac02e296c01df309b063/transformed/fragment-ktx-1.2.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/c92e1b0c4e54da19044a1dfa01fb0644/transformed/fragment-ktx-1.2.4/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/c92e1b0c4e54da19044a1dfa01fb0644/transformed/fragment-ktx-1.2.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/c92e1b0c4e54da19044a1dfa01fb0644/transformed/fragment-ktx-1.2.4/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
