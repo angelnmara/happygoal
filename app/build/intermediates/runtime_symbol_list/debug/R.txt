@@ -1958,6 +1958,7 @@ int id lnlBtnComenta 0x7f0a00ea
 int id lnlListEstadistica 0x7f0a00eb
 int id lnlResponse 0x7f0a00ec
 int id lnlSvg 0x7f0a00ed
+int id lnlTermometro 0x7f0a01d1
 int id lnlTest 0x7f0a00ee
 int id lnlTxtComenta 0x7f0a00ef
 int id loading 0x7f0a00f0
@@ -2090,6 +2091,8 @@ int id spline 0x7f0a016e
 int id split_action_bar 0x7f0a016f
 int id spnMonth 0x7f0a0170
 int id spnMonthChart 0x7f0a0171
+int id spnMonthChartTermometro 0x7f0a01d0
+int id spnMonthTermometro 0x7f0a01cf
 int id spread 0x7f0a0172
 int id spread_inside 0x7f0a0173
 int id square 0x7f0a0174

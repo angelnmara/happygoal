@@ -16,6 +16,12 @@ interface WebService {
                                       , @Header("Authorization") autHeader: String): List<Calificacion>
 
     @Headers("Content-Type: application/json")
+    @GET("calificacion-month-year")
+    suspend fun getCalificacionByMonthAnnio(@Query("mes") annio:Int?
+                                            , @Query("annio") mes:Int?
+                                            , @Header("Authorization") autHeader: String): List<Calificacion>
+
+    @Headers("Content-Type: application/json")
     @GET("calificacion-fecha/{fecha}")
     suspend fun getCalificacionByDate(@Path("fecha") fecha: String
                                       , @Header("Authorization") autHeader: String): List<Calificacion>

@@ -19,15 +19,19 @@ class DataSource {
                                       , mes:Int?
                                       , token:String): Resource<List<Calificacion>> {
         return Resource.Success(RetrofitClient.webservice.getCalificacionByUser(userName
-                , annio
-                , mes
-                , token).toList())
+            , annio
+            , mes
+            , token).toList())
+    }
+
+    suspend fun getCalificacionByMonthAnnio(mes: Int?, annio: Int?, token: String): Resource<List<Calificacion>>{
+        return Resource.Success(RetrofitClient.webservice.getCalificacionByMonthAnnio(mes, annio, token).toList())
     }
 
     suspend fun getCalificacionByDate(fecha:String
                                       , token:String): Resource<List<Calificacion>> {
         return Resource.Success(RetrofitClient.webservice.getCalificacionByDate(fecha
-                , token).toList())
+            , token).toList())
     }
 
     /*val generateTragosList= Resource.Success(listOf(

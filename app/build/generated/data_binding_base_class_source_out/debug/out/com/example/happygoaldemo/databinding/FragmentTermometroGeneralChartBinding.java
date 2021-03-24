@@ -4,7 +4,8 @@ package com.example.happygoaldemo.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
+import android.widget.LinearLayout;
+import android.widget.Spinner;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
@@ -17,20 +18,24 @@ import java.lang.String;
 
 public final class FragmentTermometroGeneralChartBinding implements ViewBinding {
   @NonNull
-  private final FrameLayout rootView;
+  private final LinearLayout rootView;
 
   @NonNull
   public final AAChartView AAChartView;
 
-  private FragmentTermometroGeneralChartBinding(@NonNull FrameLayout rootView,
-      @NonNull AAChartView AAChartView) {
+  @NonNull
+  public final Spinner spnMonthChartTermometro;
+
+  private FragmentTermometroGeneralChartBinding(@NonNull LinearLayout rootView,
+      @NonNull AAChartView AAChartView, @NonNull Spinner spnMonthChartTermometro) {
     this.rootView = rootView;
     this.AAChartView = AAChartView;
+    this.spnMonthChartTermometro = spnMonthChartTermometro;
   }
 
   @Override
   @NonNull
-  public FrameLayout getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -61,7 +66,14 @@ public final class FragmentTermometroGeneralChartBinding implements ViewBinding 
         break missingId;
       }
 
-      return new FragmentTermometroGeneralChartBinding((FrameLayout) rootView, AAChartView);
+      id = R.id.spnMonthChartTermometro;
+      Spinner spnMonthChartTermometro = ViewBindings.findChildViewById(rootView, id);
+      if (spnMonthChartTermometro == null) {
+        break missingId;
+      }
+
+      return new FragmentTermometroGeneralChartBinding((LinearLayout) rootView, AAChartView,
+          spnMonthChartTermometro);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

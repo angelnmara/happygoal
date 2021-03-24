@@ -43,6 +43,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:id="@+id/lnlTermometro"
+        android:visibility="visible"
         android:orientation="vertical">
         <Spinner
             android:id="@+id/spnMonthTermometro"
@@ -53,7 +55,6 @@
             android:id="@+id/listTermometro"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:visibility="visible"
             tools:listitem="@layout/fragment_termometro_general" />
     </LinearLayout>
 

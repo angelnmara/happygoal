@@ -9,10 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
-import android.widget.RelativeLayout
-import android.widget.Spinner
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatCheckedTextView
 import androidx.fragment.app.viewModels
@@ -43,6 +40,7 @@ class TermometroGeneralFragment : Fragment(), AdapterView.OnItemSelectedListener
     private val TAG = javaClass.name
     private lateinit var spinnerAdapter:CustomSpinnerAdapter
     private lateinit var spinner: Spinner
+    private lateinit var linearLayout: LinearLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -64,6 +62,8 @@ class TermometroGeneralFragment : Fragment(), AdapterView.OnItemSelectedListener
         listTermometro = view.findViewById(R.id.listTermometro)
         spinner = view.findViewById(R.id.spnMonthTermometro)
         spinner.onItemSelectedListener = this
+        viewModel.setVariablesMutables(null, null, tokenG)
+        linearLayout = view.findViewById(R.id.lnlTermometro)
 
         // Set the adapter
         if (listTermometro is RecyclerView) {
@@ -86,9 +86,9 @@ class TermometroGeneralFragment : Fragment(), AdapterView.OnItemSelectedListener
     }
 
     private fun setupObserver(recyclerView: RecyclerView){
-        viewModel.token = tokenG
-        viewModel.fetchCalificacionList.observe(viewLifecycleOwner, Observer {
-            result ->
+        //viewModel.token = tokenG
+        viewModel.fetchCalificacionListMonthYear.observe(viewLifecycleOwner, Observer {
+                result ->
             when(result){
                 is Resource.Loading->{
                     progresBar.visibility = View.VISIBLE
@@ -97,16 +97,18 @@ class TermometroGeneralFragment : Fragment(), AdapterView.OnItemSelectedListener
                     progresBar.visibility = View.GONE
                     if(result.data.isEmpty()){
                         clLeyendaTermometro.visibility = View.VISIBLE
-                        listTermometro.visibility = View.GONE
+                        linearLayout.visibility = View.GONE
                     }else{
                         clLeyendaTermometro.visibility = View.GONE
-                        listTermometro.visibility = View.VISIBLE
+                        linearLayout.visibility = View.VISIBLE
                         recyclerView.adapter = EstadisticaPersonalRecyclerViewAdapter(result.data, requireContext())
-                        fillDDLMes(result.data)
+                        if(spinner.adapter==null){
+                            fillDDLMes(result.data)
+                        }
                     }
                 }
                 is Resource.Failure->{
-                    listTermometro.visibility = View.GONE
+                    linearLayout.visibility = View.GONE
                     clLeyendaTermometro.visibility = View.VISIBLE
                     Log.d(TAG, "setupObserver: " + result.exception.message)
                     Toast.makeText(requireContext(), result.exception.message, Toast.LENGTH_SHORT).show()
@@ -136,7 +138,7 @@ class TermometroGeneralFragment : Fragment(), AdapterView.OnItemSelectedListener
             val mesAnnioData = tools.mesDataList.filter {
                     c->c.anniomes == anniomes
             }
-            viewModel.setVariablesMutable(userNameG, mesAnnioData.get(0).annio, mesAnnioData.get(0).idMes, tokenG)
+            viewModel.setVariablesMutables(mesAnnioData.get(0).idMes, mesAnnioData.get(0).annio, tokenG)
         }
     }
 
