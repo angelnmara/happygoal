@@ -14,11 +14,11 @@ class DataSource {
         return Resource.Success(RetrofitClient.webservice.getCalificacion(token).toList())
     }
 
-    suspend fun getCalificacionByUser(userName:String
+    suspend fun getCalificacionByUser(idUsuario:Int
                                       , annio:Int?
                                       , mes:Int?
                                       , token:String): Resource<List<Calificacion>> {
-        return Resource.Success(RetrofitClient.webservice.getCalificacionByUser(userName
+        return Resource.Success(RetrofitClient.webservice.getCalificacionByUser(idUsuario
             , annio
             , mes
             , token).toList())

@@ -12,9 +12,9 @@ class EstadisticaPersonalViewModel(private val repo: Repo):ViewModel() {
 
     private val parametersEstadisticaPersonalMutable = MutableLiveData<ParametersEstadisticaPersonal>()
 
-    fun setVariablesMutable(userName:String, annio:Int?, mes:Int?, token:String){
+    fun setVariablesMutable(idUsuario:Int, annio:Int?, mes:Int?, token:String){
         val parametersEstadisticaPersonal = ParametersEstadisticaPersonal(
-                userName = userName,
+                idUsuario = idUsuario,
                 annio = annio,
                 mes = mes,
                 token = token
@@ -26,7 +26,7 @@ class EstadisticaPersonalViewModel(private val repo: Repo):ViewModel() {
         liveData(Dispatchers.IO) {
             emit(Resource.Loading())
             try{
-                emit(repo.getCalificacionList(it.userName
+                emit(repo.getCalificacionList(it.idUsuario
                         , it.annio
                         , it.mes
                         , it.token))

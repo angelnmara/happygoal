@@ -48,6 +48,7 @@ class EstadisticaPersonalChartFragment : Fragment(), AdapterView.OnItemSelectedL
     private lateinit var spinnerAdapter: CustomSpinnerAdapter
     private lateinit var userNameG: String
     private lateinit var tokenG: String
+    private var idUsuario:Int = 0
 
 
     private val viewModel by viewModels<EstadisticaPersonalViewModel> { VMFactory(
@@ -79,7 +80,8 @@ class EstadisticaPersonalChartFragment : Fragment(), AdapterView.OnItemSelectedL
         viewModel.token = tools.getDefaultsString(getString(R.string.token), requireContext()).toString()*/
         userNameG = tools.getDefaultsString(getString(R.string.username), requireContext()).toString()
         tokenG = tools.getDefaultsString(getString(R.string.token), requireContext()).toString()
-        viewModel.setVariablesMutable(userNameG, null, null, tokenG)
+        idUsuario = tools.getDefaultsLong(getString(R.string.idusuario), requireContext()).toInt()
+        viewModel.setVariablesMutable(idUsuario, null, null, tokenG)
         spinner = view.findViewById(R.id.spnMonthChart)
         spinner.onItemSelectedListener = this
         setupObserver(view)
@@ -154,7 +156,7 @@ class EstadisticaPersonalChartFragment : Fragment(), AdapterView.OnItemSelectedL
             val mesAnnioData = tools.mesDataList.filter {
                     c->c.anniomes == anniomes
             }
-            viewModel.setVariablesMutable(userNameG, mesAnnioData.get(0).annio, mesAnnioData.get(0).idMes, tokenG)
+            viewModel.setVariablesMutable(idUsuario, mesAnnioData.get(0).annio, mesAnnioData.get(0).idMes, tokenG)
         }
     }
 

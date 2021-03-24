@@ -15,12 +15,12 @@ class RepoImpl(private val dataSource: DataSource): Repo {
     }
 
     override suspend fun getCalificacionList(
-        userName: String,
+        idUsuario: Int,
         annio:Int?,
         mes:Int?,
         token: String
     ): Resource<List<Calificacion>> {
-        return dataSource.getCalificacionByUser(userName
+        return dataSource.getCalificacionByUser(idUsuario
             , annio
             , mes
             , token)

@@ -38,6 +38,7 @@ class EstadisticaPersonalListFragment : Fragment(), AdapterView.OnItemSelectedLi
     private var tools = Tools()
     private var TAG = javaClass.name
     private lateinit var userNameG: String
+    private var idUsuario:Int = 0
     private lateinit var tokenG: String
     private lateinit var rlLeyenda: RelativeLayout
     private lateinit var lnlLista: LinearLayout
@@ -59,7 +60,7 @@ class EstadisticaPersonalListFragment : Fragment(), AdapterView.OnItemSelectedLi
             inflater.inflate(R.layout.fragment_estadistica_personal_list_list, container, false)
 
         userNameG = tools.getDefaultsString(getString(R.string.username), requireContext()).toString()
-
+        idUsuario = tools.getDefaultsLong(getString(R.string.idusuario), requireContext()).toInt()
         tokenG = tools.getDefaultsString(getString(R.string.token), requireContext()).toString()
 
         rlLeyenda = view.findViewById(R.id.clLeyendaDatosEstadistica)
@@ -81,7 +82,7 @@ class EstadisticaPersonalListFragment : Fragment(), AdapterView.OnItemSelectedLi
                 }
 
                 /*  inicializamos con null  */
-                viewModel.setVariablesMutable(userNameG, null, null, tokenG)
+                viewModel.setVariablesMutable(idUsuario, null, null, tokenG)
                 setupObserver(rv)
                 //setupObseverText(rv)
 
@@ -149,7 +150,7 @@ class EstadisticaPersonalListFragment : Fragment(), AdapterView.OnItemSelectedLi
             val mesAnnioData = tools.mesDataList.filter {
                     c->c.anniomes == anniomes
             }
-            viewModel.setVariablesMutable(userNameG, mesAnnioData.get(0).annio, mesAnnioData.get(0).idMes, tokenG)
+            viewModel.setVariablesMutable(idUsuario, mesAnnioData.get(0).annio, mesAnnioData.get(0).idMes, tokenG)
         }
         //viewModel.setMesMutable(2)
         //viewModel.setVariablesMutable(2021, 1, tokenG)

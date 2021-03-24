@@ -7,7 +7,7 @@ import com.example.happygoaldemo.tools.Resource
 interface Repo {
     suspend fun getTragosList(tragoName:String): Resource<List<Drink>>
     suspend fun getCalificacionList(token: String): Resource<List<Calificacion>>
-    suspend fun getCalificacionList(userName:String
+    suspend fun getCalificacionList(idUsuario:Int
                                     , annio:Int?
                                     , mes:Int?
                                     , token:String): Resource<List<Calificacion>>

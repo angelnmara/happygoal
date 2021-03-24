@@ -13,7 +13,7 @@ class EstadisticaPersonalChartViewModel(private val repo: Repo):ViewModel() {
     lateinit var token:String
     private val TAG = javaClass.name
 
-    val fetchCalificacion = liveData(Dispatchers.IO) {
+    /*val fetchCalificacion = liveData(Dispatchers.IO) {
         emit(Resource.Loading())
         try{
             emit(repo.getCalificacionList(userName
@@ -24,5 +24,5 @@ class EstadisticaPersonalChartViewModel(private val repo: Repo):ViewModel() {
             Log.d(TAG, e.toString())
             //emit(Resource.Failure(e))
         }
-    }
+    }*/
 }
