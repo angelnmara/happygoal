@@ -32,6 +32,7 @@ class ComentariosDelDiaFragment : Fragment() {
     private var columnCount = 1
     private var tools = Tools()
     private lateinit var tokenG: String
+    private var idEmpresaG: Int = 0
     private lateinit var progressBar: RelativeLayout
     private lateinit var leyendaDatos:RelativeLayout
     private lateinit var rv:RecyclerView
@@ -51,6 +52,7 @@ class ComentariosDelDiaFragment : Fragment() {
         leyendaDatos= view.findViewById(R.id.clLeyendaDatos)
 
         tokenG = tools.getDefaultsString(getString(R.string.token), requireContext()).toString()
+        idEmpresaG = tools.getDefaultsLong(getString(R.string.idempresa), requireContext()).toInt()
 
         rv = view.findViewById<RecyclerView>(R.id.listComentariosDia)
 
@@ -67,6 +69,7 @@ class ComentariosDelDiaFragment : Fragment() {
                 val Year = cal[Calendar.YEAR].toString()
                 viewModel.fecha = Year + Month + dayOfMonth
                 viewModel.token = tokenG
+                viewModel.idEmpresa = idEmpresaG
                 configureObserver(rv)
             }
         }

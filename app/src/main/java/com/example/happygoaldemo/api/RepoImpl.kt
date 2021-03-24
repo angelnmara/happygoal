@@ -32,9 +32,11 @@ class RepoImpl(private val dataSource: DataSource): Repo {
 
     override suspend fun getCalificacionDate(
         fecha: String,
+        idEmpresa: Int,
         token: String
     ): Resource<List<Calificacion>> {
         return dataSource.getCalificacionByDate(fecha
+            , idEmpresa
             , token)
     }
 

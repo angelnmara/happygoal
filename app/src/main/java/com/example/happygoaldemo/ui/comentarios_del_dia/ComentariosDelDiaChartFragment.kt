@@ -55,6 +55,7 @@ class ComentariosDelDiaChartFragment : Fragment() {
         val Year = cal[Calendar.YEAR].toString()
         viewModel.fecha = Year + Month + dayOfMonth
         viewModel.token = tools.getDefaultsString(getString(R.string.token), requireContext()).toString()
+        viewModel.idEmpresa = tools.getDefaultsLong(getString(R.string.idempresa), requireContext()).toInt()
         setupObserver(view)
         return view
     }

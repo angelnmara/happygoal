@@ -12,12 +12,14 @@ class ComentariosDelDiaViewModel(private val repo:Repo): ViewModel() {
 
     lateinit var fecha:String
     lateinit var token:String
+    var idEmpresa:Int = 0
 
     val fetchListaByFecha = liveData(Dispatchers.IO) {
         emit(Resource.Loading())
         try{
             emit(repo.getCalificacionDate(fecha
-                    , token))
+                , idEmpresa
+                , token))
         }catch (e: Exception){
             Log.d("", e.toString())
             //emit(Resource.Failure(e))

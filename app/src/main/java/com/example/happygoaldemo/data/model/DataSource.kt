@@ -29,8 +29,9 @@ class DataSource {
     }
 
     suspend fun getCalificacionByDate(fecha:String
+                                      , idEmpresa:Int
                                       , token:String): Resource<List<Calificacion>> {
-        return Resource.Success(RetrofitClient.webservice.getCalificacionByDate(fecha
+        return Resource.Success(RetrofitClient.webservice.getCalificacionByFechaEmpresa(fecha, idEmpresa
             , token).toList())
     }
 
