@@ -56,12 +56,12 @@ object PlaceholderContent {
 
     private fun addItem(item: Calificacion) {
         ITEMS.add(item)
-        ITEM_MAP.put(item.idCalificacion.toString(), item)
+        ITEM_MAP.put(item.idCatCalificacion.toString(), item)
     }
 
     private fun createPlaceholderItem(position: Int): Calificacion {
         var data: Date = Calendar.getInstance().time
-        return Calificacion(1, 2, makeDetails(position), data, "")
+        return Calificacion(1, 2, 1, makeDetails(position), data)
     }
 
     private fun makeDetails(position: Int): String {

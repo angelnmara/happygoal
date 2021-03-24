@@ -39,6 +39,8 @@
     <string name="dateloged">dateLoged</string>
     <string name="timeExpiration">3600000</string>
     <string name="username">userName</string>
+    <string name="idempresa">idEmpresa</string>
+    <string name="idusuario">idUsuario</string>
     <!--menu main-->
     <string name="estadisticaPersonal">Estadística personal</string>
     <string name="comentarioDelDia">Comentario del día</string>

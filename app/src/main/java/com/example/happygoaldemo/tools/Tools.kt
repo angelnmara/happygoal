@@ -260,7 +260,7 @@ class Tools {
 
         emotionList.forEach { cal->
             //var graphDataEmotion = GraphDataEmotion(emotion = cal.nameEmotion, sumEmotion = data.filter { c -> c.calificacion == cal.idEmotion }.count())
-            aoa.add(arrayOf(cal.nameEmotion, data.filter { c -> c.calificacion == cal.idEmotion }.count()))
+            aoa.add(arrayOf(cal.nameEmotion, data.filter { c -> c.idCatCalificacion == cal.idEmotion }.count()))
         }
         aoa.removeAt(0)
             listGraphEmotion = aoa.toArray()

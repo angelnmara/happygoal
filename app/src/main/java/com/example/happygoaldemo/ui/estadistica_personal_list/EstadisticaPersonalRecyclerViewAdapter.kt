@@ -49,7 +49,7 @@ class EstadisticaPersonalRecyclerViewAdapter(
         holder.contentView.text = item.emocion
         holder.txtDia.text = tools.getDayOfWeekEspanniol(item.fechaCreacion, context)
         holder.txtDiaNumero.text = tools.getDay(item.fechaCreacion)
-        holder.imgSentimiento.setImageResource(tools.getFaceResource(item.calificacion))
+        holder.imgSentimiento.setImageResource(tools.getFaceResource(item.idCatCalificacion))
     }
 
     override fun getItemCount(): Int = values.size

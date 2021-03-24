@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="?attr/actionBarSize"
+    app:layoutManager="LinearLayoutManager"
+    tools:context=".EstadisticaPersonalListFragment"
+    android:name="com.example.happygoaldemo.EstadisticaPersonalListFragment">
+
+    <RelativeLayout
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+        </ProgressBar>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/clLeyendaDatosEstadistica"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_acerca_de"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:fontFamily="@font/actor"
+            android:textColor="@color/white"
+            android:text="@string/no_existen_comentarios_estadistica_personal"
+            android:textSize="24sp"></TextView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lnlListEstadistica"
+        android:visibility="visible">
+
+        <Spinner
+            android:id="@+id/spnMonth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </Spinner>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listEstadisticaPersonal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/fragment_estadistica_personal_list">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+
+</FrameLayout>

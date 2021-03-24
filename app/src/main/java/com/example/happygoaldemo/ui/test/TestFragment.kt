@@ -35,10 +35,13 @@ class TestFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
     private lateinit var testViewModel: TestViewModel
+    private var idUsuario:Int = 0
+    private var idEmpresa:Int = 0
     private var _binding: FragmentTestBinding? = null
     private var comentarioMaximo: Long = 15
     private var calificacionId: Int? = null
     private var userName = "";
+
     val tools = Tools()
 
     private val binding get() = _binding!!
@@ -65,6 +68,8 @@ class TestFragment : Fragment() {
         val isloged = tools.getDefaultsBolean(getString(R.string.isloged), context) //sharedPref.getBoolean(getString(R.string.isloged), defaultValue)
         var dateLoged = tools.getDefaultsLong(getString(R.string.dateloged), context) //sharedPref.getLong(getString(R.string.dateloged), 0)
         userName = tools.getDefaultsString(getString(R.string.username), context).toString() //sharedPref.getString(getString(R.string.username), "").toString()
+        idUsuario = tools.getDefaultsLong(getString(R.string.idusuario), context)?.toInt()!!
+        idEmpresa = tools.getDefaultsLong(getString(R.string.idempresa), context)?.toInt()!!
         if(!(isloged && (dateLoged > Calendar.getInstance().timeInMillis))){
             (requireActivity() as MainActivity).supportActionBar!!.hide()
             val action = TestFragmentDirections.actionTestFragmentToLoginFragment()
@@ -178,11 +183,11 @@ class TestFragment : Fragment() {
 
             val apiService = RestApiService()
             val calificacion = Calificacion(
-                    idCalificacion = null,
-                    calificacion = calificacionId,
-                    emocion = txtComenta.text.toString(),
-                    fechaCreacion = null,
-                    idUsuario = userName
+                idCatCalificacion = calificacionId,
+                idUsuario = idUsuario,
+                idEmpresa = idEmpresa,
+                emocion = txtComenta.text.toString(),
+                fechaCreacion = null
             );
             apiService.calificacionFun(calificacion, token.toString()){
                 if (it == 200) {

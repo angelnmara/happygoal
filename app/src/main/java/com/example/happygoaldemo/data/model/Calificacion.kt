@@ -3,11 +3,11 @@ package com.example.happygoaldemo.data.model
 import java.util.*
 
 data class Calificacion (
-    val idCalificacion: Int?,
-    val calificacion: Int?,
+    val idCatCalificacion: Int?,
+    val idUsuario: Int?,
+    val idEmpresa: Int?,
     val emocion: String,
-    val fechaCreacion: Date?,
-    val idUsuario: String
+    val fechaCreacion:Date?
         )
 
 data class CalificacionList(

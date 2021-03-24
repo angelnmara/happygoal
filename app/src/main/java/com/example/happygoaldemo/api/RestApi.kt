@@ -14,6 +14,10 @@ interface RestApi {
     fun addCalificacion(@Body calificacion: Calificacion, @Header("Authorization") autHeader: String): Call<Void>
 
     @Headers("Content-Type: application/json")
+    @GET("usuario-detalle-by-user-name/{userName}")
+    fun getDetalleUsuario(@Path("userName") userName: String, @Header("Authorization") autHeader: String): Call<DetalleUsuarioResponse>
+
+    @Headers("Content-Type: application/json")
     @GET("calificacion-usuario/")
     suspend fun getCalificacionByUser(@Query("idUser") idUser: String, @Body annioMes: AnnioMes, @Header("Authorization") autHeader: String): CalificacionList
 

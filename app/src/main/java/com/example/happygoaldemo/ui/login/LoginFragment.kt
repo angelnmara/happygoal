@@ -3,6 +3,7 @@ package com.example.happygoaldemo.ui.login
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -24,6 +25,7 @@ import java.util.*
 
 class LoginFragment : Fragment() {
 
+    private val TAG = javaClass.name
     private lateinit var loginViewModel: LoginViewModel
     private var _binding: FragmentLoginBinding? = null
     val tools = Tools()
@@ -142,15 +144,18 @@ class LoginFragment : Fragment() {
 
         apiService.loginFun(login) {
             if (it?.codeHttp == 200) {
-                // it = newly added user parsed as response
-                // it?.id = newly added user ID
-                                tools.savePreferences(activity, getString(R.string.token), it.token, 1)
-                tools.savePreferences(activity, getString(R.string.isloged), "true", 2)
-                tools.savePreferences(activity, getString(R.string.dateloged), (Calendar.getInstance().timeInMillis + getString(R.string.timeExpiration).toLong()).toString(), 3)
-                tools.savePreferences(activity, getString(R.string.username), userName, 1 )
-                val action = LoginFragmentDirections.actionLoginFragmentToTestFragment()
-                view.findNavController().navigate(action)
-                (requireActivity() as MainActivity).supportActionBar!!.show()
+                tools.savePreferences(requireActivity(), getString(R.string.token), it.token, 1)
+                tools.savePreferences(requireActivity(), getString(R.string.isloged), "true", 2)
+                tools.savePreferences(requireActivity(), getString(R.string.dateloged), (Calendar.getInstance().timeInMillis + getString(R.string.timeExpiration).toLong()).toString(), 3)
+                tools.savePreferences(requireActivity(), getString(R.string.username), userName, 1 )
+
+                apiService.detalleUsuario(userName, it.token){
+                    tools.savePreferences(requireActivity(), getString(R.string.idempresa), it?.idEmpresa.toString(), 3 )
+                    tools.savePreferences(requireActivity(), getString(R.string.idusuario), it?.idUsuario.toString(), 3 )
+                    val action = LoginFragmentDirections.actionLoginFragmentToTestFragment()
+                    view.findNavController().navigate(action)
+                    (requireActivity() as MainActivity).supportActionBar!!.show()
+                }
             } else {
                 //Timber.d("Error registering new user")
                 //Toast.makeText(context, resources.getText(R.string.msjNoSeEncuentraRegistrado), Toast.LENGTH_LONG).show()
@@ -159,7 +164,14 @@ class LoginFragment : Fragment() {
         }
     }
 
-
+    /*private fun savePreferences(token:String, userName: String, idEmpresa:Long?, idUsuario: Long?){
+        tools.savePreferences(requireActivity(), getString(R.string.token), token, 1)
+        tools.savePreferences(requireActivity(), getString(R.string.isloged), "true", 2)
+        tools.savePreferences(requireActivity(), getString(R.string.dateloged), (Calendar.getInstance().timeInMillis + getString(R.string.timeExpiration).toLong()).toString(), 3)
+        tools.savePreferences(requireActivity(), getString(R.string.username), userName, 1 )
+        tools.savePreferences(requireActivity(), getString(R.string.idempresa), userName, 3 )
+        tools.savePreferences(requireActivity(), getString(R.string.idusuario), userName, 3 )
+    }*/
 
     private fun updateUiWithUser(model: LoggedInUserView) {
         val welcome = getString(R.string.welcome) + model.displayName
