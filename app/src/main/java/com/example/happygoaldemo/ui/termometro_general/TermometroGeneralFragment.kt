@@ -34,6 +34,7 @@ class TermometroGeneralFragment : Fragment(), AdapterView.OnItemSelectedListener
     //private lateinit var recyclerView: RecyclerView
     private var tools = Tools()
     private lateinit var tokenG:String
+    private var idEmpresaG:Int = 0
     private lateinit var progresBar:RelativeLayout
     private lateinit var clLeyendaTermometro:RelativeLayout
     private lateinit var listTermometro:RecyclerView
@@ -46,6 +47,7 @@ class TermometroGeneralFragment : Fragment(), AdapterView.OnItemSelectedListener
         super.onCreate(savedInstanceState)
         (activity as AppCompatActivity?)!!.supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_arrow)
         tokenG = tools.getDefaultsString(getString(R.string.token), requireContext()).toString()
+        idEmpresaG = tools.getDefaultsLong(getString(R.string.idempresa), requireContext()).toInt()
         arguments?.let {
             columnCount = it.getInt(ARG_COLUMN_COUNT)
         }
@@ -62,7 +64,10 @@ class TermometroGeneralFragment : Fragment(), AdapterView.OnItemSelectedListener
         listTermometro = view.findViewById(R.id.listTermometro)
         spinner = view.findViewById(R.id.spnMonthTermometro)
         spinner.onItemSelectedListener = this
-        viewModel.setVariablesMutables(null, null, tokenG)
+        viewModel.setVariablesMutables(null
+            , null
+            , idEmpresaG
+            , tokenG)
         linearLayout = view.findViewById(R.id.lnlTermometro)
 
         // Set the adapter
@@ -138,7 +143,10 @@ class TermometroGeneralFragment : Fragment(), AdapterView.OnItemSelectedListener
             val mesAnnioData = tools.mesDataList.filter {
                     c->c.anniomes == anniomes
             }
-            viewModel.setVariablesMutables(mesAnnioData.get(0).idMes, mesAnnioData.get(0).annio, tokenG)
+            viewModel.setVariablesMutables(mesAnnioData.get(0).idMes
+                , mesAnnioData.get(0).annio
+                , idEmpresaG
+                , tokenG)
         }
     }
 

@@ -19,6 +19,7 @@ interface WebService {
     @GET("calificacion-month-year")
     suspend fun getCalificacionByMonthAnnio(@Query("mes") annio:Int?
                                             , @Query("annio") mes:Int?
+                                            , @Query("idEmpresa") idEmpresa:Int
                                             , @Header("Authorization") autHeader: String): List<Calificacion>
 
     @Headers("Content-Type: application/json")

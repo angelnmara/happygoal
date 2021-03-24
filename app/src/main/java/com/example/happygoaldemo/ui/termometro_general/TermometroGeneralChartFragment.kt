@@ -41,6 +41,7 @@ class TermometroGeneralChartFragment : Fragment(), AdapterView.OnItemSelectedLis
     private lateinit var spinner: Spinner
     private lateinit var spinnerAdapter: CustomSpinnerAdapter
     private lateinit var token:String
+    private var idEmpresa:Int = 0
     private val viewModel by viewModels<TermometroGeneralViewModel> {VMFactory(RepoImpl(
         DataSource()
     ))  }
@@ -49,6 +50,7 @@ class TermometroGeneralChartFragment : Fragment(), AdapterView.OnItemSelectedLis
         super.onCreate(savedInstanceState)
         (activity as AppCompatActivity?)!!.supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_arrow)
         token = tools.getDefaultsString(getString(R.string.token), requireContext()).toString()
+        idEmpresa = tools.getDefaultsLong(getString(R.string.idempresa), requireContext()).toInt()
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
@@ -62,7 +64,10 @@ class TermometroGeneralChartFragment : Fragment(), AdapterView.OnItemSelectedLis
         // Inflate the layout for this fragment
         val view:View = inflater.inflate(R.layout.fragment_termometro_general_chart, container, false)
         //viewModel.token =
-        viewModel.setVariablesMutables(null, null, token)
+        viewModel.setVariablesMutables(null
+            , null
+            ,idEmpresa
+            ,token)
         spinner = view.findViewById(R.id.spnMonthChartTermometro)
         spinner.onItemSelectedListener = this
         setupObserver(view)
@@ -121,7 +126,10 @@ class TermometroGeneralChartFragment : Fragment(), AdapterView.OnItemSelectedLis
         val mesAnnioData = tools.mesDataList.filter {
                 c->c.anniomes == anniomes
         }
-        viewModel.setVariablesMutables(mesAnnioData.get(0).idMes, mesAnnioData.get(0).annio, token)
+        viewModel.setVariablesMutables(mesAnnioData.get(0).idMes
+            , mesAnnioData.get(0).annio
+            , idEmpresa
+            , token)
     }
 
     override fun onNothingSelected(p0: AdapterView<*>?) {

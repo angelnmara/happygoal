@@ -17,9 +17,11 @@ class TermometroGeneralViewModel(private val repo:Repo):ViewModel() {
 
     private val parametersTermometroGeneralMutable = MutableLiveData<ParametersTermometroGeneral>()
 
-    fun setVariablesMutables(mes:Int?, annio:Int?, token:String){
-        val parametersTermometroGeneral = ParametersTermometroGeneral(
-            mes = mes, annio = annio, token = token
+    fun setVariablesMutables(mes:Int?, annio:Int?, idEmpresa:Int, token:String){
+        val parametersTermometroGeneral = ParametersTermometroGeneral(mes = mes
+            , annio = annio
+            , idEmpresa = idEmpresa
+            , token = token
         )
         parametersTermometroGeneralMutable.value = parametersTermometroGeneral
     }
@@ -44,6 +46,7 @@ class TermometroGeneralViewModel(private val repo:Repo):ViewModel() {
                 emit(
                     repo.getCalificacionByMonthAnnio(parametersTermometroGeneralMutable.value!!.mes,
                         parametersTermometroGeneralMutable.value!!.annio,
+                        parametersTermometroGeneralMutable.value!!.idEmpresa,
                         parametersTermometroGeneralMutable.value!!.token)
                 )
             } catch (e: Exception) {

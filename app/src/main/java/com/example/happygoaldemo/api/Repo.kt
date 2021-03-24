@@ -14,5 +14,8 @@ interface Repo {
     suspend fun getCalificacionDate(fecha:String
                                     , idEmpresa: Int
                                     , token:String): Resource<List<Calificacion>>
-    suspend fun getCalificacionByMonthAnnio(mes: Int?, annio: Int?, token: String):Resource<List<Calificacion>>
+    suspend fun getCalificacionByMonthAnnio(mes: Int?
+                                            , annio: Int?
+                                            , idEmpresa: Int
+                                            , token: String):Resource<List<Calificacion>>
 }
