@@ -1959,6 +1959,7 @@ id lnlBtnComenta
 id lnlListEstadistica
 id lnlResponse
 id lnlSvg
+id lnlTermometro
 id lnlTest
 id lnlTxtComenta
 id loading
@@ -2091,6 +2092,8 @@ id spline
 id split_action_bar
 id spnMonth
 id spnMonthChart
+id spnMonthChartTermometro
+id spnMonthTermometro
 id spread
 id spread_inside
 id square

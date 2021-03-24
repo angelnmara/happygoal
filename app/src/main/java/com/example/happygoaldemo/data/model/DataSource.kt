@@ -24,6 +24,10 @@ class DataSource {
                 , token).toList())
     }
 
+    suspend fun getCalificacionByMonthAnnio(mes: Int?, annio: Int?, token: String): Resource<List<Calificacion>>{
+        return Resource.Success(RetrofitClient.webservice.getCalificacionByMonthAnnio(mes, annio, token).toList())
+    }
+
     suspend fun getCalificacionByDate(fecha:String
                                       , token:String): Resource<List<Calificacion>> {
         return Resource.Success(RetrofitClient.webservice.getCalificacionByDate(fecha

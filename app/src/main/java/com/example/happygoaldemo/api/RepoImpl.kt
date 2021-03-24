@@ -26,6 +26,10 @@ class RepoImpl(private val dataSource: DataSource): Repo {
                 , token)
     }
 
+    override suspend fun getCalificacionByMonthAnnio(mes: Int?, annio: Int?, token: String):Resource<List<Calificacion>>{
+        return dataSource.getCalificacionByMonthAnnio(mes, annio, token)
+    }
+
     override suspend fun getCalificacionDate(
             fecha: String,
             token: String

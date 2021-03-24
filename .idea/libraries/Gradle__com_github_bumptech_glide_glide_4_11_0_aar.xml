@@ -4,9 +4,9 @@
       <root url="jar:///usr/local/Cellar/gradle/6.7.1/libexec/caches/transforms-2/files-2.1/68d2032de12b82441242cc6279eb1370/glide-4.11.0/jars/classes.jar!/" />
       <root url="file:///usr/local/Cellar/gradle/6.7.1/libexec/caches/transforms-2/files-2.1/68d2032de12b82441242cc6279eb1370/glide-4.11.0/res" />
       <root url="file:///usr/local/Cellar/gradle/6.7.1/libexec/caches/transforms-2/files-2.1/68d2032de12b82441242cc6279eb1370/glide-4.11.0/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/25e1ab04b13c6d24bc7f60f48aa43da4/transformed/glide-4.11.0/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/25e1ab04b13c6d24bc7f60f48aa43da4/transformed/glide-4.11.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/25e1ab04b13c6d24bc7f60f48aa43da4/transformed/glide-4.11.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/92592f96daf3ca0335bae7816dd84802/transformed/glide-4.11.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/92592f96daf3ca0335bae7816dd84802/transformed/glide-4.11.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/92592f96daf3ca0335bae7816dd84802/transformed/glide-4.11.0/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar:///usr/local/Cellar/gradle/6.7.1/libexec/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/4.11.0/c7431a0f446d7be1d3e99914f1bfb8db403ae76a/glide-4.11.0-javadoc.jar!/" />

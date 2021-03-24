@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.response.ResponseFragment"
+    android:orientation="vertical"
+    android:id="@+id/lnlResponse"
+    android:background="@drawable/background_respuesta_feliz">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/lnlSvg"
+        android:background="@drawable/ic_fondo_pantalla_2"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:layout_margin="20dp">
+            <TextView
+                android:id="@+id/txtMainText"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:text="@string/felizTitle"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="@font/actor"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:layout_margin="20dp">
+            <TextView
+                android:id="@+id/txtAlternText"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="Tu opinion es muy importante"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="@font/actor"
+                android:textColor="@color/white"
+                android:layout_gravity="top" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

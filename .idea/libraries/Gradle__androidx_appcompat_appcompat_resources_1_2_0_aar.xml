@@ -4,9 +4,9 @@
       <root url="jar:///usr/local/Cellar/gradle/6.7.1/libexec/caches/transforms-2/files-2.1/2da5d4df6e3ab1fee7223b8d191e2080/appcompat-resources-1.2.0/jars/classes.jar!/" />
       <root url="file:///usr/local/Cellar/gradle/6.7.1/libexec/caches/transforms-2/files-2.1/2da5d4df6e3ab1fee7223b8d191e2080/appcompat-resources-1.2.0/AndroidManifest.xml" />
       <root url="file:///usr/local/Cellar/gradle/6.7.1/libexec/caches/transforms-2/files-2.1/2da5d4df6e3ab1fee7223b8d191e2080/appcompat-resources-1.2.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/9cc67c99249742db83325508ce8d0050/transformed/appcompat-resources-1.2.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/9cc67c99249742db83325508ce8d0050/transformed/appcompat-resources-1.2.0/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/9cc67c99249742db83325508ce8d0050/transformed/appcompat-resources-1.2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/4e6e7c6dfcd1bd1132d10545bb4f4a8c/transformed/appcompat-resources-1.2.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/4e6e7c6dfcd1bd1132d10545bb4f4a8c/transformed/appcompat-resources-1.2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/4e6e7c6dfcd1bd1132d10545bb4f4a8c/transformed/appcompat-resources-1.2.0/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

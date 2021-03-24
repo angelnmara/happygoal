@@ -4,10 +4,13 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import android.util.Patterns
+import androidx.lifecycle.viewModelScope
 import com.example.happygoaldemo.data.LoginRepository
 import com.example.happygoaldemo.data.Result
 
 import com.example.happygoaldemo.R
+import kotlinx.coroutines.launch
+import java.lang.Exception
 
 class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel() {
 
@@ -19,13 +22,17 @@ class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel()
 
     fun login(username: String, password: String) {
         // can be launched in a separate asynchronous job
-        val result = loginRepository.login(username, password)
-
-        if (result is Result.Success) {
-            _loginResult.value =
-                LoginResult(success = LoggedInUserView(displayName = result.data.displayName))
-        } else {
-            _loginResult.value = LoginResult(error = R.string.login_failed)
+        viewModelScope.launch {
+            val result = try {
+                loginRepository.login(username, password)
+            } catch (ex:Exception){
+                Result.Error(Exception(ex.message))
+            }
+            when(result){
+                is Result.Success -> _loginResult.value =
+                    LoginResult(success = LoggedInUserView(displayName = result.data.displayName))
+                is Result.Error -> _loginResult.value = LoginResult(error = R.string.login_failed)
+            }
         }
     }
 

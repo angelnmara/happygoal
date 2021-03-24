@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import androidx.annotation.NonNull;
@@ -28,19 +29,24 @@ public final class FragmentTermometroGeneralListBinding implements ViewBinding {
   public final RecyclerView listTermometro;
 
   @NonNull
+  public final LinearLayout lnlTermometro;
+
+  @NonNull
   public final RelativeLayout progressBar;
 
   @NonNull
-  public final Spinner spnMonth;
+  public final Spinner spnMonthTermometro;
 
   private FragmentTermometroGeneralListBinding(@NonNull FrameLayout rootView,
       @NonNull RelativeLayout clLeyendaTermometro, @NonNull RecyclerView listTermometro,
-      @NonNull RelativeLayout progressBar, @NonNull Spinner spnMonth) {
+      @NonNull LinearLayout lnlTermometro, @NonNull RelativeLayout progressBar,
+      @NonNull Spinner spnMonthTermometro) {
     this.rootView = rootView;
     this.clLeyendaTermometro = clLeyendaTermometro;
     this.listTermometro = listTermometro;
+    this.lnlTermometro = lnlTermometro;
     this.progressBar = progressBar;
-    this.spnMonth = spnMonth;
+    this.spnMonthTermometro = spnMonthTermometro;
   }
 
   @Override
@@ -82,20 +88,26 @@ public final class FragmentTermometroGeneralListBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.lnlTermometro;
+      LinearLayout lnlTermometro = ViewBindings.findChildViewById(rootView, id);
+      if (lnlTermometro == null) {
+        break missingId;
+      }
+
       id = R.id.progressBar;
       RelativeLayout progressBar = ViewBindings.findChildViewById(rootView, id);
       if (progressBar == null) {
         break missingId;
       }
 
-      id = R.id.spnMonth;
-      Spinner spnMonth = ViewBindings.findChildViewById(rootView, id);
-      if (spnMonth == null) {
+      id = R.id.spnMonthTermometro;
+      Spinner spnMonthTermometro = ViewBindings.findChildViewById(rootView, id);
+      if (spnMonthTermometro == null) {
         break missingId;
       }
 
       return new FragmentTermometroGeneralListBinding((FrameLayout) rootView, clLeyendaTermometro,
-          listTermometro, progressBar, spnMonth);
+          listTermometro, lnlTermometro, progressBar, spnMonthTermometro);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

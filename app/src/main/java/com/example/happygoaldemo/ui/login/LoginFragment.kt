@@ -130,34 +130,12 @@ class LoginFragment : Fragment() {
                     passwordEditText.text.toString()
             )
 
-            addDummyUser(view, usernameEditText.text.toString(), passwordEditText.text.toString())
+            //addDummyUser(view, usernameEditText.text.toString(), passwordEditText.text.toString())
 
         }
     }
 
-    fun addDummyUser(view: View, userName: String, pass: String) {
-        val apiService = RestApiService()
-        val login = Login(username = userName,
-                password = pass)
 
-        apiService.loginFun(login) {
-            if (it?.codeHttp == 200) {
-                // it = newly added user parsed as response
-                // it?.id = newly added user ID
-                                tools.savePreferences(activity, getString(R.string.token), it.token, 1)
-                tools.savePreferences(activity, getString(R.string.isloged), "true", 2)
-                tools.savePreferences(activity, getString(R.string.dateloged), (Calendar.getInstance().timeInMillis + getString(R.string.timeExpiration).toLong()).toString(), 3)
-                tools.savePreferences(activity, getString(R.string.username), userName, 1 )
-                val action = LoginFragmentDirections.actionLoginFragmentToTestFragment()
-                view.findNavController().navigate(action)
-                (requireActivity() as MainActivity).supportActionBar!!.show()
-            } else {
-                //Timber.d("Error registering new user")
-                //Toast.makeText(context, resources.getText(R.string.msjNoSeEncuentraRegistrado), Toast.LENGTH_LONG).show()
-                Snackbar.make(view, resources.getText(R.string.msjNoSeEncuentraRegistrado), Snackbar.LENGTH_SHORT).show()
-            }
-        }
-    }
 
 
 
